@@ -21,4 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.sharedManager().enable = true
         IQKeyboardManager.sharedManager().enableAutoToolbar = false
         IQKeyboardManager.sharedManager().shouldShowToolbarPlaceholder = false
-        IQKeyboardManager.s
+        IQKeyboardManager.sharedManager().shouldResignOnTouchOutside = true
+        
+        return true
+    }
+
+    func applicationWillResignActive(_ application: UIApplication) {
+        // Sent when the application is about to move from active to inactiv
