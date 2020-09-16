@@ -9,4 +9,14 @@
 import UIKit
 import AVFoundation
 
-class PreviewView: UIV
+class PreviewView: UIView {
+    
+    private var maskLayer = [CAShapeLayer]()
+    
+    
+    // MARK: AV capture properties
+    var videoPreviewLayer: AVCaptureVideoPreviewLayer {
+        return layer as! AVCaptureVideoPreviewLayer
+    }
+    
+    var session: AVCaptureS
