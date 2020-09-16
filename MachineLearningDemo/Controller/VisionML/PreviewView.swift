@@ -19,4 +19,15 @@ class PreviewView: UIView {
         return layer as! AVCaptureVideoPreviewLayer
     }
     
-    var session: AVCaptureS
+    var session: AVCaptureSession? {
+        get {
+            return videoPreviewLayer.session
+        }
+        
+        set {
+            videoPreviewLayer.session = newValue
+        }
+    }
+    
+    override class var layerClass: AnyClass {
+       
