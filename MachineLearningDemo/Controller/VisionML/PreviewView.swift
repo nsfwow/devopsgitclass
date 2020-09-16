@@ -30,4 +30,13 @@ class PreviewView: UIView {
     }
     
     override class var layerClass: AnyClass {
-       
+        return AVCaptureVideoPreviewLayer.self
+    }
+    
+    func drawLayer(in rect: CGRect) {
+        
+        let mask = CAShapeLayer()
+        mask.frame = rect
+        
+        mask.backgroundColor = UIColor.yellow.cgColor
+        mask.co
