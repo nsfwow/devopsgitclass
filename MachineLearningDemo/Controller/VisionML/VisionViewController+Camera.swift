@@ -87,3 +87,7 @@ extension VisionViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
             exifOrientation = .right0ColTop
         }
         return exifOrientation.rawValue
+    }
+    
+    
+}
