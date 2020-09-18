@@ -48,4 +48,12 @@ class PreviewView: UIView {
         layer.insertSublayer(mask, at: 1)
     }
     
-    func removeMa
+    func removeMask() {
+        for mask in maskLayer {
+            mask.removeFromSuperlayer()
+        }
+        maskLayer.removeAll()
+    }
+    
+}
+
