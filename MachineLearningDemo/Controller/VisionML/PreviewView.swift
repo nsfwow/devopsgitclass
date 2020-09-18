@@ -39,4 +39,13 @@ class PreviewView: UIView {
         mask.frame = rect
         
         mask.backgroundColor = UIColor.yellow.cgColor
-        mask.co
+        mask.cornerRadius = 10
+        mask.opacity = 0.3
+        mask.borderColor = UIColor.yellow.cgColor
+        mask.borderWidth = 2.0
+        
+        maskLayer.append(mask)
+        layer.insertSublayer(mask, at: 1)
+    }
+    
+    func removeMa
