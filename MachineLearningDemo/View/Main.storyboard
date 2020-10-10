@@ -15,4 +15,6 @@
         <!--Name By Gender Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="NameByGenderController"
+                <viewController id="BYZ-38-t0r" customClass="NameByGenderController" customModule="MachineLearningDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0
