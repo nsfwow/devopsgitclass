@@ -37,3 +37,6 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jnh-FF-nYZ">
                                 <rect key="frame" x="16" y="261" width="343" height="50"/>
+                                <color key="backgroundColor" red="0.76389030237662159" green="0.83616529360418967" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+          
