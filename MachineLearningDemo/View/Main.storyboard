@@ -54,4 +54,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="59" id="pX4-aR-Y5w"/>
                                 </constraints>
-                            
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                         
