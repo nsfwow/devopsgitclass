@@ -62,4 +62,7 @@
                                 <rect key="frame" x="88" y="597" width="199" height="50"/>
                                 <color key="backgroundColor" red="0.76389030237662159" green="0.83616529360418967" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint fi
+                                    <constraint firstAttribute="height" constant="50" id="f1a-NT-by2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                            
