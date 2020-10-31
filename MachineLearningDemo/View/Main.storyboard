@@ -65,4 +65,7 @@
                                     <constraint firstAttribute="height" constant="50" id="f1a-NT-by2"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
-                            
+                                <state key="normal" title="Next Demo">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+           
