@@ -68,4 +68,8 @@
                                 <state key="normal" title="Next Demo">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-           
+                                <connections>
+                                    <segue destination="8b5-TT-MID" kind="show" id="zbK-PP-8qs"/>
+                                </connections>
+                            </button>
+                        </subview
