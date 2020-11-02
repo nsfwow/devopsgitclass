@@ -77,4 +77,5 @@
                         <constraints>
                             <constraint firstItem="sGq-GB-CCv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="223" id="7Yz-xN-bVf"/>
                             <constraint firstItem="jnh-FF-nYZ" firstAttribute="leading" secondItem="IBN-ke-GFc" secondAttribute="leading" id="BSR-Mw-pY4"/>
-                   
+                            <constraint firstItem="TM3-yk-mYx" firstAttribute="trailing" secondItem="sGq-GB-CCv" secondAttribute="trailing" id="CTD-wf-AWu"/>
+                            <constraint firstItem="sGq-GB-CCv" firstAttribute="trailing" secondItem="jnh-FF-nYZ" second
