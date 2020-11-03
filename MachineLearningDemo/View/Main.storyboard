@@ -81,4 +81,5 @@
                             <constraint firstItem="sGq-GB-CCv" firstAttribute="trailing" secondItem="jnh-FF-nYZ" secondAttribute="trailing" id="Dfa-wh-btR"/>
                             <constraint firstItem="plR-wL-iKH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="88" id="EOy-Kx-fQs"/>
                             <constraint firstItem="jnh-FF-nYZ" firstAttribute="trailing" secondItem="IBN-ke-GFc" secondAttribute="trailing" id="IED-nk-Aiw"/>
-                            <constraint firstItem="
+                            <constraint firstItem="IBN-ke-GFc" firstAttribute="top" secondItem="jnh-FF-nYZ" secondAttribute="bottom" constant="8" symbolic="YES" id="JTI-5t-Xy9"/>
+                            <constraint firstItem="TM3-yk-mYx" firstAttribute="top" secondItem="6Tk-OE-BBY" second
