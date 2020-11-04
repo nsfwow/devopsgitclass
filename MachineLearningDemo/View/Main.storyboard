@@ -84,4 +84,5 @@
                             <constraint firstItem="IBN-ke-GFc" firstAttribute="top" secondItem="jnh-FF-nYZ" secondAttribute="bottom" constant="8" symbolic="YES" id="JTI-5t-Xy9"/>
                             <constraint firstItem="TM3-yk-mYx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="Rnr-U8-YfA"/>
                             <constraint firstItem="jnh-FF-nYZ" firstAttribute="top" secondItem="sGq-GB-CCv" secondAttribute="bottom" constant="8" symbolic="YES" id="WUN-KV-6Y1"/>
-                            <constraint 
+                            <constraint firstItem="TM3-yk-mYx" firstAttribute="leading" secondItem="sGq-GB-CCv" secondAttribute="leading" id="WhB-6a-BWq"/>
+                            <constraint firstItem="TM3-yk-mYx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttri
