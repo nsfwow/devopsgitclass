@@ -90,4 +90,9 @@
                             <constraint firstItem="TM3-yk-mYx" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="l3s-IN-yoz"/>
                             <constraint firstItem="sGq-GB-CCv" firstAttribute="leading" secondItem="jnh-FF-nYZ" secondAttribute="leading" id="lOd-da-pam"/>
                             <constraint firstItem="IBN-ke-GFc" firstAttribute="centerX" secondItem="plR-wL-iKH" secondAttribute="centerX" id="w5y-ZD-46h"/>
-                        </constrain
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="genderLabel" destination="IBN-ke-GFc" id="zm8-It-s5f"/>
+  
