@@ -97,4 +97,9 @@
                         <outlet property="genderLabel" destination="IBN-ke-GFc" id="zm8-It-s5f"/>
                         <outlet property="getGenderButton" destination="jnh-FF-nYZ" id="7G7-Bp-hmt"/>
                         <outlet property="nameTextField" destination="sGq-GB-CCv" id="K6I-Ro-JSR"/>
-                        <outlet 
+                        <outlet property="nextDemoButton" destination="plR-wL-iKH" id="wGn-MN-ifg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+  
