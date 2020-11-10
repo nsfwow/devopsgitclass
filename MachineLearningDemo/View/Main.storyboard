@@ -107,4 +107,6 @@
         <!--Vision View Controller-->
         <scene sceneID="hMx-ti-IgP">
             <objects>
-                <viewController id="8b5-TT-MID" customClass="Vis
+                <viewController id="8b5-TT-MID" customClass="VisionViewController" customModule="MachineLearningDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ag5-3W-oCN">
+                        <rect key="fr
