@@ -118,4 +118,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="krg-Gt-CaK">
                                 <rect key="frame" x="16" y="20" width="140" height="50"/>
-                                <color key="backgroundColor" red="0.74422115089999996" green="0.81338441370000003" blue="0.96259266139999999" alpha="1"
+                                <color key="backgroundColor" red="0.74422115089999996" green="0.81338441370000003" blue="0.96259266139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="vwY-wG-gGh"/>
+                                    <cons
