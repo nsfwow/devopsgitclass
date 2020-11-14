@@ -129,4 +129,6 @@
                                 </state>
                                 <connections>
                                     <action selector="didTapPreviousDemo:" destination="8b5-TT-MID" eventType="touchUpInside" id="oUq-NJ-NiH"/>
-  
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlign
