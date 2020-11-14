@@ -123,4 +123,7 @@
                                     <constraint firstAttribute="height" constant="50" id="vwY-wG-gGh"/>
                                     <constraint firstAttribute="width" constant="140" id="yVl-Jq-R1Q"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                <state key="normal" title="Previous Demo">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+       
