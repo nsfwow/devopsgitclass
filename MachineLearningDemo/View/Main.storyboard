@@ -141,4 +141,7 @@
                                 <rect key="frame" x="219" y="20" width="140" height="50"/>
                                 <color key="backgroundColor" red="0.74422115089999996" green="0.81338441370000003" blue="0.96259266139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
-   
+                                <state key="normal" title="Next Demo">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+ 
