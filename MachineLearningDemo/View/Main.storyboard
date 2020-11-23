@@ -149,4 +149,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="uns-F8-ece" firstAttribute="leading" secondItem="ag5-3W-oCN" secondAttribute="leading" id="5sU-Ky-62H"/>
-                            <constraint firstItem="Wi2-mA-xKL" firstAttribute="centerX" secondItem="
+                            <constraint firstItem="Wi2-mA-xKL" firstAttribute="centerX" secondItem="uns-F8-ece" secondAttribute="centerX" id="L7I-wU-fgD"/>
+                            <constraint firstItem="uns-F8-ece" firstAttribute="top" secondItem="Wi2-mA-xKL" secondAttribute="bottom" constant="8" symbolic="YES" id="MPX-YD-1fC"/>
+                      
