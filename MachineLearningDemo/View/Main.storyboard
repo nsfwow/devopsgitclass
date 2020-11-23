@@ -148,4 +148,5 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-         
+                            <constraint firstItem="uns-F8-ece" firstAttribute="leading" secondItem="ag5-3W-oCN" secondAttribute="leading" id="5sU-Ky-62H"/>
+                            <constraint firstItem="Wi2-mA-xKL" firstAttribute="centerX" secondItem="
