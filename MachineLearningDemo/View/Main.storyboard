@@ -152,4 +152,6 @@
                             <constraint firstItem="Wi2-mA-xKL" firstAttribute="centerX" secondItem="uns-F8-ece" secondAttribute="centerX" id="L7I-wU-fgD"/>
                             <constraint firstItem="uns-F8-ece" firstAttribute="top" secondItem="Wi2-mA-xKL" secondAttribute="bottom" constant="8" symbolic="YES" id="MPX-YD-1fC"/>
                             <constraint firstAttribute="trailing" secondItem="uns-F8-ece" secondAttribute="trailing" id="OdJ-nA-aEK"/>
-                            <constraint firstItem="cFm-NM-FRq" firstAttribute="trailing" secondItem="Wi2-mA-xKL" secondAttrib
+                            <constraint firstItem="cFm-NM-FRq" firstAttribute="trailing" secondItem="Wi2-mA-xKL" secondAttribute="trailing" id="R47-UA-HIc"/>
+                            <constraint firstItem="krg-Gt-CaK" firstAttribute="top" secondItem="cFm-NM-FRq" secondAttribute="top" id="S3g-87-w02"/>
+                            <constraint firstItem="krg
