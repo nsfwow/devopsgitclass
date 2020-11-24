@@ -154,4 +154,5 @@
                             <constraint firstAttribute="trailing" secondItem="uns-F8-ece" secondAttribute="trailing" id="OdJ-nA-aEK"/>
                             <constraint firstItem="cFm-NM-FRq" firstAttribute="trailing" secondItem="Wi2-mA-xKL" secondAttribute="trailing" id="R47-UA-HIc"/>
                             <constraint firstItem="krg-Gt-CaK" firstAttribute="top" secondItem="cFm-NM-FRq" secondAttribute="top" id="S3g-87-w02"/>
-                            <constraint firstItem="krg
+                            <constraint firstItem="krg-Gt-CaK" firstAttribute="top" secondItem="iz1-hu-0i8" secondAttribute="top" id="Xfz-9z-LVA"/>
+                            <constraint firstItem="cFm-NM-FRq" firstAttribute="leading" secondItem="krg-Gt-CaK" secondAtt
