@@ -157,4 +157,5 @@
                             <constraint firstItem="krg-Gt-CaK" firstAttribute="top" secondItem="iz1-hu-0i8" secondAttribute="top" id="Xfz-9z-LVA"/>
                             <constraint firstItem="cFm-NM-FRq" firstAttribute="leading" secondItem="krg-Gt-CaK" secondAttribute="trailing" constant="63" id="alu-dn-HK6"/>
                             <constraint firstItem="uns-F8-ece" firstAttribute="bottom" secondItem="iz1-hu-0i8" secondAttribute="bottom" id="d7W-Jw-Mtf"/>
-                            <constraint fi
+                            <constraint firstItem="krg-Gt-CaK" firstAttribute="leading" secondItem="ag5-3W-oCN" secondAttribute="leadingMargin" id="k5k-PI-G7R"/>
+                            <constraint firstItem="krg-Gt-CaK" firstAttribute="baseline" secondItem="cFm-NM-FRq" 
