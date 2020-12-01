@@ -160,4 +160,6 @@
                             <constraint firstItem="krg-Gt-CaK" firstAttribute="leading" secondItem="ag5-3W-oCN" secondAttribute="leadingMargin" id="k5k-PI-G7R"/>
                             <constraint firstItem="krg-Gt-CaK" firstAttribute="baseline" secondItem="cFm-NM-FRq" secondAttribute="firstBaseline" id="s3O-XF-L2C"/>
                             <constraint firstItem="krg-Gt-CaK" firstAttribute="leading" secondItem="Wi2-mA-xKL" secondAttribute="leading" id="v2A-gO-YrL"/>
-                            <constraint
+                            <constraint firstItem="Wi2-mA-xKL" firstAttribute="top" secondItem="krg-Gt-CaK" secondAttribute="bottom" constant="44" id="yGk-nK-hlr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iz1-hu-0i8
