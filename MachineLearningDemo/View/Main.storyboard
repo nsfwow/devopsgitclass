@@ -162,4 +162,8 @@
                             <constraint firstItem="krg-Gt-CaK" firstAttribute="leading" secondItem="Wi2-mA-xKL" secondAttribute="leading" id="v2A-gO-YrL"/>
                             <constraint firstItem="Wi2-mA-xKL" firstAttribute="top" secondItem="krg-Gt-CaK" secondAttribute="bottom" constant="44" id="yGk-nK-hlr"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="iz1-hu-0i8
+                        <viewLayoutGuide key="safeArea" id="iz1-hu-0i8"/>
+                    </view>
+                    <connections>
+                        <outlet property="objectTextView" destination="Wi2-mA-xKL" id="3QS-nH-GYD"/>
+                        <outlet property="previewView" destination="uns
