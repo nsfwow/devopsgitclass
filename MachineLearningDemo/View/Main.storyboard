@@ -166,4 +166,7 @@
                     </view>
                     <connections>
                         <outlet property="objectTextView" destination="Wi2-mA-xKL" id="3QS-nH-GYD"/>
-                        <outlet property="previewView" destination="uns
+                        <outlet property="previewView" destination="uns-F8-ece" id="Kq6-oo-VCJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E1I-SQ-clc" userLabel="First Responder" sceneMemberID="fir
