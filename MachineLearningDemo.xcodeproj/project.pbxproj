@@ -67,3 +67,211 @@
 				4937B6E11FC47FA700BAFE20 /* MachineLearningDemo.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		4937B6E31FC47FA700BAFE20 /* MachineLearningDemo */ = {
+			isa = PBXGroup;
+			children = (
+				4937B6E41FC47FA700BAFE20 /* AppDelegate.swift */,
+				4991048D1FC4816900062913 /* Helper.swift */,
+				4991049A1FC4826A00062913 /* MLModels */,
+				4991049B1FC4827300062913 /* Model */,
+				499104991FC4826100062913 /* View */,
+				499104981FC4825700062913 /* Controller */,
+				4937B6EB1FC47FA700BAFE20 /* Assets.xcassets */,
+				4937B6ED1FC47FA700BAFE20 /* LaunchScreen.storyboard */,
+				4937B6F01FC47FA700BAFE20 /* Info.plist */,
+			);
+			path = MachineLearningDemo;
+			sourceTree = "<group>";
+		};
+		495644031FC49778002BFD15 /* NameByGender */ = {
+			isa = PBXGroup;
+			children = (
+				499104921FC481C400062913 /* NameByGenderController.swift */,
+			);
+			path = NameByGender;
+			sourceTree = "<group>";
+		};
+		495644041FC49785002BFD15 /* VisionML */ = {
+			isa = PBXGroup;
+			children = (
+				495644051FC497D4002BFD15 /* VisionViewController.swift */,
+				495644071FC4984A002BFD15 /* VisionViewController+Camera.swift */,
+				495644091FC49987002BFD15 /* PreviewView.swift */,
+			);
+			path = VisionML;
+			sourceTree = "<group>";
+		};
+		499104981FC4825700062913 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				495644041FC49785002BFD15 /* VisionML */,
+				495644031FC49778002BFD15 /* NameByGender */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		499104991FC4826100062913 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				499104961FC4822300062913 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4991049A1FC4826A00062913 /* MLModels */ = {
+			isa = PBXGroup;
+			children = (
+				499104941FC481E600062913 /* GenderByName.mlmodel */,
+			);
+			path = MLModels;
+			sourceTree = "<group>";
+		};
+		4991049B1FC4827300062913 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A63DA8954022DAE470C37538 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC46E45BA5705487F3A8C77E /* Pods_MachineLearningDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D9B429F3617D67E67FB8926C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0C4BD17E0E0F04D17E966A63 /* Pods-MachineLearningDemo.debug.xcconfig */,
+				91EDDCB7C0F24F8D08243FF9 /* Pods-MachineLearningDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4937B6E01FC47FA700BAFE20 /* MachineLearningDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4937B6F31FC47FA700BAFE20 /* Build configuration list for PBXNativeTarget "MachineLearningDemo" */;
+			buildPhases = (
+				E5A984FE20F39BCD8923BB22 /* [CP] Check Pods Manifest.lock */,
+				4937B6DD1FC47FA700BAFE20 /* Sources */,
+				4937B6DE1FC47FA700BAFE20 /* Frameworks */,
+				4937B6DF1FC47FA700BAFE20 /* Resources */,
+				044B82F24A2D79FEF502965A /* [CP] Embed Pods Frameworks */,
+				493996EEF016B24A36757D91 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MachineLearningDemo;
+			productName = MachineLearningDemo;
+			productReference = 4937B6E11FC47FA700BAFE20 /* MachineLearningDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4937B6D91FC47FA700BAFE20 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "Rafael Aguilera";
+				TargetAttributes = {
+					4937B6E01FC47FA700BAFE20 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 4937B6DC1FC47FA700BAFE20 /* Build configuration list for PBXProject "MachineLearningDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4937B6D81FC47FA700BAFE20;
+			productRefGroup = 4937B6E21FC47FA700BAFE20 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4937B6E01FC47FA700BAFE20 /* MachineLearningDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4937B6DF1FC47FA700BAFE20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				499104971FC4822300062913 /* Main.storyboard in Resources */,
+				4937B6EF1FC47FA700BAFE20 /* LaunchScreen.storyboard in Resources */,
+				4937B6EC1FC47FA700BAFE20 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		044B82F24A2D79FEF502965A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MachineLearningDemo/Pods-MachineLearningDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MachineLearningDemo/Pods-MachineLearningDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		493996EEF016B24A36757D91 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MachineLearningDemo/Pods-MachineLearningDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5A984FE20F39BCD8923BB22 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MachineLearningDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
