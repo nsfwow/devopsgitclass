@@ -184,4 +184,9 @@
                         <viewLayoutGuide key="safeArea" id="1bF-0z-vK3"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ush-Dj-CfV
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ush-Dj-CfV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1602" y="134"/>
+        </scene>
+    </scenes>
+</document>

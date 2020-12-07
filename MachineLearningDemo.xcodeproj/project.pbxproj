@@ -1,0 +1,69 @@
+
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4937B6E51FC47FA700BAFE20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4937B6E41FC47FA700BAFE20 /* AppDelegate.swift */; };
+		4937B6EC1FC47FA700BAFE20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4937B6EB1FC47FA700BAFE20 /* Assets.xcassets */; };
+		4937B6EF1FC47FA700BAFE20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4937B6ED1FC47FA700BAFE20 /* LaunchScreen.storyboard */; };
+		495644061FC497D4002BFD15 /* VisionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495644051FC497D4002BFD15 /* VisionViewController.swift */; };
+		495644081FC4984A002BFD15 /* VisionViewController+Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495644071FC4984A002BFD15 /* VisionViewController+Camera.swift */; };
+		4956440A1FC49987002BFD15 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495644091FC49987002BFD15 /* PreviewView.swift */; };
+		4991048E1FC4816900062913 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4991048D1FC4816900062913 /* Helper.swift */; };
+		499104931FC481C500062913 /* NameByGenderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499104921FC481C400062913 /* NameByGenderController.swift */; };
+		499104951FC481E600062913 /* GenderByName.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 499104941FC481E600062913 /* GenderByName.mlmodel */; };
+		499104971FC4822300062913 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 499104961FC4822300062913 /* Main.storyboard */; };
+		8647B6D6D58CE0E969AB954F /* Pods_MachineLearningDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC46E45BA5705487F3A8C77E /* Pods_MachineLearningDemo.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0C4BD17E0E0F04D17E966A63 /* Pods-MachineLearningDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MachineLearningDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MachineLearningDemo/Pods-MachineLearningDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		4937B6E11FC47FA700BAFE20 /* MachineLearningDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MachineLearningDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4937B6E41FC47FA700BAFE20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4937B6EB1FC47FA700BAFE20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4937B6EE1FC47FA700BAFE20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4937B6F01FC47FA700BAFE20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		495644051FC497D4002BFD15 /* VisionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionViewController.swift; sourceTree = "<group>"; };
+		495644071FC4984A002BFD15 /* VisionViewController+Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VisionViewController+Camera.swift"; sourceTree = "<group>"; };
+		495644091FC49987002BFD15 /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
+		4991048D1FC4816900062913 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		499104921FC481C400062913 /* NameByGenderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameByGenderController.swift; sourceTree = "<group>"; };
+		499104941FC481E600062913 /* GenderByName.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = GenderByName.mlmodel; sourceTree = "<group>"; };
+		499104961FC4822300062913 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		91EDDCB7C0F24F8D08243FF9 /* Pods-MachineLearningDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MachineLearningDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MachineLearningDemo/Pods-MachineLearningDemo.release.xcconfig"; sourceTree = "<group>"; };
+		BC46E45BA5705487F3A8C77E /* Pods_MachineLearningDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MachineLearningDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4937B6DE1FC47FA700BAFE20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8647B6D6D58CE0E969AB954F /* Pods_MachineLearningDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4937B6D81FC47FA700BAFE20 = {
+			isa = PBXGroup;
+			children = (
+				4937B6E31FC47FA700BAFE20 /* MachineLearningDemo */,
+				4937B6E21FC47FA700BAFE20 /* Products */,
+				D9B429F3617D67E67FB8926C /* Pods */,
+				A63DA8954022DAE470C37538 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4937B6E21FC47FA700BAFE20 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4937B6E11FC47FA700BAFE20 /* MachineLearningDemo.app */,
+			);
+			name = Products;
