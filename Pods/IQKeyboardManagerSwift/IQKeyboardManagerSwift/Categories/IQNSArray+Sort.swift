@@ -34,4 +34,11 @@ internal extension Array {
     ///--------------
     
     /**
-    Returns 
+    Returns the array by sorting the UIView's by their tag property.
+    */
+    internal func sortedArrayByTag() -> [Element] {
+        
+        return sorted(by: { (obj1 : Element, obj2 : Element) -> Bool in
+            
+            let view1 = obj1 as! UIView
+          
