@@ -58,4 +58,16 @@ internal extension Array {
             let view2 = obj2 as! UIView
             
             let x1 = view1.frame.minX
-            let y1 = view1.
+            let y1 = view1.frame.minY
+            let x2 = view2.frame.minX
+            let y2 = view2.frame.minY
+            
+            if y1 != y2 {
+                return y1 < y2
+            } else {
+                return x1 < x2
+            }
+        })
+    }
+}
+
