@@ -32,4 +32,10 @@ public extension UIScrollView {
     /**
      If YES, then scrollview will ignore scrolling (simply not scroll it) for adjusting textfield position. Default is NO.
      */
-    public var shouldIgnoreScrollingAdjustment: 
+    public var shouldIgnoreScrollingAdjustment: Bool {
+        get {
+            
+            if let aValue = objc_getAssociatedObject(self, &kIQShouldIgnoreScrollingAdjustment) as? Bool {
+                return aValue
+            } else {
+                return fal
