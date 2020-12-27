@@ -52,4 +52,11 @@ public extension UIScrollView {
     public var shouldRestoreScrollViewContentOffset: Bool {
         get {
             
-            if let aValue = objc_getAssociatedObject(self, &kIQShoul
+            if let aValue = objc_getAssociatedObject(self, &kIQShouldRestoreScrollViewContentOffset) as? Bool {
+                return aValue
+            } else {
+                return false
+            }
+        }
+        set(newValue) {
+            objc_setAssociatedObject(self, &kIQSh
