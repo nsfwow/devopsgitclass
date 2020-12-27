@@ -38,4 +38,13 @@ public extension UIScrollView {
             if let aValue = objc_getAssociatedObject(self, &kIQShouldIgnoreScrollingAdjustment) as? Bool {
                 return aValue
             } else {
-                return fal
+                return false
+            }
+        }
+        set(newValue) {
+            objc_setAssociatedObject(self, &kIQShouldIgnoreScrollingAdjustment, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+
+    /**
+     To set cust
