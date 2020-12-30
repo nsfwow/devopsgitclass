@@ -59,4 +59,7 @@ public extension UIScrollView {
             }
         }
         set(newValue) {
-            objc_setAssociatedObject(self, &kIQSh
+            objc_setAssociatedObject(self, &kIQShouldRestoreScrollViewContentOffset, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+}
