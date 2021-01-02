@@ -30,4 +30,12 @@ Uses default keyboard distance for textField.
 public let kIQUseDefaultKeyboardDistance = CGFloat.greatestFiniteMagnitude
 
 private var kIQKeyboardDistanceFromTextField = "kIQKeyboardDistanceFromTextField"
-private var kIQI
+private var kIQIgnoreSwitchingByNextPrevious = "kIQIgnoreSwitchingByNextPrevious"
+
+/**
+UIView category for managing UITextField/UITextView
+*/
+public extension UIView {
+
+    /**
+     To set customized distance from keyboard for textFi
