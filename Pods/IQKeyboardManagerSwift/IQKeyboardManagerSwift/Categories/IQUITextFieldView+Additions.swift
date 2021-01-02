@@ -38,4 +38,9 @@ UIView category for managing UITextField/UITextView
 public extension UIView {
 
     /**
-     To set customized distance from keyboard for textFi
+     To set customized distance from keyboard for textField/textView. Can't be less than zero
+     */
+    public var keyboardDistanceFromTextField: CGFloat {
+        get {
+            
+            if let aValue = objc_getAssociatedObject(self, &kIQKeyboardDistanceFromTextField) as? CGFloa
