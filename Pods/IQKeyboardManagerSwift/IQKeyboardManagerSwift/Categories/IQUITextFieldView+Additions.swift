@@ -55,4 +55,10 @@ public extension UIView {
     }
     
     /**
-     If shouldIgnoreSwitchingByNextPrevious is true then library will ignore this textField/textView while moving to other textField/textView using key
+     If shouldIgnoreSwitchingByNextPrevious is true then library will ignore this textField/textView while moving to other textField/textView using keyboard toolbar next previous buttons. Default is false
+     */
+    public var ignoreSwitchingByNextPrevious: Bool {
+        get {
+            
+            if let aValue = objc_getAssociatedObject(self, &kIQIgnoreSwitchingByNextPrevious) as? Bool {
+      
