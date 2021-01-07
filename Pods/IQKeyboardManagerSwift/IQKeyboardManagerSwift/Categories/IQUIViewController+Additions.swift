@@ -24,4 +24,12 @@
 import UIKit
 
 
-private var kIQLayoutGuideConstraint = "kIQLayoutGuideCon
+private var kIQLayoutGuideConstraint = "kIQLayoutGuideConstraint"
+
+
+public extension UIViewController {
+
+    /**
+    To set customized distance from keyboard for textField/textView. Can't be less than zero
+     
+     @deprecated    Library is internally handling Safe Area (If you are using Saf
