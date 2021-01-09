@@ -1,5 +1,6 @@
+
 //
-//  IQUIViewController+Additions.swift
+//  IQUIWindow+Hierarchy.swift
 // https://github.com/hackiftekhar/IQKeyboardManager
 // Copyright (c) 2013-16 Iftekhar Qurashi.
 //
@@ -21,28 +22,33 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+
 import UIKit
 
+/** @abstract UIWindow hierarchy category.  */
+public extension UIWindow {
 
-private var kIQLayoutGuideConstraint = "kIQLayoutGuideConstraint"
-
-
-public extension UIViewController {
-
-    /**
-    To set customized distance from keyboard for textField/textView. Can't be less than zero
-     
-     @deprecated    Library is internally handling Safe Area (If you are using Safe Area from Xcode9 and iOS11) and there is no need to do any tweak if you already migrated to use Safe Area
-    */
-    @available(iOS, deprecated: 11.0)
-    @IBOutlet public var IQLayoutGuideConstraint: NSLayoutConstraint? {
-        get {
-            
-            return objc_getAssociatedObject(self, &kIQLayoutGuideConstraint) as? NSLayoutConstraint
+    /** @return Returns the current Top Most ViewController in hierarchy.   */
+    public func topMostWindowController()->UIViewController? {
+        
+        var topController = rootViewController
+        
+        while let presentedController = topController?.presentedViewController {
+            topController = presentedController
+        }
+        
+        return topController
+    }
+    
+    /** @return Returns the topViewController in stack of topMostWindowController.    */
+    public func currentViewController()->UIViewController? {
+        
+        var currentViewController = topMostWindowController()
+        
+        while currentViewController != nil && currentViewController is UINavigationController && (currentViewController as! UINavigationController).topViewController != nil {
+            currentViewController = (currentViewController as! UINavigationController).topViewController
         }
 
-        set(newValue) {
-            objc_setAssociatedObject(self, &kIQLayoutGuideConstraint, newValue,objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-        }
+        return currentViewController
     }
 }
