@@ -37,4 +37,9 @@ public extension UIViewController {
     @available(iOS, deprecated: 11.0)
     @IBOutlet public var IQLayoutGuideConstraint: NSLayoutConstraint? {
         get {
-  
+            
+            return objc_getAssociatedObject(self, &kIQLayoutGuideConstraint) as? NSLayoutConstraint
+        }
+
+        set(newValue) {
+            objc_setAssociatedObject(self, &kIQLayoutGuideConstraint, newValue,objc_AssociationPolicy.OBJC_ASSOCI
