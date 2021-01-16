@@ -24,4 +24,13 @@
 
 import Foundation
 
-///-----------------------------
+///-----------------------------------
+/// MARK: IQAutoToolbarManageBehaviour
+///-----------------------------------
+
+/**
+`IQAutoToolbarBySubviews`
+Creates Toolbar according to subview's hirarchy of Textfield's in view.
+
+`IQAutoToolbarByTag`
+Creates Toolbar according to tag prop
