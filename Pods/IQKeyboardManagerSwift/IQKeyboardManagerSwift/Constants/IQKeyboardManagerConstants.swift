@@ -57,4 +57,11 @@ public enum IQAutoToolbarManageBehaviour : Int {
 public enum IQPreviousNextDisplayMode : Int {
     case Default
     case alwaysHide
-    case alwaysS
+    case alwaysShow
+}
+
+/*
+ 
+ /---------------------------------------------------------------------------------------------------\
+ \---------------------------------------------------------------------------------------------------/
+ |                               
