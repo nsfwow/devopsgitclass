@@ -33,4 +33,12 @@ import Foundation
 Creates Toolbar according to subview's hirarchy of Textfield's in view.
 
 `IQAutoToolbarByTag`
-Creates Toolbar according to tag prop
+Creates Toolbar according to tag property of TextField's.
+
+`IQAutoToolbarByPosition`
+Creates Toolbar according to the y,x position of textField in it's superview coordinate.
+*/
+public enum IQAutoToolbarManageBehaviour : Int {
+    case bySubviews
+    case byTag
+    case byPosition
