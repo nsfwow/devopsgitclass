@@ -51,4 +51,10 @@ public enum IQAutoToolbarManageBehaviour : Int {
  `IQPreviousNextDisplayModeAlwaysHide`
  Do not show NextPrevious buttons in any case.
  
- `IQPreviousNextDisplayModeAlwaysS
+ `IQPreviousNextDisplayModeAlwaysShow`
+ Always show nextPrevious buttons, if there are more than 1 textField then both buttons will be visible but will be shown as disabled.
+ */
+public enum IQPreviousNextDisplayMode : Int {
+    case Default
+    case alwaysHide
+    case alwaysS
