@@ -42,3 +42,13 @@ public enum IQAutoToolbarManageBehaviour : Int {
     case bySubviews
     case byTag
     case byPosition
+}
+
+/**
+ `IQPreviousNextDisplayModeDefault`
+ Show NextPrevious when there are more than 1 textField otherwise hide.
+ 
+ `IQPreviousNextDisplayModeAlwaysHide`
+ Do not show NextPrevious buttons in any case.
+ 
+ `IQPreviousNextDisplayModeAlwaysS
