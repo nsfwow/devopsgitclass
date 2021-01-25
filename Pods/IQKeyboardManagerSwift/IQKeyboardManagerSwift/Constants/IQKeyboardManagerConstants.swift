@@ -78,4 +78,10 @@ public enum IQPreviousNextDisplayMode : Int {
  
  ------------------------------------------------------------
  When UITextView become first responder
- ----------------
+ ------------------------------------------------------------
+ - UIKeyboardWillShowNotification
+ - UITextViewTextDidBeginEditingNotification (UITextView)
+ - UIKeyboardDidShowNotification
+ 
+ ------------------------------------------------------------
+ When sw
