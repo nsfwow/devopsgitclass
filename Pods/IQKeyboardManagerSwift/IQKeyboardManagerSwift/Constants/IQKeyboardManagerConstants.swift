@@ -84,4 +84,8 @@ public enum IQPreviousNextDisplayMode : Int {
  - UIKeyboardDidShowNotification
  
  ------------------------------------------------------------
- When sw
+ When switching focus from UITextField to another UITextField
+ ------------------------------------------------------------
+ - UITextFieldTextDidEndEditingNotification (UITextField1)
+ - UITextFieldTextDidBeginEditingNotification (UITextField2)
+ - UIKeyboardWillSho
