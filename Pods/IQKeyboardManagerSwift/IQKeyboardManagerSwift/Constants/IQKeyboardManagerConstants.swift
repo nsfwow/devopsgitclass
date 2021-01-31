@@ -119,4 +119,10 @@ public enum IQPreviousNextDisplayMode : Int {
  When opening/closing UIKeyboard Predictive bar
  ------------------------------------------------------------
  - UIKeyboardWillShowNotification
- - UIKeyboardDidShowNotific
+ - UIKeyboardDidShowNotification
+ 
+ ------------------------------------------------------------
+ On orientation change
+ ------------------------------------------------------------
+ - UIApplicationWillChangeStatusBarOrientationNotification
+ - UIKeyboardWillHideNotifi
