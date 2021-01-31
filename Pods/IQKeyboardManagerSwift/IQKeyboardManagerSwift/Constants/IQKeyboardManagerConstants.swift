@@ -109,4 +109,10 @@ public enum IQPreviousNextDisplayMode : Int {
  
  ------------------------------------------------------------
  When switching focus from UITextView to UITextField
- -------------------------
+ ------------------------------------------------------------
+ - UITextViewTextDidEndEditingNotification (UITextView)
+ - UITextFieldTextDidBeginEditingNotification (UITextField)
+ - UIKeyboardWillShowNotification
+ - UIKeyboardDidShowNotification
+ 
+ -----
