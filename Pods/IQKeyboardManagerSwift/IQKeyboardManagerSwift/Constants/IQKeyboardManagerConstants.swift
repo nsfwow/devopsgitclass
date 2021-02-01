@@ -125,4 +125,10 @@ public enum IQPreviousNextDisplayMode : Int {
  On orientation change
  ------------------------------------------------------------
  - UIApplicationWillChangeStatusBarOrientationNotification
- - UIKeyboardWillHideNotifi
+ - UIKeyboardWillHideNotification
+ - UIKeyboardDidHideNotification
+ - UIApplicationDidChangeStatusBarOrientationNotification
+ - UIKeyboardWillShowNotification
+ - UIKeyboardDidShowNotification
+ - UIKeyboardWillShowNotification
+ - UIKeyboardDidShowNotific
