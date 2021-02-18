@@ -131,4 +131,6 @@ public enum IQPreviousNextDisplayMode : Int {
  - UIKeyboardWillShowNotification
  - UIKeyboardDidShowNotification
  - UIKeyboardWillShowNotification
- - UIKeyboardDidShowNotific
+ - UIKeyboardDidShowNotification
+ 
+ */
