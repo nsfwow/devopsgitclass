@@ -44,4 +44,12 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     
     /**
     Default tag for toolbar with Previous/Next buttons -1005.
-   
+    */
+    fileprivate static let  kIQPreviousNextButtonToolbarTag =   -1005
+    
+    ///---------------------------
+    ///  MARK: UIKeyboard handling
+    ///---------------------------
+    
+    /**
+     Registered classes list with library.
