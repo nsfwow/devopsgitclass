@@ -35,4 +35,13 @@ import QuartzCore
 Codeless drop-in universal library allows to prevent issues of keyboard sliding up and cover UITextField/UITextView. Neither need to write any code nor any setup required and much more. A generic version of KeyboardManagement. https://developer.apple.com/library/ios/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/KeyboardManagement/KeyboardManagement.html
 */
 
-open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate 
+open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
+    
+    /**
+    Default tag for toolbar with Done button   -1002.
+    */
+    fileprivate static let  kIQDoneButtonToolbarTag         =   -1002
+    
+    /**
+    Default tag for toolbar with Previous/Next buttons -1005.
+   
