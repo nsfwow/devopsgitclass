@@ -59,4 +59,10 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     /**
     Enable/disable managing distance between keyboard and textField. Default is YES(Enabled when class loads in `+(void)load` method).
     */
-    open var enable = 
+    open var enable = false {
+        
+        didSet {
+            //If not enable, enable it.
+            if enable == true &&
+                oldValue == false {
+                //If keyboard is currently showing. Sending a fake notification for keybo
