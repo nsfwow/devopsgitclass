@@ -65,4 +65,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             //If not enable, enable it.
             if enable == true &&
                 oldValue == false {
-                //If keyboard is currently showing. Sending a fake notification for keybo
+                //If keyboard is currently showing. Sending a fake notification for keyboardWillShow to adjust view according to keyboard.
+                if _kbShowNotification != nil {
+                    keyboardWillShow(_kbShowNotification)
+                }
+                showLog("Enabled"
