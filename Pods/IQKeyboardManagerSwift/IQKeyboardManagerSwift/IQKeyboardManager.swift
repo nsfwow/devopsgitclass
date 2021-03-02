@@ -78,4 +78,12 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         }
     }
     
-    fileprivate func privateIsE
+    fileprivate func privateIsEnabled()-> Bool {
+        
+        var isEnabled = enable
+        
+        if let textFieldViewController = _textFieldView?.viewController() {
+            
+            if isEnabled == false {
+                
+                
