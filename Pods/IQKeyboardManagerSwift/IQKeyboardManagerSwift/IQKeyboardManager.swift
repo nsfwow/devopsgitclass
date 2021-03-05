@@ -109,3 +109,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                 
                 //Special Controllers
                 if isEnabled == true {
+                    
+                    let classNameString = NSStringFromClass(type(of:textFieldViewController.self))
+                    
+                    //_UIAlertControllerTextFieldViewController
+                
