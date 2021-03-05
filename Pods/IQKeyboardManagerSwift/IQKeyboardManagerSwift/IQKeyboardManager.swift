@@ -98,4 +98,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             
             if isEnabled == true {
                 
-                //If viewCont
+                //If viewController is kind of disabled viewController class, then assuming it's disabled.
+                for disabledClass in disabledDistanceHandlingClasses {
+                    
+                    if textFieldViewController.isKind
