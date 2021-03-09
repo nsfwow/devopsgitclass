@@ -113,4 +113,10 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                     let classNameString = NSStringFromClass(type(of:textFieldViewController.self))
                     
                     //_UIAlertControllerTextFieldViewController
-                
+                    if (classNameString.contains("UIAlertController") && classNameString.hasSuffix("TextFieldViewController")) {
+                        isEnabled = false
+                    }
+                }
+            }
+        }
+     
