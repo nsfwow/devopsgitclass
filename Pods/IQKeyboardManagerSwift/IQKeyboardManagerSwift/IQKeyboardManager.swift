@@ -119,4 +119,14 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                 }
             }
         }
-     
+        
+        return isEnabled
+    }
+    
+    /**
+    To set keyboard distance from textField. can't be less than zero. Default is 10.0.
+    */
+    open var keyboardDistanceFromTextField: CGFloat {
+        
+        set {
+            _privateKeyboardD
