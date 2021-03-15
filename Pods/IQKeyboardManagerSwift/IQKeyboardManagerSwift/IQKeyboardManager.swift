@@ -148,4 +148,14 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     }
     
     /**
-     moved distance to the top used to maintain distance
+     moved distance to the top used to maintain distance between keyboard and textField. Most of the time this will be a positive value.
+     */
+    open var movedDistance: CGFloat {
+        
+        get {
+            return _privateMovedDistance
+        }
+    }
+
+    /**
+    Prevent keyboar
