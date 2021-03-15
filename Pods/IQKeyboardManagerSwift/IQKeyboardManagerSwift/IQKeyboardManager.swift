@@ -129,4 +129,13 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     open var keyboardDistanceFromTextField: CGFloat {
         
         set {
-            _privateKeyboardD
+            _privateKeyboardDistanceFromTextField =  max(0, newValue)
+            showLog("keyboardDistanceFromTextField: \(_privateKeyboardDistanceFromTextField)")
+        }
+        get {
+            return _privateKeyboardDistanceFromTextField
+        }
+    }
+    
+    /**
+     Bool
