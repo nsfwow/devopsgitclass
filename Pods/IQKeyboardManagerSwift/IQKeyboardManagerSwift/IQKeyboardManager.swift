@@ -138,4 +138,14 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     }
     
     /**
-     Bool
+     Boolean to know if keyboard is showing.
+     */
+    open var keyboardShowing: Bool {
+        
+        get {
+            return _privateIsKeyboardShowing
+        }
+    }
+    
+    /**
+     moved distance to the top used to maintain distance
