@@ -158,4 +158,11 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     }
 
     /**
-    Prevent keyboar
+    Prevent keyboard manager to slide up the rootView to more than keyboard height. Default is YES.
+    */
+    open var preventShowingBottomBlankSpace = true
+    
+    /**
+    Returns the default singleton instance.
+    */
+    @objc open class func sharedMa
