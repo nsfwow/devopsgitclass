@@ -189,4 +189,13 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
 
             privateIsEnableAutoToolbar() ?addToolbarIfRequired():removeToolbarIfRequired()
 
-            let enableToolbar 
+            let enableToolbar = enableAutoToolbar ? "Yes" : "NO"
+
+            showLog("enableAutoToolbar: \(enableToolbar)")
+        }
+    }
+    
+    fileprivate func privateIsEnableAutoToolbar() -> Bool {
+        
+        var enableToolbar = enableAutoToolbar
+    
