@@ -172,4 +172,13 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             static let kbManager = IQKeyboardManager()
         }
         
-        /** 
+        /** @return Returns the default singleton instance. */
+        return Static.kbManager
+    }
+    
+    ///-------------------------
+    /// MARK: IQToolbar handling
+    ///-------------------------
+    
+    /**
+    Automatic add the IQToolbar functio
