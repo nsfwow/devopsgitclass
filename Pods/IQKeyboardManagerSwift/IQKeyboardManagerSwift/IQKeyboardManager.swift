@@ -165,4 +165,11 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     /**
     Returns the default singleton instance.
     */
-    @objc open class func sharedMa
+    @objc open class func sharedManager() -> IQKeyboardManager {
+        
+        struct Static {
+            //Singleton instance. Initializing keyboard manger.
+            static let kbManager = IQKeyboardManager()
+        }
+        
+        /** 
