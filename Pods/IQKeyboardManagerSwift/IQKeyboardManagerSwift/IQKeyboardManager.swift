@@ -181,4 +181,12 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     ///-------------------------
     
     /**
-    Automatic add the IQToolbar functio
+    Automatic add the IQToolbar functionality. Default is YES.
+    */
+    open var enableAutoToolbar = true {
+        
+        didSet {
+
+            privateIsEnableAutoToolbar() ?addToolbarIfRequired():removeToolbarIfRequired()
+
+            let enableToolbar 
