@@ -198,4 +198,10 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     fileprivate func privateIsEnableAutoToolbar() -> Bool {
         
         var enableToolbar = enableAutoToolbar
-    
+        
+        if let textFieldViewController = _textFieldView?.viewController() {
+            
+            if enableToolbar == false {
+                
+                //If found any toolbar enabled classes then return.
+        
