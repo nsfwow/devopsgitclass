@@ -208,4 +208,12 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                     
                     if textFieldViewController.isKind(of: enabledClass) {
                         enableToolbar = true
-                   
+                        break
+                    }
+                }
+            }
+            
+            if enableToolbar == true {
+                
+                //If found any toolbar disabled classes then return.
+                for disabledClass in disab
