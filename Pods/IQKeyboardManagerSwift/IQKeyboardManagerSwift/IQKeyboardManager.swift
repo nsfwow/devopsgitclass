@@ -224,3 +224,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                     }
                 }
                 
+                //Special Controllers
+                if enableToolbar == true {
+                    
+                    let classNameString = NSStringFromClass(type(of:textFieldViewController.self))
+                    
+                    /
