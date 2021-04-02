@@ -232,4 +232,15 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                     //_UIAlertControllerTextFieldViewController
                     if (classNameString.contains("UIAlertController") && classNameString.hasSuffix("TextFieldViewController")) {
                         enableToolbar = false
-            
+                    }
+                }
+            }
+        }
+
+        return enableToolbar
+    }
+
+    /**
+     /**
+     IQAutoToolbarBySubviews:   Creates Toolbar according to subview's hirarchy of Textfield's in view.
+     IQAutoToolbar
