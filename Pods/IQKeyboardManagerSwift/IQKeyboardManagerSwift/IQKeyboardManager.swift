@@ -243,4 +243,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     /**
      /**
      IQAutoToolbarBySubviews:   Creates Toolbar according to subview's hirarchy of Textfield's in view.
-     IQAutoToolbar
+     IQAutoToolbarByTag:        Creates Toolbar according to tag property of TextField's.
+     IQAutoToolbarByPosition:   Creates Toolbar according to the y,x position of textField in it's superview coordinate.
+     
+     Default is IQAutoToolbarBySubviews.
+     */
+    AutoToolbar managing beh
