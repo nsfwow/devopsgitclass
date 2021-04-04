@@ -253,4 +253,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     open var toolbarManageBehaviour = IQAutoToolbarManageBehaviour.bySubviews
 
     /**
-    If YES, then uses textField's tintColor property for IQToolbar, otherwise tint color is bl
+    If YES, then uses textField's tintColor property for IQToolbar, otherwise tint color is black. Default is NO.
+    */
+    open var shouldToolbarUsesTextFieldTintColor = false
+    
+    /**
+    This is used for toolbar.tintColor when textfield.keyboardAppearance is UIKeyboardAppearanceDefault. If shouldToolbarUsesTex
