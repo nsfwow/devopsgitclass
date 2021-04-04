@@ -263,4 +263,10 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     open var toolbarTintColor : UIColor?
 
     /**
-     This is used for toolbar.barTintColor. Default is nil and uses white 
+     This is used for toolbar.barTintColor. Default is nil and uses white color.
+     */
+    open var toolbarBarTintColor : UIColor?
+
+    /**
+     IQPreviousNextDisplayModeDefault:      Show NextPrevious when there are more than 1 textField otherwise hide.
+     IQPreviousNextDisplayModeAlwaysHide:   
