@@ -277,4 +277,12 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     /**
      Toolbar done button icon, If nothing is provided then check toolbarDoneBarButtonItemText to draw done button.
      */
-    open var toolbarDoneBarButtonItemImage : 
+    open var toolbarDoneBarButtonItemImage : UIImage?
+    
+    /**
+     Toolbar done button text, If nothing is provided then system default 'UIBarButtonSystemItemDone' will be used.
+     */
+    open var toolbarDoneBarButtonItemText : String?
+
+    /**
+    If YES, 
