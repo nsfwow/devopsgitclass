@@ -269,4 +269,6 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
 
     /**
      IQPreviousNextDisplayModeDefault:      Show NextPrevious when there are more than 1 textField otherwise hide.
-     IQPreviousNextDisplayModeAlwaysHide:   
+     IQPreviousNextDisplayModeAlwaysHide:   Do not show NextPrevious buttons in any case.
+     IQPreviousNextDisplayModeAlwaysShow:   Always show nextPrevious buttons, if there are more than 1 textField then both buttons will be visible but will be shown as disabled.
+    
