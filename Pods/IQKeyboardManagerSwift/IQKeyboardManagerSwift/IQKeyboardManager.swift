@@ -285,4 +285,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     open var toolbarDoneBarButtonItemText : String?
 
     /**
-    If YES, 
+    If YES, then it add the textField's placeholder text on IQToolbar. Default is YES.
+    */
+    @available(*,deprecated, message: "This is renamed to `shouldShowToolbarPlaceholder` for more clear naming.")
+    open var shouldShowTextFieldPlaceholder: Bool {
+        
+        set
