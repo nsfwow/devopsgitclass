@@ -290,4 +290,15 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     @available(*,deprecated, message: "This is renamed to `shouldShowToolbarPlaceholder` for more clear naming.")
     open var shouldShowTextFieldPlaceholder: Bool {
         
-        set
+        set {
+            shouldShowToolbarPlaceholder =  newValue
+        }
+        get {
+            return shouldShowToolbarPlaceholder
+        }
+    }
+    open var shouldShowToolbarPlaceholder = true
+
+    /**
+    Placeholder Font. Default is nil.
+    */
