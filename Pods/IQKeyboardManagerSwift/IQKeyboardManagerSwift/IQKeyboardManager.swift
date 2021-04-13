@@ -302,3 +302,12 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     /**
     Placeholder Font. Default is nil.
     */
+    open var placeholderFont: UIFont?
+    
+    
+    ///--------------------------
+    /// MARK: UITextView handling
+    ///--------------------------
+    
+    /** used to adjust contentInset of UITextView. */
+    fileprivate var         startingTextViewContentInsets = UIEdgeInse
