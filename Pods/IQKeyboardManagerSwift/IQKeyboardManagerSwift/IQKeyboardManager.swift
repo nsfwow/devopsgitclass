@@ -310,4 +310,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     ///--------------------------
     
     /** used to adjust contentInset of UITextView. */
-    fileprivate var         startingTextViewContentInsets = UIEdgeInse
+    fileprivate var         startingTextViewContentInsets = UIEdgeInsets.zero
+    
+    /** used to adjust scrollIndicatorInsets of UITextView. */
+    fileprivate var         startingTextViewScrollIndicatorInsets = UIEdgeInsets.zero
+    
+    /** used with textView to detect a textFieldView contentInset is changed or not. (Bug
