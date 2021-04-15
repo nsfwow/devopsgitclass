@@ -315,4 +315,10 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     /** used to adjust scrollIndicatorInsets of UITextView. */
     fileprivate var         startingTextViewScrollIndicatorInsets = UIEdgeInsets.zero
     
-    /** used with textView to detect a textFieldView contentInset is changed or not. (Bug
+    /** used with textView to detect a textFieldView contentInset is changed or not. (Bug ID: #92)*/
+    fileprivate var         isTextViewContentInsetChanged = false
+        
+
+    ///---------------------------------------
+    /// MARK: UIKeyboard appearance overriding
+    ///-----
