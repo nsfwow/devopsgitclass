@@ -329,4 +329,10 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     open var overrideKeyboardAppearance = false
     
     /**
-    If overrideKeyboardAppearance is YES, then all the textField keyboardAppeara
+    If overrideKeyboardAppearance is YES, then all the textField keyboardAppearance is set using this property.
+    */
+    open var keyboardAppearance = UIKeyboardAppearance.default
+
+    
+    ///-----------------------------------------------------------
+    /// MARK: UITextField/UITextView Next/Previou
