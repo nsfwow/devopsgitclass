@@ -335,4 +335,11 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
 
     
     ///-----------------------------------------------------------
-    /// MARK: UITextField/UITextView Next/Previou
+    /// MARK: UITextField/UITextView Next/Previous/Resign handling
+    ///-----------------------------------------------------------
+    
+    
+    /**
+    Resigns Keyboard on touching outside of UITextField/View. Default is NO.
+    */
+    open var shouldResignOnTouchOutside = fa
