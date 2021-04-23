@@ -342,4 +342,11 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     /**
     Resigns Keyboard on touching outside of UITextField/View. Default is NO.
     */
-    open var shouldResignOnTouchOutside = fa
+    open var shouldResignOnTouchOutside = false {
+        
+        didSet {
+            _tapGesture.isEnabled = privateShouldResignOnTouchOutside()
+            
+            let shouldResign = shouldResignOnTouchOutside ? "Yes" : "NO"
+            
+            showLog("shouldResignOnTouchOutside: \(s
