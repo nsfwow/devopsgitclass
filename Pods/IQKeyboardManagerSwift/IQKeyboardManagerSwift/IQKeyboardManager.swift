@@ -354,4 +354,11 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     }
     
     /** TapGesture to resign keyboard on view's touch. It's a readonly property and exposed only for adding/removing dependencies if your added gesture does have collision with this one */
-    filepriva
+    fileprivate var _tapGesture: UITapGestureRecognizer!
+    open var resignFirstResponderGesture: UITapGestureRecognizer {
+        get {
+            return _tapGesture
+        }
+    }
+    
+    /************************************
