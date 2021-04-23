@@ -349,4 +349,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             
             let shouldResign = shouldResignOnTouchOutside ? "Yes" : "NO"
             
-            showLog("shouldResignOnTouchOutside: \(s
+            showLog("shouldResignOnTouchOutside: \(shouldResign)")
+        }
+    }
+    
+    /** TapGesture to resign keyboard on view's touch. It's a readonly property and exposed only for adding/removing dependencies if your added gesture does have collision with this one */
+    filepriva
