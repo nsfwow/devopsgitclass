@@ -361,4 +361,10 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         }
     }
     
-    /************************************
+    /*******************************************/
+    
+    fileprivate func privateShouldResignOnTouchOutside() -> Bool {
+        
+        var shouldResign = shouldResignOnTouchOutside
+        
+        if let textFieldViewController = _textFieldView?.viewCo
