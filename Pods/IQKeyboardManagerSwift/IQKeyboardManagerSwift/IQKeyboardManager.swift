@@ -367,4 +367,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         
         var shouldResign = shouldResignOnTouchOutside
         
-        if let textFieldViewController = _textFieldView?.viewCo
+        if let textFieldViewController = _textFieldView?.viewController() {
+            
+            if shouldResign == false {
+                
+                //If viewController is kind of enable viewController class, then assuming shouldResignOnTouchOutside is enabled.
+         
