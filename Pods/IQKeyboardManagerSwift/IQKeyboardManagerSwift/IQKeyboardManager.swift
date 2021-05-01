@@ -395,4 +395,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                 //Special Controllers
                 if shouldResign == true {
                     
-                    let classNameString = NSStringFromClass(type(of:te
+                    let classNameString = NSStringFromClass(type(of:textFieldViewController.self))
+                    
+                    //_UIAlertControllerTextFieldViewController
+                    if (classNameString.contains("UIAlertController") && classNameString.hasSuffix("TextFieldViewCo
