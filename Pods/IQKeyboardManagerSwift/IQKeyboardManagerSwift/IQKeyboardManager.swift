@@ -388,4 +388,11 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                     
                     if textFieldViewController.isKind(of: disabledClass) {
                         shouldResign = false
-                   
+                        break
+                    }
+                }
+                
+                //Special Controllers
+                if shouldResign == true {
+                    
+                    let classNameString = NSStringFromClass(type(of:te
