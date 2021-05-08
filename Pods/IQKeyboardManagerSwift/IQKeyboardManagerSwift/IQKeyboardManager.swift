@@ -411,4 +411,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     /**
     Resigns currently first responder field.
     */
-    @discar
+    @discardableResult open func resignFirstResponder()-> Bool {
+        
+        if let textFieldRetain = _textFieldView {
+            
+            //Resigning first responder
+            let isResignFirstResponder = textFieldRetain.
