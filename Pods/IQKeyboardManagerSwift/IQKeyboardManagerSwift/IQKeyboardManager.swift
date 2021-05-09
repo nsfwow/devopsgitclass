@@ -416,4 +416,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         if let textFieldRetain = _textFieldView {
             
             //Resigning first responder
-            let isResignFirstResponder = textFieldRetain.
+            let isResignFirstResponder = textFieldRetain.resignFirstResponder()
+            
+            //  If it refuses then becoming it as first responder again.    (Bug ID: #96)
+            if isResignFirstResponder == false {
+                //If it refuses to resign then becoming
