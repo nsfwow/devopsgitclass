@@ -423,4 +423,16 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                 //If it refuses to resign then becoming it first responder again for getting notifications callback.
                 textFieldRetain.becomeFirstResponder()
                 
-                showLog("Refuses to resign first responder: \(String(describing: _textFieldVie
+                showLog("Refuses to resign first responder: \(String(describing: _textFieldView?._IQDescription()))")
+            }
+            
+            return isResignFirstResponder
+        }
+        
+        return false
+    }
+    
+    /**
+    Returns YES if can navigate to previous responder textField/textView, otherwise NO.
+    */
+    @obj
