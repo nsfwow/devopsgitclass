@@ -445,4 +445,13 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                     
                     //If it is not first textField. then it's previous object canBecomeFirstResponder.
                     if index > 0 {
-      
+                        return true
+                    }
+                }
+            }
+        }
+        return false
+    }
+    
+    /**
+    Returns YES if can navigate to next responder textField/text
