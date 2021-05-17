@@ -460,4 +460,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         //Getting all responder view's.
         if let textFields = responderViews() {
             if let  textFieldRetain = _textFieldView {
-                //Getting index of current t
+                //Getting index of current textField.
+                if let index = textFields.index(of: textFieldRetain) {
+                    
+                    //If it is not first textField. then it's previous object canBecomeFirstResponder.
+                    if index < textF
