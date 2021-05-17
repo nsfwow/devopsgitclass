@@ -454,4 +454,10 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     }
     
     /**
-    Returns YES if can navigate to next responder textField/text
+    Returns YES if can navigate to next responder textField/textView, otherwise NO.
+    */
+    @objc open var canGoNext: Bool {
+        //Getting all responder view's.
+        if let textFields = responderViews() {
+            if let  textFieldRetain = _textFieldView {
+                //Getting index of current t
