@@ -476,4 +476,10 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     /**
     Navigate to previous responder textField/textView.
     */
-    @objc @discardableR
+    @objc @discardableResult open func goPrevious()-> Bool {
+        
+        //Getting all responder view's.
+        if let  textFieldRetain = _textFieldView {
+            if let textFields = responderViews() {
+                //Getting index of current textField.
+                if 
