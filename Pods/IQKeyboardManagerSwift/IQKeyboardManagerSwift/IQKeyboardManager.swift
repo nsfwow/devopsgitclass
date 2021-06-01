@@ -486,4 +486,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                     
                     //If it is not first textField. then it's previous object becomeFirstResponder.
                     if index > 0 {
-   
+                        
+                        let nextTextField = textFields[index-1]
+                        
+                        let isAcceptAsFirstResponder = nextTextField.becomeFirstResponder()
+                        
+                        //  I
