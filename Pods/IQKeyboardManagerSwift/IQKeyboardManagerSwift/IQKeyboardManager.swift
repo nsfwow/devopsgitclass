@@ -493,4 +493,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                         
                         //  If it refuses then becoming previous textFieldView as first responder again.    (Bug ID: #96)
                         if isAcceptAsFirstResponder == false {
-                            //If next field refuses to become first re
+                            //If next field refuses to become first responder then restoring old textField as first responder.
+                            textFieldRetain.becomeFirstResponder()
+                            
+                            showLog("Refuses to become first responder: \(nextTextField
