@@ -518,4 +518,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             if let textFields = responderViews() {
                 //Getting index of current textField.
                 if let index = textFields.index(of: textFieldRetain) {
-                    //If it is not last textField
+                    //If it is not last textField. then it's next object becomeFirstResponder.
+                    if index < textFields.count-1 {
+                        
+                        let nextTextField = textFields[index+1]
+                        
+              
