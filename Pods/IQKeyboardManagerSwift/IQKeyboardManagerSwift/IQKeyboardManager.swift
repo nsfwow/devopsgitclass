@@ -514,4 +514,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     @objc @discardableResult open func goNext()-> Bool {
 
         //Getting all responder view's.
-        if let  textFieldRetain = _textFie
+        if let  textFieldRetain = _textFieldView {
+            if let textFields = responderViews() {
+                //Getting index of current textField.
+                if let index = textFields.index(of: textFieldRetain) {
+                    //If it is not last textField
