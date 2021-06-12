@@ -523,4 +523,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                         
                         let nextTextField = textFields[index+1]
                         
-              
+                        let isAcceptAsFirstResponder = nextTextField.becomeFirstResponder()
+                        
+                        //  If it refuses then becoming previous textFieldView as first responder again.    (Bug ID: #96)
+                        if isAcc
