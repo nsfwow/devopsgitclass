@@ -533,4 +533,16 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                             showLog("Refuses to become first responder: \(nextTextField._IQDescription())")
                         }
                         
-                        return isAcceptAsFirstResponde
+                        return isAcceptAsFirstResponder
+                    }
+                }
+            }
+        }
+
+        return false
+    }
+    
+    /**	previousAction. */
+    @objc internal func previousAction (_ barButton : IQBarButtonItem) {
+        
+        //If user wants
