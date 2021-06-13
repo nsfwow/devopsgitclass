@@ -545,4 +545,12 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     /**	previousAction. */
     @objc internal func previousAction (_ barButton : IQBarButtonItem) {
         
-        //If user wants
+        //If user wants to play input Click sound.
+        if shouldPlayInputClicks == true {
+            //Play Input Click Sound.
+            UIDevice.current.playInputClick()
+        }
+        
+        if canGoPrevious == true {
+            
+            if let textField
