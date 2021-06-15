@@ -561,4 +561,13 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                     barButton.invocation.action != nil {
                     
                     UIApplication.shared.sendAction(barButton.invocation.action!, to: barButton.invocation.target, from: textFieldRetain, for: UIEvent())
-                
+                }
+            }
+        }
+    }
+    
+    /**	nextAction. */
+    @objc internal func nextAction (_ barButton : IQBarButtonItem) {
+        
+        //If user wants to play input Click sound.
+        if shouldPlayInputClicks == true {
