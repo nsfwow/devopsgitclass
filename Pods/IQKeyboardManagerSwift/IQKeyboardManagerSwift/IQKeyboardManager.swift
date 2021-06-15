@@ -558,4 +558,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                 
                 if isAcceptAsFirstResponder &&
                     barButton.invocation.target != nil &&
-                    barButton.i
+                    barButton.invocation.action != nil {
+                    
+                    UIApplication.shared.sendAction(barButton.invocation.action!, to: barButton.invocation.target, from: textFieldRetain, for: UIEvent())
+                
