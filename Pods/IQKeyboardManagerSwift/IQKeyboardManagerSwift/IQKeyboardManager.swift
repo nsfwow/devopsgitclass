@@ -578,4 +578,10 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         if canGoNext == true {
             
             if let textFieldRetain = _textFieldView {
-                let isAcceptAsFirstResponder
+                let isAcceptAsFirstResponder = goNext()
+                
+                if isAcceptAsFirstResponder &&
+                    barButton.invocation.target != nil &&
+                    barButton.invocation.action != nil {
+                    
+                    UIApplicati
