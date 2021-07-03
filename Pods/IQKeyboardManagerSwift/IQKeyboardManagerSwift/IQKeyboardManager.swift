@@ -591,4 +591,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     }
     
     /**	doneAction. Resigning current textField. */
- 
+    @objc internal func doneAction (_ barButton : IQBarButtonItem) {
+        
+        //If user wants to play input Click sound.
+        if shouldPlayInputClicks == true {
+            //Play Input Click Sound.
+            UIDevice.cur
