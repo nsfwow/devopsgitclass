@@ -596,4 +596,11 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         //If user wants to play input Click sound.
         if shouldPlayInputClicks == true {
             //Play Input Click Sound.
-            UIDevice.cur
+            UIDevice.current.playInputClick()
+        }
+        
+        if let textFieldRetain = _textFieldView {
+            //Resign textFieldView.
+            let isResignedFirstResponder = resignFirstResponder()
+            
+            if
