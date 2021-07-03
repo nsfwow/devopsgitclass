@@ -607,4 +607,11 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                 barButton.invocation.target != nil &&
                 barButton.invocation.action != nil{
                 
-                UIApplication.shared.sendAction(barButton.invocation.action!, to: barButton.invoca
+                UIApplication.shared.sendAction(barButton.invocation.action!, to: barButton.invocation.target, from: textFieldRetain, for: UIEvent())
+            }
+        }
+    }
+    
+    /** Resigning on tap gesture.   (Enhancement ID: #14)*/
+    @objc internal func tapRecognized(_ gesture: UITapGestureRecognizer) {
+   
