@@ -603,4 +603,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             //Resign textFieldView.
             let isResignedFirstResponder = resignFirstResponder()
             
-            if
+            if isResignedFirstResponder &&
+                barButton.invocation.target != nil &&
+                barButton.invocation.action != nil{
+                
+                UIApplication.shared.sendAction(barButton.invocation.action!, to: barButton.invoca
