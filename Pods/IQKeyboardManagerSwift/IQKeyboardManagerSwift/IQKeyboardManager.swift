@@ -614,4 +614,12 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     
     /** Resigning on tap gesture.   (Enhancement ID: #14)*/
     @objc internal func tapRecognized(_ gesture: UITapGestureRecognizer) {
-   
+        
+        if gesture.state == UIGestureRecognizerState.ended {
+
+            //Resigning currently responder textField.
+            _ = resignFirstResponder()
+        }
+    }
+    
+    /** Note: returning YES is guaranteed to allow simultan
