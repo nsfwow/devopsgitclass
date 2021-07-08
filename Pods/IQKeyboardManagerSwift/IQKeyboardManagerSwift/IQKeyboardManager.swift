@@ -622,4 +622,5 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         }
     }
     
-    /** Note: returning YES is guaranteed to allow simultan
+    /** Note: returning YES is guaranteed to allow simultaneous recognition. returning NO is not guaranteed to prevent simultaneous recognition, as the other gesture's delegate may return YES. */
+    open func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shoul
