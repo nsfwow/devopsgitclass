@@ -623,4 +623,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     }
     
     /** Note: returning YES is guaranteed to allow simultaneous recognition. returning NO is not guaranteed to prevent simultaneous recognition, as the other gesture's delegate may return YES. */
-    open func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shoul
+    open func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return false
+    }
+    
+    /** To not detect touch events in a subclass of UIControl, these may have added their own selector for specific work */
+    ope
