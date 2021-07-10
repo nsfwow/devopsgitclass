@@ -628,4 +628,5 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     }
     
     /** To not detect touch events in a subclass of UIControl, these may have added their own selector for specific work */
-    ope
+    open func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        //  Should not recognize gesture if the clicked view is either UIControl or UINavigationBar(<Back button etc...)    (
