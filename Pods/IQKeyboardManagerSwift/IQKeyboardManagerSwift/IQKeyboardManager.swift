@@ -648,4 +648,12 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     /**
     If YES, then it plays inputClick sound on next/previous/done click.
     */
-    open var shouldPlayInputClicks = 
+    open var shouldPlayInputClicks = true
+    
+    
+    ///---------------------------
+    /// MARK: UIAnimation handling
+    ///---------------------------
+
+    /**
+    If YES, then calls 'setNeedsLayout' and 'layoutIfNeeded' on any frame update of to vi
