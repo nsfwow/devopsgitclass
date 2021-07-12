@@ -640,4 +640,12 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
 
         return true
     }
-   
+    
+    ///-----------------------
+    /// MARK: UISound handling
+    ///-----------------------
+
+    /**
+    If YES, then it plays inputClick sound on next/previous/done click.
+    */
+    open var shouldPlayInputClicks = 
