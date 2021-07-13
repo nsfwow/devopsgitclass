@@ -665,3 +665,4 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     ///-----------------------------------------------
     
     /**
+     If YES, then always consider UINavigationController.view begin point as {0,0}, this is a workaround to fix a bug #464 because there are no notification mechanism exist when UINavigationController.view.frame gets changed internally.
