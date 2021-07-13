@@ -656,4 +656,12 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     ///---------------------------
 
     /**
-    If YES, then calls 'setNeedsLayout' and 'layoutIfNeeded' on any frame update of to vi
+    If YES, then calls 'setNeedsLayout' and 'layoutIfNeeded' on any frame update of to viewController's view.
+    */
+    open var layoutIfNeededOnUpdate = false
+
+    ///-----------------------------------------------
+    /// @name InteractivePopGestureRecognizer handling
+    ///-----------------------------------------------
+    
+    /**
