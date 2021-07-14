@@ -675,4 +675,10 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     ///------------------------------------
 
     /**
-     If YES, then library will try to adjust viewContro
+     If YES, then library will try to adjust viewController.additionalSafeAreaInsets to automatically handle layout guide. Default is NO.
+     */
+    open var canAdjustAdditionalSafeAreaInsets = false
+#endif
+
+    ///------------------------------------
+    /// MARK: Clas
