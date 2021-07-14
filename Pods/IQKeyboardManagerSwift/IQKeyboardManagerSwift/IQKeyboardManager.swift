@@ -681,4 +681,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
 #endif
 
     ///------------------------------------
-    /// MARK: Clas
+    /// MARK: Class Level disabling methods
+    ///------------------------------------
+    
+    /**
+     Disable distance handling within the scope of disabled distance handling viewControllers classes. Within this scope, 'enabled' property is ignored. Class sho
