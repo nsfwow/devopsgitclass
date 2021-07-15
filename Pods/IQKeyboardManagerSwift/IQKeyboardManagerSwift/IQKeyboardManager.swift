@@ -690,4 +690,6 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     open var disabledDistanceHandlingClasses  = [UIViewController.Type]()
     
     /**
-     Enable distance handling within the scope of enabled distance handling viewControllers classes. Wi
+     Enable distance handling within the scope of enabled distance handling viewControllers classes. Within this scope, 'enabled' property is ignored. Class should be kind of UIViewController. If same Class is added in disabledDistanceHandlingClasses list, then enabledDistanceHandlingClasses will be ignored.
+     */
+    open var enabledDistanceHandlingClasses  = [UIV
