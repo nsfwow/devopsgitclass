@@ -692,4 +692,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     /**
      Enable distance handling within the scope of enabled distance handling viewControllers classes. Within this scope, 'enabled' property is ignored. Class should be kind of UIViewController. If same Class is added in disabledDistanceHandlingClasses list, then enabledDistanceHandlingClasses will be ignored.
      */
-    open var enabledDistanceHandlingClasses  = [UIV
+    open var enabledDistanceHandlingClasses  = [UIViewController.Type]()
+    
+    /**
+     Disable automatic toolbar creation within the scope of disabled toolbar viewControllers classes. Within this scope, 'enableAutoToolbar' property is ignored. Class should be kind of UIViewController.
+     */
+    open var dis
