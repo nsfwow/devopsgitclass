@@ -697,4 +697,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     /**
      Disable automatic toolbar creation within the scope of disabled toolbar viewControllers classes. Within this scope, 'enableAutoToolbar' property is ignored. Class should be kind of UIViewController.
      */
-    open var dis
+    open var disabledToolbarClasses  = [UIViewController.Type]()
+    
+    /**
+     Enable automatic toolbar creation within the scope of enabled toolbar viewControllers classes. Within this scope, 'enableAutoToolbar' property is ignored. Class should be ki
