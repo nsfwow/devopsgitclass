@@ -705,4 +705,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     open var enabledToolbarClasses  = [UIViewController.Type]()
 
     /**
-     Allowed subclasses of UI
+     Allowed subclasses of UIView to add all inner textField, this will allow to navigate between textField contains in different superview. Class should be kind of UIView.
+     */
+    open var toolbarPreviousNextAllowedClasses  = [UIView.Type]()
+    
+    /
