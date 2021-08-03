@@ -709,4 +709,10 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
      */
     open var toolbarPreviousNextAllowedClasses  = [UIView.Type]()
     
-    /
+    /**
+     Disabled classes to ignore 'shouldResignOnTouchOutside' property, Class should be kind of UIViewController.
+     */
+    open var disabledTouchResignedClasses  = [UIViewController.Type]()
+    
+    /**
+     Enabled classes to fo
