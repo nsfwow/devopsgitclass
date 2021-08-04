@@ -726,3 +726,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
 
     ///-------------------------------------------
     /// MARK: Third Party Library support
+    /// Add TextField/TextView Notifications customised Notifications. For example while using YYTextView https://github.com/ibireme/YYText
+    ///-------------------------------------------
+    
+    /**
+    Add/Remove cust
