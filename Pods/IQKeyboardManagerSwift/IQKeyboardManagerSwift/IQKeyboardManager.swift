@@ -720,4 +720,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     open var enabledTouchResignedClasses  = [UIViewController.Type]()
     
     /**
-     if shouldResignOnTouchOutside is enabled then you can customise the behaviour to not recognise gesture touches on some spec
+     if shouldResignOnTouchOutside is enabled then you can customise the behaviour to not recognise gesture touches on some specific view subclasses. Class should be kind of UIView. Default is [UIControl, UINavigationBar]
+     */
+    open var touchResignedGestureIgnoreClasses  = [UIView.Type]()    
+
+    ///-------------------------------------------
+    /// MARK: Third Party Library support
