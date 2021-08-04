@@ -715,4 +715,6 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     open var disabledTouchResignedClasses  = [UIViewController.Type]()
     
     /**
-     Enabled classes to fo
+     Enabled classes to forcefully enable 'shouldResignOnTouchOutsite' property. Class should be kind of UIViewController. If same Class is added in disabledTouchResignedClasses list, then enabledTouchResignedClasses will be ignored.
+     */
+    open v
