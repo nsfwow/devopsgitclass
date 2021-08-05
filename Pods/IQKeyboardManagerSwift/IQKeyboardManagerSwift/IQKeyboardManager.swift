@@ -730,4 +730,6 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     ///-------------------------------------------
     
     /**
-    Add/Remove customised Notification for third party customised TextField/TextView. Please be aware that the Notification object must be idential to UITextField/UITextView Notification objects and customised TextField/TextView support must be iden
+    Add/Remove customised Notification for third party customised TextField/TextView. Please be aware that the Notification object must be idential to UITextField/UITextView Notification objects and customised TextField/TextView support must be idential to UITextField/UITextView.
+    @param didBeginEditingNotificationName This should be identical to UITextViewTextDidBeginEditingNotification
+    @param didEndEditingNotificationName This should be identical to UITextViewTextDidEndEditingNoti
