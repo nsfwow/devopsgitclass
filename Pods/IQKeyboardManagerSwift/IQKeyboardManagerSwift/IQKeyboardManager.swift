@@ -739,4 +739,5 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         
         registeredClasses.append(aClass)
 
-       
+        NotificationCenter.default.addObserver(self, selector: #selector(self.textFieldViewDidBeginEditing(_:)),    name: Notification.Name(rawValue: didBeginEditingNotificationName), object: nil)
+        NotificationCenter.default.addObserver(self, sel
