@@ -748,4 +748,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         if let index = registeredClasses.index(where: { element in
             return element == aClass.self
         }) {
-            registeredClasses.remove(at: 
+            registeredClasses.remove(at: index)
+        }
+
+        NotificationCenter.default.removeObserver(self, name: Notification.Name(rawValue: didBeginEditingNotificationName), object: nil)
+        NotificationCenter.default.removeObserver(self, name: Notification.Name(rawValue: di
