@@ -752,4 +752,12 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         }
 
         NotificationCenter.default.removeObserver(self, name: Notification.Name(rawValue: didBeginEditingNotificationName), object: nil)
-        NotificationCenter.default.removeObserver(self, name: Notification.Name(rawValue: di
+        NotificationCenter.default.removeObserver(self, name: Notification.Name(rawValue: didEndEditingNotificationName), object: nil)
+    }
+    
+    /**************************************************************************************/
+    ///------------------------
+    /// MARK: Private variables
+    ///------------------------
+
+    /********************
