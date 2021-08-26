@@ -760,4 +760,10 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     /// MARK: Private variables
     ///------------------------
 
-    /********************
+    /*******************************************/
+
+    /** To save UITextField/UITextView object voa textField/textView notifications. */
+    fileprivate weak var    _textFieldView: UIView?
+    
+    /** To save rootViewController.view.frame. */
+    fileprivate va
