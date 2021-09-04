@@ -772,4 +772,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     fileprivate weak var    _rootViewController: UIViewController?
     
 #if swift(>=3.2)
-    /** To save additionalSafeAreaInsets of rootViewCon
+    /** To save additionalSafeAreaInsets of rootViewController to tweak iOS11 Safe Area */
+    fileprivate var         _initialAdditionalSafeAreaInsets = UIEdgeInsets.zero
+#endif
+
+    /** To save topBottomLayoutConstraint original constant */
+    fileprivate 
