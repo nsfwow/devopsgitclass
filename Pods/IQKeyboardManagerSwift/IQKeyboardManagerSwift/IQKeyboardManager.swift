@@ -777,4 +777,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
 #endif
 
     /** To save topBottomLayoutConstraint original constant */
-    fileprivate 
+    fileprivate var         _layoutGuideConstraintInitialConstant: CGFloat  = 0
+
+    /** To save topBottomLayoutConstraint original constraint reference */
+    fileprivate weak var    _layoutGuideConstraint: NSLay
