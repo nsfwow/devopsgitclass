@@ -780,4 +780,11 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     fileprivate var         _layoutGuideConstraintInitialConstant: CGFloat  = 0
 
     /** To save topBottomLayoutConstraint original constraint reference */
-    fileprivate weak var    _layoutGuideConstraint: NSLay
+    fileprivate weak var    _layoutGuideConstraint: NSLayoutConstraint?
+
+    /*******************************************/
+
+    /** Variable to save lastScrollView that was scrolled. */
+    fileprivate weak var    _lastScrollView: UIScrollView?
+    
+    /** LastScrollView's initial contentOffse
