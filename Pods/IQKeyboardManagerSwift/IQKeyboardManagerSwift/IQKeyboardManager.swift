@@ -766,4 +766,10 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     fileprivate weak var    _textFieldView: UIView?
     
     /** To save rootViewController.view.frame. */
-    fileprivate va
+    fileprivate var         _topViewBeginRect = CGRect.zero
+    
+    /** To save rootViewController */
+    fileprivate weak var    _rootViewController: UIViewController?
+    
+#if swift(>=3.2)
+    /** To save additionalSafeAreaInsets of rootViewCon
