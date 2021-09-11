@@ -805,4 +805,10 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     fileprivate var         _kbSize = CGSize.zero
     
     /** To save Status Bar size. */
-    fileprivate var  
+    fileprivate var         _statusBarFrame = CGRect.zero
+    
+    /** To save keyboard animation duration. */
+    fileprivate var         _animationDuration : TimeInterval = 0.25
+    
+    /** To mimic the keyboard animation */
+    fileprivate var     
