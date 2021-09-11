@@ -821,4 +821,10 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     fileprivate var         _privateMovedDistance : CGFloat = 0.0
     
     /** To use with keyboardDistanceFromTextField. */
-    fileprivate var  
+    fileprivate var         _privateKeyboardDistanceFromTextField: CGFloat = 10.0
+    
+    /**************************************************************************************/
+    
+    ///--------------------------------------
+    /// MARK: Initialization/Deinitialization
+    ///---------------
