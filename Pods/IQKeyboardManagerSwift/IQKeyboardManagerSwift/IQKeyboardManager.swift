@@ -815,4 +815,10 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     
     /*******************************************/
 
-    /** Boolean to maintain keyboard is showing or it is hide. To solve rootViewController.view.
+    /** Boolean to maintain keyboard is showing or it is hide. To solve rootViewController.view.frame calculations. */
+    fileprivate var         _privateIsKeyboardShowing = false
+
+    fileprivate var         _privateMovedDistance : CGFloat = 0.0
+    
+    /** To use with keyboardDistanceFromTextField. */
+    fileprivate var  
