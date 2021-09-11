@@ -787,4 +787,10 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     /** Variable to save lastScrollView that was scrolled. */
     fileprivate weak var    _lastScrollView: UIScrollView?
     
-    /** LastScrollView's initial contentOffse
+    /** LastScrollView's initial contentOffset. */
+    fileprivate var         _startingContentOffset = CGPoint.zero
+    
+    /** LastScrollView's initial scrollIndicatorInsets. */
+    fileprivate var         _startingScrollIndicatorInsets = UIEdgeInsets.zero
+    
+    /** Last
