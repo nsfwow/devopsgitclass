@@ -793,4 +793,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     /** LastScrollView's initial scrollIndicatorInsets. */
     fileprivate var         _startingScrollIndicatorInsets = UIEdgeInsets.zero
     
-    /** Last
+    /** LastScrollView's initial contentInsets. */
+    fileprivate var         _startingContentInsets = UIEdgeInsets.zero
+    
+    /*******************************************/
+
+    /** To save keyboardWillShowNotification. Needed for enable keyboard functional
