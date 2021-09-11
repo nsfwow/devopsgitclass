@@ -798,4 +798,11 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     
     /*******************************************/
 
-    /** To save keyboardWillShowNotification. Needed for enable keyboard functional
+    /** To save keyboardWillShowNotification. Needed for enable keyboard functionality. */
+    fileprivate var         _kbShowNotification: Notification?
+    
+    /** To save keyboard size. */
+    fileprivate var         _kbSize = CGSize.zero
+    
+    /** To save Status Bar size. */
+    fileprivate var  
