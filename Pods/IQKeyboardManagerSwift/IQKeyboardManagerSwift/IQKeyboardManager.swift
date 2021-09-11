@@ -811,4 +811,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     fileprivate var         _animationDuration : TimeInterval = 0.25
     
     /** To mimic the keyboard animation */
-    fileprivate var     
+    fileprivate var         _animationCurve = UIViewAnimationOptions.curveEaseOut
+    
+    /*******************************************/
+
+    /** Boolean to maintain keyboard is showing or it is hide. To solve rootViewController.view.
