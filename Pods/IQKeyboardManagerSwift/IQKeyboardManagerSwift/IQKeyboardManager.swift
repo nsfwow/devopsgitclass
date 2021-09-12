@@ -827,4 +827,13 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     
     ///--------------------------------------
     /// MARK: Initialization/Deinitialization
-    ///---------------
+    ///--------------------------------------
+    
+    /*  Singleton Object Initialization. */
+    override init() {
+        
+        super.init()
+
+        self.registerAllNotifications()
+
+        //Creating gesture for @shouldResignOnTouchOutside. (E
