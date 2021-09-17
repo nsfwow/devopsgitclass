@@ -840,4 +840,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         _tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapRecognized(_:)))
         _tapGesture.cancelsTouchesInView = false
         _tapGesture.delegate = self
-        _tapGesture.isEna
+        _tapGesture.isEnabled = shouldResignOnTouchOutside
+        
+        //Loading IQToolbar, IQTitleBarButtonItem, IQBarButtonItem to fix first time keyboard appearance delay (Bug ID: #550)
+        let textField = UITextField()
+        textField.addDoneOnKeyboardWithTarget(nil,
