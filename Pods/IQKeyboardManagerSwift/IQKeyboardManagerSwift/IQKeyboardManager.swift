@@ -853,4 +853,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         disabledTouchResignedClasses.append(UIAlertController.self)
         toolbarPreviousNextAllowedClasses.append(UITableView.self)
         toolbarPreviousNextAllowedClasses.append(UICollectionView.self)
-        toolbarPreviousNextAllowedClasses.append(IQPreviousNext
+        toolbarPreviousNextAllowedClasses.append(IQPreviousNextView.self)
+        touchResignedGestureIgnoreClasses.append(UIControl.self)
+        touchResignedGestureIgnoreClasses.append(UINavigationBar.self)
+    }
+    
+    /** Override +load method to enable KeyboardManager when class l
