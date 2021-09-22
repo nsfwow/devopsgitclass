@@ -850,4 +850,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         disabledDistanceHandlingClasses.append(UITableViewController.self)
         disabledDistanceHandlingClasses.append(UIAlertController.self)
         disabledToolbarClasses.append(UIAlertController.self)
-        disabledTouchRes
+        disabledTouchResignedClasses.append(UIAlertController.self)
+        toolbarPreviousNextAllowedClasses.append(UITableView.self)
+        toolbarPreviousNextAllowedClasses.append(UICollectionView.self)
+        toolbarPreviousNextAllowedClasses.append(IQPreviousNext
