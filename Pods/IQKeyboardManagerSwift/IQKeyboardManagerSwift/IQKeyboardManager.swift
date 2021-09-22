@@ -845,4 +845,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         //Loading IQToolbar, IQTitleBarButtonItem, IQBarButtonItem to fix first time keyboard appearance delay (Bug ID: #550)
         let textField = UITextField()
         textField.addDoneOnKeyboardWithTarget(nil, action: #selector(self.doneAction(_:)))
-        textField.addPreviousNextDoneOnKeyboardWithTarget(nil, previousAction: #selector(self.previousAction(_:)), nextAction: #selector(self.nextAction(_:)), doneAction: #selector(self.doneAction(_:
+        textField.addPreviousNextDoneOnKeyboardWithTarget(nil, previousAction: #selector(self.previousAction(_:)), nextAction: #selector(self.nextAction(_:)), doneAction: #selector(self.doneAction(_:)))
+        
+        disabledDistanceHandlingClasses.append(UITableViewController.self)
+        disabledDistanceHandlingClasses.append(UIAlertController.self)
+        disabledToolbarClasses.append(UIAlertController.self)
+        disabledTouchRes
