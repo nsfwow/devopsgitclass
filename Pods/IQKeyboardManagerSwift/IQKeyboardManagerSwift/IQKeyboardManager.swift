@@ -858,4 +858,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         touchResignedGestureIgnoreClasses.append(UINavigationBar.self)
     }
     
-    /** Override +load method to enable KeyboardManager when class l
+    /** Override +load method to enable KeyboardManager when class loader load IQKeyboardManager. Enabling when app starts (No need to write any code) */
+    /** It doesn't work from Swift 1.2 */
+//    override public class func load() {
+//        super.load()
+//        
+//        //Enabling IQKeyb
