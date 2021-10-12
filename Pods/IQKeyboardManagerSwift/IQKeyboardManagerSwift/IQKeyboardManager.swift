@@ -863,4 +863,13 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
 //    override public class func load() {
 //        super.load()
 //        
-//        //Enabling IQKeyb
+//        //Enabling IQKeyboardManager.
+//        IQKeyboardManager.sharedManager().enable = true
+//    }
+    
+    deinit {
+        //  Disable the keyboard manager.
+        enable = false
+
+        //Removing notification observers on dealloc.
+        NotificationCenter.default.removeOb
