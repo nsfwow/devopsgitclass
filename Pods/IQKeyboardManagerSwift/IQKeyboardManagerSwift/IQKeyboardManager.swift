@@ -872,4 +872,14 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         enable = false
 
         //Removing notification observers on dealloc.
-        NotificationCenter.default.removeOb
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    /** Getting keyWindow. */
+    fileprivate func keyWindow() -> UIWindow? {
+        
+        if let keyWindow = _textFieldView?.window {
+            return keyWindow
+        } else {
+            
+      
