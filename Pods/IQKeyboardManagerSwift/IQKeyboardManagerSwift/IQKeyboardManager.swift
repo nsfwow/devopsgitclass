@@ -882,4 +882,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             return keyWindow
         } else {
             
-      
+            struct Static {
+                /** @abstract   Save keyWindow object for reuse.
+                @discussion Sometimes [[UIApplication sharedApplication] keyWindow] is returning nil between the app.   */
+                static weak var keyWind
