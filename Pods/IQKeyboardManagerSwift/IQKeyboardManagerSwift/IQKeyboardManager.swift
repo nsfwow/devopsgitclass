@@ -891,4 +891,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             /*  (Bug ID: #23, #25, #73)   */
             let originalKeyWindow = UIApplication.shared.keyWindow
             
-            //If original key window is not nil and the cached keywindow is also not original keywindo
+            //If original key window is not nil and the cached keywindow is also not original keywindow then changing keywindow.
+            if originalKeyWindow != nil &&
+                (Static.keyWindow == nil || Static.keyWindow != originalKeyWindow) {
+                Static.keyWindow = originalKeyWindow
+    
