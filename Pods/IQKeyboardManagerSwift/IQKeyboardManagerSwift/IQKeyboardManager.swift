@@ -906,4 +906,11 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     /// MARK: Helper Functions
     ///-----------------------
     
-    /*  Helper function to manipulate RootViewController's
+    /*  Helper function to manipulate RootViewController's frame with animation. */
+    fileprivate func setRootViewFrame(_ frame: CGRect) {
+        
+        //  Getting topMost ViewController.
+        var controller = _textFieldView?.topMostController()
+        
+        if controller == nil {
+      
