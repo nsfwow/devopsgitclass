@@ -895,4 +895,15 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             if originalKeyWindow != nil &&
                 (Static.keyWindow == nil || Static.keyWindow != originalKeyWindow) {
                 Static.keyWindow = originalKeyWindow
+            }
+
+            //Return KeyWindow
+            return Static.keyWindow
+        }
+    }
+
+    ///-----------------------
+    /// MARK: Helper Functions
+    ///-----------------------
     
+    /*  Helper function to manipulate RootViewController's
