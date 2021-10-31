@@ -913,4 +913,10 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         var controller = _textFieldView?.topMostController()
         
         if controller == nil {
-      
+            controller = keyWindow()?.topMostWindowController()
+        }
+        
+        if let unwrappedController = controller {
+            
+            var newFrame = frame
+            //frame size needs to be adjusted on iOS
