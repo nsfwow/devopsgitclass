@@ -919,4 +919,12 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         if let unwrappedController = controller {
             
             var newFrame = frame
-            //frame size needs to be adjusted on iOS
+            //frame size needs to be adjusted on iOS8 due to orientation structure changes.
+            newFrame.size = unwrappedController.view.frame.size
+            
+#if swift(>=3.2)
+    
+            var safeAreaNewInset = UIEdgeInsets.zero;
+
+            if canAdjustAdditionalSafeAreaInsets {
+     
