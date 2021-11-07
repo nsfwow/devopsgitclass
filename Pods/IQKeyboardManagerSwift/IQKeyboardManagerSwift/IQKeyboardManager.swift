@@ -939,4 +939,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                         
                         if textFieldView.isSearchBarTextField() {
                             
-                            if  let searchBar = textFieldView.superviewOfClassType(UISearchBar.self)
+                            if  let searchBar = textFieldView.superviewOfClassType(UISearchBar.self) {
+                                specialKeyboardDistanceFromTextField = searchBar.keyboardDistanceFromTextField
+                            }
+                        }
+                        
+                        let newKeyboardDistanceFr
