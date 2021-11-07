@@ -927,4 +927,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             var safeAreaNewInset = UIEdgeInsets.zero;
 
             if canAdjustAdditionalSafeAreaInsets {
-     
+        
+                if #available(iOS 11, *) {
+                    
+                    if let textFieldView = _textFieldView {
+                        safeAreaNewInset = _initialAdditionalSafeAreaInsets;
+                        let viewMo
