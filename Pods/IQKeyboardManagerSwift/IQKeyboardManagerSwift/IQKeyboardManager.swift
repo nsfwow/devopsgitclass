@@ -935,4 +935,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                         let viewMovement : CGFloat = _topViewBeginRect.maxY - newFrame.maxY;
                         
                         //Maintain keyboardDistanceFromTextField
-                        var specialKeyboardDistanceFromTextField = textFieldView.keyboardDistanc
+                        var specialKeyboardDistanceFromTextField = textFieldView.keyboardDistanceFromTextField
+                        
+                        if textFieldView.isSearchBarTextField() {
+                            
+                            if  let searchBar = textFieldView.superviewOfClassType(UISearchBar.self)
