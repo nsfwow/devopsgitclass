@@ -932,4 +932,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                     
                     if let textFieldView = _textFieldView {
                         safeAreaNewInset = _initialAdditionalSafeAreaInsets;
-                        let viewMo
+                        let viewMovement : CGFloat = _topViewBeginRect.maxY - newFrame.maxY;
+                        
+                        //Maintain keyboardDistanceFromTextField
+                        var specialKeyboardDistanceFromTextField = textFieldView.keyboardDistanc
