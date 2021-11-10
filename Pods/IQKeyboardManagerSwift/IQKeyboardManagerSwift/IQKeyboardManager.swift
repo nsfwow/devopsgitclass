@@ -946,4 +946,11 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                         
                         let newKeyboardDistanceFromTextField = (specialKeyboardDistanceFromTextField == kIQUseDefaultKeyboardDistance) ? keyboardDistanceFromTextField : specialKeyboardDistanceFromTextField
                         
-                        let textFieldDistance = textFiel
+                        let textFieldDistance = textFieldView.frame.size.height + newKeyboardDistanceFromTextField;
+                        safeAreaNewInset.bottom += min(viewMovement, textFieldDistance);
+                    }
+                }
+            }
+#endif
+
+            //Used UIViewAnimationOpti
