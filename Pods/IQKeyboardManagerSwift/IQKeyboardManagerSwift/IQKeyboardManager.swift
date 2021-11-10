@@ -944,4 +944,6 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                             }
                         }
                         
-                        let newKeyboardDistanceFr
+                        let newKeyboardDistanceFromTextField = (specialKeyboardDistanceFromTextField == kIQUseDefaultKeyboardDistance) ? keyboardDistanceFromTextField : specialKeyboardDistanceFromTextField
+                        
+                        let textFieldDistance = textFiel
