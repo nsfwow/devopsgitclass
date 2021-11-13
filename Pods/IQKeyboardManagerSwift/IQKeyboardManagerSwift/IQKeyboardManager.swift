@@ -953,4 +953,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             }
 #endif
 
-            //Used UIViewAnimationOpti
+            //Used UIViewAnimationOptionBeginFromCurrentState to minimize strange animations.
+            UIView.animate(withDuration: _animationDuration, delay: 0, options: UIViewAnimationOptions.beginFromCurrentState.union(_animationCurve), animations: { () -> Void in
+                
+#if swift(>=3.2)
+                i
