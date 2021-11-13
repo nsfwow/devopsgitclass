@@ -957,4 +957,11 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             UIView.animate(withDuration: _animationDuration, delay: 0, options: UIViewAnimationOptions.beginFromCurrentState.union(_animationCurve), animations: { () -> Void in
                 
 #if swift(>=3.2)
-                i
+                if self.canAdjustAdditionalSafeAreaInsets {
+                    if #available(iOS 11, *) {
+                        unwrappedController.additionalSafeAreaInsets = safeAreaNewInset;
+                    }
+                }
+#endif
+
+                //  Setting it's new f
