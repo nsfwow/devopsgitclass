@@ -964,4 +964,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                 }
 #endif
 
-                //  Setting it's new f
+                //  Setting it's new frame
+                unwrappedController.view.frame = newFrame
+                self.showLog("Set \(String(describing: controller?._IQDescription())) frame to : \(newFrame)")
+                
+                //Animating content if needed (Bug ID: #204)
+    
