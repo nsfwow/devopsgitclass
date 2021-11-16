@@ -969,4 +969,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                 self.showLog("Set \(String(describing: controller?._IQDescription())) frame to : \(newFrame)")
                 
                 //Animating content if needed (Bug ID: #204)
-    
+                if self.layoutIfNeededOnUpdate == true {
+                    //Animating content (Bug ID: #160)
+                    unwrappedController.view.setNeedsLayout()
+                    unwrappedController.view.layoutIfNeeded()
+                }
