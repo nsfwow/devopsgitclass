@@ -974,3 +974,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                     unwrappedController.view.setNeedsLayout()
                     unwrappedController.view.layoutIfNeeded()
                 }
+ 
+                
+                }) { (animated:Bool) -> Void in}
+        } else {  //  If can't get rootViewController then printing warning to user.
+            showLog("You must set UIWindow.rootViewController in your App
