@@ -978,4 +978,11 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                 
                 }) { (animated:Bool) -> Void in}
         } else {  //  If can't get rootViewController then printing warning to user.
-            showLog("You must set UIWindow.rootViewController in your App
+            showLog("You must set UIWindow.rootViewController in your AppDelegate to work with IQKeyboardManager")
+        }
+    }
+
+    /* Adjusting RootViewController's frame according to interface orientation. */
+    fileprivate func adjustFrame() {
+        
+        //  We are unable to get textField object while keyboard showing on UIWebView's
