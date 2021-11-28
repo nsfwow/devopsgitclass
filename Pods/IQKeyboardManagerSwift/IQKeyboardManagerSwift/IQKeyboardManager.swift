@@ -995,4 +995,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         let startTime = CACurrentMediaTime()
         showLog("****** \(#function) started ******")
 
-        //  Ge
+        //  Getting KeyWindow object.
+        let optionalWindow = keyWindow()
+        
+        //  Getting RootViewController.  (Bug ID: #1, #4)
+        var optionalRootController = _textFieldView?.topMostController()
+        if optionalRootContr
