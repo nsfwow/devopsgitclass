@@ -1000,4 +1000,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         
         //  Getting RootViewController.  (Bug ID: #1, #4)
         var optionalRootController = _textFieldView?.topMostController()
-        if optionalRootContr
+        if optionalRootController == nil {
+            optionalRootController = keyWindow()?.topMostWindowController()
+        }
+        
+        //  Converting Rectangle according to window bounds.
+        let optionalTextFieldViewRect = textFieldView.superview?.c
