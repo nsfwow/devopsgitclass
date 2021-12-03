@@ -1005,4 +1005,12 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         }
         
         //  Converting Rectangle according to window bounds.
-        let optionalTextFieldViewRect = textFieldView.superview?.c
+        let optionalTextFieldViewRect = textFieldView.superview?.convert(textFieldView.frame, to: optionalWindow)
+
+        if optionalRootController == nil ||
+            optionalWindow == nil ||
+            optionalTextFieldViewRect == nil {
+            return
+        }
+        
+        let 
