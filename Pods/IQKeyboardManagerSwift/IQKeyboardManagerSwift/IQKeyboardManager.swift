@@ -1018,4 +1018,10 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         let textFieldViewRect = optionalTextFieldViewRect!
         
         //  Getting RootViewRect.
-        var rootViewRect = rootController.view.
+        var rootViewRect = rootController.view.frame
+        //Getting statusBarFrame
+
+        //Maintain keyboardDistanceFromTextField
+        var specialKeyboardDistanceFromTextField = textFieldView.keyboardDistanceFromTextField
+        
+        if te
