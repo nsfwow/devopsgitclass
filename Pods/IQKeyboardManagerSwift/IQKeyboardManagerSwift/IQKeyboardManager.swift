@@ -1013,4 +1013,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             return
         }
         
-        let 
+        let rootController = optionalRootController!
+        let window = optionalWindow!
+        let textFieldViewRect = optionalTextFieldViewRect!
+        
+        //  Getting RootViewRect.
+        var rootViewRect = rootController.view.
