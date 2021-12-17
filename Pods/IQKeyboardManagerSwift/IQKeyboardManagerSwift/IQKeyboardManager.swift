@@ -1038,4 +1038,11 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         let statusBarFrame = UIApplication.shared.statusBarFrame
         
         //  (Bug ID: #250)
-        var layoutGuidePosition = IQLayoutGuidePosition.non
+        var layoutGuidePosition = IQLayoutGuidePosition.none
+        
+        if let viewController = textFieldView.viewController() {
+            
+            if let constraint = _layoutGuideConstraint {
+                
+                var layoutGuide : UILayoutSupport?
+                if let itemLayoutG
