@@ -1032,4 +1032,10 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         }
         
         let newKeyboardDistanceFromTextField = (specialKeyboardDistanceFromTextField == kIQUseDefaultKeyboardDistance) ? keyboardDistanceFromTextField : specialKeyboardDistanceFromTextField
-        var kbSize = _kbSi
+        var kbSize = _kbSize
+        kbSize.height += newKeyboardDistanceFromTextField
+
+        let statusBarFrame = UIApplication.shared.statusBarFrame
+        
+        //  (Bug ID: #250)
+        var layoutGuidePosition = IQLayoutGuidePosition.non
