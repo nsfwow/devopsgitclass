@@ -1057,4 +1057,14 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                     {
                         layoutGuidePosition = .top
                     }
-                    else if (itemLayoutGuide === viewController.bottomLayoutGuide)    //If bottomLayo
+                    else if (itemLayoutGuide === viewController.bottomLayoutGuide)    //If bottomLayoutGuice constraint
+                    {
+                        layoutGuidePosition = .bottom
+                    }
+                }
+            }
+        }
+        
+        let topLayoutGuide : CGFloat = statusBarFrame.height
+
+        var move : CGFloat = 0.0
