@@ -1048,4 +1048,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                 if let itemLayoutGuide = constraint.firstItem as? UILayoutSupport {
                     layoutGuide = itemLayoutGuide
                 } else if let itemLayoutGuide = constraint.secondItem as? UILayoutSupport {
+                    layoutGuide = itemLayoutGuide
+                }
+                
+                if let itemLayoutGuide : UILayoutSupport = layoutGuide {
                     
+                    if (itemLayoutGuide === viewController.topLayoutGuide)    //
