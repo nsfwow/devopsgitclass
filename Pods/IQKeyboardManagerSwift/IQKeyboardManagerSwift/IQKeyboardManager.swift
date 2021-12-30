@@ -1068,3 +1068,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         let topLayoutGuide : CGFloat = statusBarFrame.height
 
         var move : CGFloat = 0.0
+        //  Move positive = textField is hidden.
+        //  Move negative = textField is showing.
+        
+        //  Checking if there is bottomLayoutGuide attached (Bug ID: #250)
+        if layoutGuidePosition == .bott
