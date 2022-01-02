@@ -1072,4 +1072,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         //  Move negative = textField is showing.
         
         //  Checking if there is bottomLayoutGuide attached (Bug ID: #250)
-        if layoutGuidePosition == .bott
+        if layoutGuidePosition == .bottom {
+            //  Calculating move position.
+            move = textFieldViewRect.maxY-(window.frame.height-kbSize.height)
+        } else {
+            //  Calculating move position. Common for both normal and special cases.
+            move =
