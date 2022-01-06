@@ -1077,4 +1077,10 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             move = textFieldViewRect.maxY-(window.frame.height-kbSize.height)
         } else {
             //  Calculating move position. Common for both normal and special cases.
-            move =
+            move = min(textFieldViewRect.minY-(topLayoutGuide+5), textFieldViewRect.maxY-(window.frame.height-kbSize.height))
+        }
+        
+        showLog("Need to move: \(move)")
+
+        var superScrollView : UIScrollView? = nil
+        var s
