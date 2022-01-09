@@ -1094,4 +1094,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             }
             else {
                 //  Getting it's superScrollView.   //  (Enhancement ID: #21, #24)
-      
+                superView = view.superviewOfClassType(UIScrollView.self) as? UIScrollView
+            }
+        }
+        
+        //If there was a lastScrollView.    //  (Bug ID: #34)
+        if let lastScrollView = _lastScrollView
