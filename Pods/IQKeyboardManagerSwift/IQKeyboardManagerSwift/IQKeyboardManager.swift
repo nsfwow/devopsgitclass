@@ -1103,4 +1103,6 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             //If we can't find current superScrollView, then setting lastScrollView to it's original form.
             if superScrollView == nil {
                 
-                showLog("Restoring \(lastScrollView._IQDescription()) conten
+                showLog("Restoring \(lastScrollView._IQDescription()) contentInset to : \(_startingContentInsets) and contentOffset to : \(_startingContentOffset)")
+
+                UIView.animate(withDuration: _animationDuration, delay: 0, options: UIViewAnimationOptions.beginFromCurrentState.union(_animationCurve), animations:
