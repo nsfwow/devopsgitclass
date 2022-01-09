@@ -1099,4 +1099,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         }
         
         //If there was a lastScrollView.    //  (Bug ID: #34)
-        if let lastScrollView = _lastScrollView
+        if let lastScrollView = _lastScrollView {
+            //If we can't find current superScrollView, then setting lastScrollView to it's original form.
+            if superScrollView == nil {
+                
+                showLog("Restoring \(lastScrollView._IQDescription()) conten
