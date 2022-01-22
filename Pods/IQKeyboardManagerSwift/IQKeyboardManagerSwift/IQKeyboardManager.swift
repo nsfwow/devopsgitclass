@@ -1119,4 +1119,6 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                 _startingScrollIndicatorInsets = UIEdgeInsets.zero
                 _startingContentOffset = CGPoint.zero
                 _lastScrollView = nil
-         
+            } else if superScrollView != lastScrollView {     //If both scrollView's are different, then reset lastScrollView to it's original frame and setting current scrollView as last scrollView.
+                
+                showLog("Restoring \(last
