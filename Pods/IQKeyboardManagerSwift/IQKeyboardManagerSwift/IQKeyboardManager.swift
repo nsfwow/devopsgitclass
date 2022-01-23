@@ -1121,4 +1121,6 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                 _lastScrollView = nil
             } else if superScrollView != lastScrollView {     //If both scrollView's are different, then reset lastScrollView to it's original frame and setting current scrollView as last scrollView.
                 
-                showLog("Restoring \(last
+                showLog("Restoring \(lastScrollView._IQDescription()) contentInset to : \(_startingContentInsets) and contentOffset to : \(_startingContentOffset)")
+                
+                UIView.animate(withDuration: _animationDuration, delay: 0, options: UIViewAnimatio
