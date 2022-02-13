@@ -1142,4 +1142,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             }
             //Else the case where superScrollView == lastScrollView means we are on same scrollView after switching to different textField. So doing nothing, going ahead
         } else if let unwrappedSuperScrollView = superScrollView {    //If there was no lastScrollView and we found a current scrollView. then setting it as lastScrollView.
-            _lastScrollView = unwrappedSuperScro
+            _lastScrollView = unwrappedSuperScrollView
+            _startingContentInsets = unwrappedSuperScrollView.contentInset
+            _startingScrollIndicatorInsets = unwrappedSuperScrollView.scrollIndicatorInsets
+            _startingContentOffset = unwrap
