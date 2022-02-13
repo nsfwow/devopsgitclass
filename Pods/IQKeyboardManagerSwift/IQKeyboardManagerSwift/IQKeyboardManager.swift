@@ -1138,4 +1138,6 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                 _startingScrollIndicatorInsets = superScrollView!.scrollIndicatorInsets
                 _startingContentOffset = superScrollView!.contentOffset
                 
-                showLog("Saving New \(lastScrollView._IQDescription()) contentInset : \(_startingCont
+                showLog("Saving New \(lastScrollView._IQDescription()) contentInset : \(_startingContentInsets) and contentOffset : \(_startingContentOffset)")
+            }
+            //Else the case where superScrollView == lastScrollView means we are on same scrollView after switching to different textField. So doing nothing, going ahea
