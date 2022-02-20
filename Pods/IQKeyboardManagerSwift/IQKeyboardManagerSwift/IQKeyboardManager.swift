@@ -1145,4 +1145,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             _lastScrollView = unwrappedSuperScrollView
             _startingContentInsets = unwrappedSuperScrollView.contentInset
             _startingScrollIndicatorInsets = unwrappedSuperScrollView.scrollIndicatorInsets
-            _startingContentOffset = unwrap
+            _startingContentOffset = unwrappedSuperScrollView.contentOffset
+
+            showLog("Saving \(unwrappedSuperScrollView._IQDescription()) contentInset : \(_startingContentInsets) and contentOffset : \(_startingContentOffset)")
+        }
+        
+        //  Special case 
