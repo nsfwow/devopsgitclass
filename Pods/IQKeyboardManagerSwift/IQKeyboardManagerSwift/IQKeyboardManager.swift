@@ -1155,4 +1155,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         if let lastScrollView = _lastScrollView {
             //Saving
             var lastView = textFieldView
-            var sup
+            var superScrollView = _lastScrollView
+            
+            while let scrollView = superScrollView {
+                
+                //Looping in upper hierarchy until we don't found any scrollView in it's upper hirarchy till UIWind
