@@ -1150,4 +1150,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             showLog("Saving \(unwrappedSuperScrollView._IQDescription()) contentInset : \(_startingContentInsets) and contentOffset : \(_startingContentOffset)")
         }
         
-        //  Special case 
+        //  Special case for ScrollView.
+        //  If we found lastScrollView then setting it's contentOffset to show textField.
+        if let lastScrollView = _lastScrollView {
+            //Saving
+            var lastView = textFieldView
+            var sup
