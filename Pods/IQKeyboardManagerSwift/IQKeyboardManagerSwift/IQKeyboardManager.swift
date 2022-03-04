@@ -1162,4 +1162,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                 //Looping in upper hierarchy until we don't found any scrollView in it's upper hirarchy till UIWindow object.
                 if move > 0 ? (move > (-scrollView.contentOffset.y - scrollView.contentInset.top)) : scrollView.contentOffset.y>0 {
                     
-                    var tempScrollView = scrollView.sup
+                    var tempScrollView = scrollView.superviewOfClassType(UIScrollView.self) as? UIScrollView
+                    var nextScrollView : UIScrollView? = nil
+                    while let view = tempScrollView {
+                        
+                        if (view.isScrollEnabl
