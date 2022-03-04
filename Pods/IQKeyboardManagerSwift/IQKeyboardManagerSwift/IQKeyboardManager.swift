@@ -1166,4 +1166,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                     var nextScrollView : UIScrollView? = nil
                     while let view = tempScrollView {
                         
-                        if (view.isScrollEnabl
+                        if (view.isScrollEnabled  && view.shouldIgnoreScrollingAdjustment == false) {
+                            nextScrollView = view
+                            break
+                        } else {
+                            tempScrollView = view.superviewOf
