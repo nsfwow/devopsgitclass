@@ -1170,4 +1170,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                             nextScrollView = view
                             break
                         } else {
-                            tempScrollView = view.superviewOf
+                            tempScrollView = view.superviewOfClassType(UIScrollView.self) as? UIScrollView
+                        }
+                    }
+                    
+                    //Getting lastViewRect.
+                    if let lastViewRect = lastView.superview
