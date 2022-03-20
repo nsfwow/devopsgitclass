@@ -1178,4 +1178,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                     if let lastViewRect = lastView.superview?.convert(lastView.frame, to: scrollView) {
                         
                         //Calculating the expected Y offset from move and scrollView's contentOffset.
-                        var shouldOffsetY = scrollView.contentOffset.y - min(scr
+                        var shouldOffsetY = scrollView.contentOffset.y - min(scrollView.contentOffset.y,-move)
+                        
+                        //Rearranging the expected Y offset according to the view.
+                        shouldOffsetY = min(shouldOffsetY, lastViewRect.origin.y /*-5*/)   //-5 is for good 
