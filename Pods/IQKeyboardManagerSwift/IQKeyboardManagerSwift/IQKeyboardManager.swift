@@ -1184,4 +1184,6 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                         shouldOffsetY = min(shouldOffsetY, lastViewRect.origin.y /*-5*/)   //-5 is for good UI.//Commenting -5 (Bug ID: #69)
 
                         //[_textFieldView isKindOfClass:[UITextView class]] If is a UITextView type
-                        //nextScrollView == nil    If processing scrollView is last scrollVie
+                        //nextScrollView == nil    If processing scrollView is last scrollView in upper hierarchy (there is no other scrollView upper hierrchy.)
+                        //[_textFieldView isKindOfClass:[UITextView class]] If is a UITextView type
+                        //shouldOffsetY >= 0     shouldOffsetY must b
