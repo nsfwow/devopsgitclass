@@ -1186,4 +1186,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                         //[_textFieldView isKindOfClass:[UITextView class]] If is a UITextView type
                         //nextScrollView == nil    If processing scrollView is last scrollView in upper hierarchy (there is no other scrollView upper hierrchy.)
                         //[_textFieldView isKindOfClass:[UITextView class]] If is a UITextView type
-                        //shouldOffsetY >= 0     shouldOffsetY must b
+                        //shouldOffsetY >= 0     shouldOffsetY must be greater than in order to keep distance from navigationBar (Bug ID: #92)
+                        if textFieldView is UITextView == true &&
+                            nextScrollView == nil &&
+                            shouldOf
