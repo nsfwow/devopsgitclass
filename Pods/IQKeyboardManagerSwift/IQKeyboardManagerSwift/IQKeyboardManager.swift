@@ -1189,4 +1189,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                         //shouldOffsetY >= 0     shouldOffsetY must be greater than in order to keep distance from navigationBar (Bug ID: #92)
                         if textFieldView is UITextView == true &&
                             nextScrollView == nil &&
-                            shouldOf
+                            shouldOffsetY >= 0 {
+                            var maintainTopLayout : CGFloat = 0
+                            
+                            if let navigationBarFrame = textFieldView.viewController()?.navigationController?.navigationBar.frame {
+                             
