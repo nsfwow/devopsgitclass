@@ -1193,4 +1193,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                             var maintainTopLayout : CGFloat = 0
                             
                             if let navigationBarFrame = textFieldView.viewController()?.navigationController?.navigationBar.frame {
-                             
+                                maintainTopLayout = navigationBarFrame.maxY
+                            }
+                            
+                            maintainTopLayout += 10.0 //For good UI
+                            
+                            //  Converting Re
