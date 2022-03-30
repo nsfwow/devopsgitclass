@@ -1198,4 +1198,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                             
                             maintainTopLayout += 10.0 //For good UI
                             
-                            //  Converting Re
+                            //  Converting Rectangle according to window bounds.
+                            if let currentTextFieldViewRect = textFieldView.superview?.convert(textFieldView.frame, to: window) {
+
+                                //Calculating expected fix distance whic
