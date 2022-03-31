@@ -1204,4 +1204,4 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                                 //Calculating expected fix distance which needs to be managed from navigation bar
                                 let expectedFixDistance = currentTextFieldViewRect.minY - maintainTopLayout
                                 
-                                //Now if expectedOf
+                                //Now if expectedOffsetY (superScrollView.contentOffset.y + expectedFixDistance) is lower than current shouldOffsetY, which means we're in a position where navigationBar up and hide, then reducing shouldOffsetY with expectedOffsetY (superScrollView.contentOffset.y + e
