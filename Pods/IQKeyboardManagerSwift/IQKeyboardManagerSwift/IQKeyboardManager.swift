@@ -1201,4 +1201,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                             //  Converting Rectangle according to window bounds.
                             if let currentTextFieldViewRect = textFieldView.superview?.convert(textFieldView.frame, to: window) {
 
-                                //Calculating expected fix distance whic
+                                //Calculating expected fix distance which needs to be managed from navigation bar
+                                let expectedFixDistance = currentTextFieldViewRect.minY - maintainTopLayout
+                                
+                                //Now if expectedOf
