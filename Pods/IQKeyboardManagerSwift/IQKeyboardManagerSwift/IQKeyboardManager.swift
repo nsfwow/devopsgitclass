@@ -1207,4 +1207,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                                 //Now if expectedOffsetY (superScrollView.contentOffset.y + expectedFixDistance) is lower than current shouldOffsetY, which means we're in a position where navigationBar up and hide, then reducing shouldOffsetY with expectedOffsetY (superScrollView.contentOffset.y + expectedFixDistance)
                                 shouldOffsetY = min(shouldOffsetY, scrollView.contentOffset.y + expectedFixDistance)
 
-                                //Setting move to 0 because now we don't want to move any view anymore (All wi
+                                //Setting move to 0 because now we don't want to move any view anymore (All will be managed by our contentInset logic.
+                                move = 0
+                            }
+                            else {
+                                //Subtracting the Y offset from the move variab
