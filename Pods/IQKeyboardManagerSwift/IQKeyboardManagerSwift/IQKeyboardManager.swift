@@ -1218,4 +1218,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                         else
                         {
                             //Subtracting the Y offset from the move variable, because we are going to change scrollView's contentOffset.y to shouldOffsetY.
-                           
+                            move -= (shouldOffsetY-scrollView.contentOffset.y)
+                        }
+                        
+                        //Getting problem while using `setContentOffset:animated:`, So I used animation API.
+                        
