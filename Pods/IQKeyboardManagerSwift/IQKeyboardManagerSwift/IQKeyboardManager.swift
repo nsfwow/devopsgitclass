@@ -1214,4 +1214,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                                 //Subtracting the Y offset from the move variable, because we are going to change scrollView's contentOffset.y to shouldOffsetY.
                                 move -= (shouldOffsetY-scrollView.contentOffset.y)
                             }
-                      
+                        }
+                        else
+                        {
+                            //Subtracting the Y offset from the move variable, because we are going to change scrollView's contentOffset.y to shouldOffsetY.
+                           
