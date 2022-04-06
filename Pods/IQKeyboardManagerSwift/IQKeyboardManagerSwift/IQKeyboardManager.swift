@@ -1222,4 +1222,6 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                         }
                         
                         //Getting problem while using `setContentOffset:animated:`, So I used animation API.
+                        UIView.animate(withDuration: _animationDuration, delay: 0, options: UIViewAnimationOptions.beginFromCurrentState.union(_animationCurve), animations: { () -> Void in
                         
+                            self.showLog("Adjusting \(scrollView
