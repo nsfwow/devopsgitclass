@@ -1241,4 +1241,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             }
             
             //Updating contentInset
-            if let lastScrollViewRect 
+            if let lastScrollViewRect = lastScrollView.superview?.convert(lastScrollView.frame, to: window) {
+                
+                let bottom : CGFloat = kbSize.height-newKeyboardDistanceFromTextField-(window.frame.height-lastScrollViewRect.maxY)
+                
+   
