@@ -1232,4 +1232,13 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                             }) { (animated:Bool) -> Void in }
                     }
                     
-                    //  Getting next lastView & su
+                    //  Getting next lastView & superScrollView.
+                    lastView = scrollView
+                    superScrollView = nextScrollView
+                } else {
+                    break
+                }
+            }
+            
+            //Updating contentInset
+            if let lastScrollViewRect 
