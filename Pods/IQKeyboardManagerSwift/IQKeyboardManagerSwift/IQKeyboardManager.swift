@@ -1245,4 +1245,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                 
                 let bottom : CGFloat = kbSize.height-newKeyboardDistanceFromTextField-(window.frame.height-lastScrollViewRect.maxY)
                 
-   
+                // Update the insets so that the scroll vew doesn't shift incorrectly when the offset is near the bottom of the scroll view.
+                var movedInsets = lastScrollView.contentInset
+                
+                mo
