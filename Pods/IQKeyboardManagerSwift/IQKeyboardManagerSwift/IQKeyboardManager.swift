@@ -1248,4 +1248,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                 // Update the insets so that the scroll vew doesn't shift incorrectly when the offset is near the bottom of the scroll view.
                 var movedInsets = lastScrollView.contentInset
                 
-                mo
+                movedInsets.bottom = max(_startingContentInsets.bottom, bottom)
+                
+                showLog("\(lastScrollView._IQDescription()) old ContentInset : \(lastScrollView.contentInset)")
+                
+                //Getting problem while using `
