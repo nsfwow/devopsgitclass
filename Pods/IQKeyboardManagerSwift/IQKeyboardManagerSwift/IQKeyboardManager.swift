@@ -1260,4 +1260,11 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                     newInset.bottom = movedInsets.bottom
                     lastScrollView.scrollIndicatorInsets = newInset
 
-          
+                    }) { (animated:Bool) -> Void in }
+
+                showLog("\(lastScrollView._IQDescription()) new ContentInset : \(lastScrollView.contentInset)")
+            }
+        }
+        //Going ahead. No else if.
+        
+      
