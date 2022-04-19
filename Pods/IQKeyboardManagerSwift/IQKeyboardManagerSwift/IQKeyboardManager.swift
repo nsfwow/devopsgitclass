@@ -1275,4 +1275,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                 
                 UIView.animate(withDuration: _animationDuration, delay: 0, options: (_animationCurve.union(UIViewAnimationOptions.beginFromCurrentState)), animations: { () -> Void in
                     
-                   
+                    constraint.constant = constant
+                    self._rootViewController?.view.setNeedsLayout()
+                    self._rootViewController?.view.layoutIfNeeded()
+                    
+                    },
