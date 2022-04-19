@@ -1267,4 +1267,10 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         }
         //Going ahead. No else if.
         
+        if layoutGuidePosition == .top {
+            
+            if let constraint = _layoutGuideConstraint {
+                
+                let constant = min(_layoutGuideConstraintInitialConstant, constraint.constant-move)
+                
       
