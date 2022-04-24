@@ -1299,4 +1299,6 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             
         } else {
             
-            //Special case for UITextView(Readjustin
+            //Special case for UITextView(Readjusting textView.contentInset when textView hight is too big to fit on screen)
+            //_lastScrollView       If not having inside any scrollView, (now contentInset manages the full screen textView.
+            //[_textFi
