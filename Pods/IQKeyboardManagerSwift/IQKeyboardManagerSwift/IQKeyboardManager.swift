@@ -1292,4 +1292,11 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                     
                     constraint.constant = constant
                     self._rootViewController?.view.setNeedsLayout()
-                    self._rootViewCon
+                    self._rootViewController?.view.layoutIfNeeded()
+                    
+                    }, completion: { (finished) -> Void in })
+            }
+            
+        } else {
+            
+            //Special case for UITextView(Readjustin
