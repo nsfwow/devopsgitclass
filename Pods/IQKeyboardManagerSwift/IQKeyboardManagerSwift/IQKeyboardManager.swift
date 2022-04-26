@@ -1303,4 +1303,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             //_lastScrollView       If not having inside any scrollView, (now contentInset manages the full screen textView.
             //[_textFieldView isKindOfClass:[UITextView class]] If is a UITextView type
             if let textView = textFieldView as? UITextView {
-                let textViewHeight = min(textView.frame.height, (window.frame.height
+                let textViewHeight = min(textView.frame.height, (window.frame.height-kbSize.height-(topLayoutGuide)))
+                
+                if (textView.frame.size.height-textView.contentInset.bottom>textViewHeight)
+                {
+                    UIView.animate(withDuration: _animationDuration, delay: 0, 
