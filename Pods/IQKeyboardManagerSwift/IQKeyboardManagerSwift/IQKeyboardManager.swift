@@ -1307,4 +1307,6 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                 
                 if (textView.frame.size.height-textView.contentInset.bottom>textViewHeight)
                 {
-                    UIView.animate(withDuration: _animationDuration, delay: 0, 
+                    UIView.animate(withDuration: _animationDuration, delay: 0, options: (_animationCurve.union(UIViewAnimationOptions.beginFromCurrentState)), animations: { () -> Void in
+                        
+                        self.showLog("\(textFieldView._IQDescription()) Old UITextView.contentInset : \
