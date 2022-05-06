@@ -1315,4 +1315,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                         if (self.isTextViewContentInsetChanged == false)
                         {
                             self.startingTextViewContentInsets = textView.contentInset
-                            self.startingTextViewScrollIndicatorInsets = textV
+                            self.startingTextViewScrollIndicatorInsets = textView.scrollIndicatorInsets
+                        }
+                        
+                        var newContentInset = textView.contentInset
+                        newContentInset.bottom = textView.frame.size.height-textViewHeight
+                   
