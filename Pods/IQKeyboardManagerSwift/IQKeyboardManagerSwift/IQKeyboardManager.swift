@@ -1312,4 +1312,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                         self.showLog("\(textFieldView._IQDescription()) Old UITextView.contentInset : \(textView.contentInset)")
                         
                         //_isTextViewContentInsetChanged,  If frame is not change by library in past, then saving user textView properties  (Bug ID: #92)
-                        if (self.isText
+                        if (self.isTextViewContentInsetChanged == false)
+                        {
+                            self.startingTextViewContentInsets = textView.contentInset
+                            self.startingTextViewScrollIndicatorInsets = textV
