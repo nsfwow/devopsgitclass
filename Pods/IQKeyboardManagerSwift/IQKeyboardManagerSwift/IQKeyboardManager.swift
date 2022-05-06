@@ -1309,4 +1309,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                 {
                     UIView.animate(withDuration: _animationDuration, delay: 0, options: (_animationCurve.union(UIViewAnimationOptions.beginFromCurrentState)), animations: { () -> Void in
                         
-                        self.showLog("\(textFieldView._IQDescription()) Old UITextView.contentInset : \
+                        self.showLog("\(textFieldView._IQDescription()) Old UITextView.contentInset : \(textView.contentInset)")
+                        
+                        //_isTextViewContentInsetChanged,  If frame is not change by library in past, then saving user textView properties  (Bug ID: #92)
+                        if (self.isText
