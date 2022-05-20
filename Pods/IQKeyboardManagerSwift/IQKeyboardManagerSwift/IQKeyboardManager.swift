@@ -1324,4 +1324,11 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                         textView.scrollIndicatorInsets = newContentInset
                         self.isTextViewContentInsetChanged = true
                         
-                        self.s
+                        self.showLog("\(textFieldView._IQDescription()) Old UITextView.contentInset : \(textView.contentInset)")
+                        
+                        
+                        }, completion: { (finished) -> Void in })
+                }
+            }
+
+     
