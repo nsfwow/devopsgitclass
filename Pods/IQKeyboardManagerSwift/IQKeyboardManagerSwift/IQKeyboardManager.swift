@@ -1331,4 +1331,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                 }
             }
 
-     
+            //  Special case for iPad modalPresentationStyle.
+            if rootController.modalPresentationStyle == UIModalPresentationStyle.formSheet ||
+                rootController.modalPresentationStyle == UIModalPresentationStyle.pageSheet {
+                
+   
