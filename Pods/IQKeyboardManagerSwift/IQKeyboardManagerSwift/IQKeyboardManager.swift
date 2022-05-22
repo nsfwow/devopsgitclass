@@ -1335,4 +1335,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             if rootController.modalPresentationStyle == UIModalPresentationStyle.formSheet ||
                 rootController.modalPresentationStyle == UIModalPresentationStyle.pageSheet {
                 
-   
+                showLog("Found Special case for Model Presentation Style: \(rootController.modalPresentationStyle)")
+                
+                //  +Positive or zero.
+                if move >= 0 {
+                    // We should
