@@ -1343,4 +1343,6 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                     rootViewRect.origin.y -= move
                     
                     //  From now prevent keyboard manager to slide up the rootView to more than keyboard height. (Bug ID: #93)
-                
+                    if preventShowingBottomBlankSpace == true {
+                        let minimumY: CGFloat = (window.frame.height-rootViewRect.size.height-topLayoutGuide)/2-(kbSize.height-newKeyboardDistanceFromTextField)
+                    
