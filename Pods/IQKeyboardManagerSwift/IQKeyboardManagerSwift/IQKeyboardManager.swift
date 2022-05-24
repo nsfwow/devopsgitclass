@@ -1339,4 +1339,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                 
                 //  +Positive or zero.
                 if move >= 0 {
-                    // We should
+                    // We should only manipulate y.
+                    rootViewRect.origin.y -= move
+                    
+                    //  From now prevent keyboard manager to slide up the rootView to more than keyboard height. (Bug ID: #93)
+                
