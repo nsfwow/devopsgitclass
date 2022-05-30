@@ -1354,4 +1354,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                     setRootViewFrame(rootViewRect)
                     _privateMovedDistance = (_topViewBeginRect.origin.y-rootViewRect.origin.y)
                 } else {  //  -Negative
-                    //  Calculating disturb
+                    //  Calculating disturbed distance. Pull Request #3
+                    let disturbDistance = rootViewRect.minY-_topViewBeginRect.minY
+                    
+                    //  disturbDistance Negative = frame disturbed.
+                    //  disturbDistance po
