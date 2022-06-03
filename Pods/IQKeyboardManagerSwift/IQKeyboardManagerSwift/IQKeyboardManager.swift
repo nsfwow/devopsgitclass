@@ -1366,4 +1366,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                         showLog("Moving Downward")
                         //  Setting adjusted rootViewRect
                         setRootViewFrame(rootViewRect)
-                        _privateMovedDistanc
+                        _privateMovedDistance = (_topViewBeginRect.origin.y-rootViewRect.origin.y)
+                    }
+                }
+            } else {  //If presentation style is neither UIModalPresentationFormSheet nor UIModalPresentationPageSheet then 
