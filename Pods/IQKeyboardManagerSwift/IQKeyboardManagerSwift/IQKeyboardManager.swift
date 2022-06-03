@@ -1362,4 +1362,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                     if disturbDistance <= 0 {
                         // We should only manipulate y.
                         rootViewRect.origin.y -= max(move, disturbDistance)
-               
+                        
+                        showLog("Moving Downward")
+                        //  Setting adjusted rootViewRect
+                        setRootViewFrame(rootViewRect)
+                        _privateMovedDistanc
