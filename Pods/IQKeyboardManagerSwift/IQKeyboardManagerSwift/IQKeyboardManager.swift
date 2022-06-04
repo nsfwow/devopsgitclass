@@ -1369,4 +1369,10 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                         _privateMovedDistance = (_topViewBeginRect.origin.y-rootViewRect.origin.y)
                     }
                 }
-            } else {  //If presentation style is neither UIModalPresentationFormSheet nor UIModalPresentationPageSheet then 
+            } else {  //If presentation style is neither UIModalPresentationFormSheet nor UIModalPresentationPageSheet then going ahead.(General case)
+                //  +Positive or zero.
+                if move >= 0 {
+                    
+                    rootViewRect.origin.y -= move
+
+                    //  From now prevent keyboard ma
