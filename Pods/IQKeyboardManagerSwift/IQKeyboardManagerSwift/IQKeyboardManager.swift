@@ -1375,4 +1375,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                     
                     rootViewRect.origin.y -= move
 
-                    //  From now prevent keyboard ma
+                    //  From now prevent keyboard manager to slide up the rootView to more than keyboard height. (Bug ID: #93)
+                    if preventShowingBottomBlankSpace == true {
+                        
+                        rootViewRect.origin.y = max(rootView
