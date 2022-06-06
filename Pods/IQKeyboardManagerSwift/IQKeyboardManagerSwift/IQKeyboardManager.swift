@@ -1383,4 +1383,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                     
                     showLog("Moving Upward")
                     //  Setting adjusted rootViewRect
-                   
+                    setRootViewFrame(rootViewRect)
+                    _privateMovedDistance = (_topViewBeginRect.origin.y-rootViewRect.origin.y)
+                } else {  //  -Negative
+                    let disturbD
