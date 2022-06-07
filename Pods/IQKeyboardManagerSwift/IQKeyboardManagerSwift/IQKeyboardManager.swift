@@ -1389,4 +1389,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                     let disturbDistance : CGFloat = rootViewRect.minY-_topViewBeginRect.minY
                     
                     //  disturbDistance Negative = frame disturbed.
-                    //  disturbDistance positive = frame not dist
+                    //  disturbDistance positive = frame not disturbed.
+                    if disturbDistance <= 0 {
+                        
+                        rootViewRect.origin.y -= max(move, disturbDistance)
+                        
+                        showLog("Moving Downward"
