@@ -1394,4 +1394,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                         
                         rootViewRect.origin.y -= max(move, disturbDistance)
                         
-                        showLog("Moving Downward"
+                        showLog("Moving Downward")
+                        //  Setting adjusted rootViewRect
+                        //  Setting adjusted rootViewRect
+                        setRootViewFrame(rootViewRect)
+                        _privateMovedDistance = (_topViewBeginRect.
