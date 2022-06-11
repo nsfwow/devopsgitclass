@@ -1398,4 +1398,11 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                         //  Setting adjusted rootViewRect
                         //  Setting adjusted rootViewRect
                         setRootViewFrame(rootViewRect)
-                        _privateMovedDistance = (_topViewBeginRect.
+                        _privateMovedDistance = (_topViewBeginRect.origin.y-rootViewRect.origin.y)
+                    }
+                }
+            }
+        }
+
+        let elapsedTime = CACurrentMediaTime() - startTime
+        showLog("****** \(#function) ended: \(elapsedTime) seconds *****
