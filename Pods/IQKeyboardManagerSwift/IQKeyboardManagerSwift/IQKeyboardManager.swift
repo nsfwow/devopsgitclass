@@ -1405,4 +1405,12 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         }
 
         let elapsedTime = CACurrentMediaTime() - startTime
-        showLog("****** \(#function) ended: \(elapsedTime) seconds *****
+        showLog("****** \(#function) ended: \(elapsedTime) seconds ******")
+    }
+
+    ///---------------------
+    /// MARK: Public Methods
+    ///---------------------
+    
+    /*  Refreshes textField/textView position if any external changes is explicitly made by user.   */
+    open func reloadLayou
