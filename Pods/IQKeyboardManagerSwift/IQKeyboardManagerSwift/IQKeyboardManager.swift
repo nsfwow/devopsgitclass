@@ -1413,4 +1413,10 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     ///---------------------
     
     /*  Refreshes textField/textView position if any external changes is explicitly made by user.   */
-    open func reloadLayou
+    open func reloadLayoutIfNeeded() -> Void {
+
+        if privateIsEnabled() == true {
+            if _textFieldView != nil &&
+                _privateIsKeyboardShowing == true &&
+                _topViewBeginRect.equalTo(CGRect.zero) == false &&
+ 
