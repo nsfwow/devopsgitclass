@@ -1419,4 +1419,14 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             if _textFieldView != nil &&
                 _privateIsKeyboardShowing == true &&
                 _topViewBeginRect.equalTo(CGRect.zero) == false &&
- 
+                _textFieldView?.isAlertViewTextField() == false {
+                adjustFrame()
+            }
+        }
+    }
+
+    ///-------------------------------
+    /// MARK: UIKeyboard Notifications
+    ///-------------------------------
+
+    /*  UIKeybo
