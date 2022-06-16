@@ -1429,4 +1429,10 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     /// MARK: UIKeyboard Notifications
     ///-------------------------------
 
-    /*  UIKeybo
+    /*  UIKeyboardWillShowNotification. */
+    @objc internal func keyboardWillShow(_ notification : Notification?) -> Void {
+        
+        _kbShowNotification = notification
+
+        //  Boolean to know keyboard is showing/hiding
+        _pri
