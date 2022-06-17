@@ -1435,4 +1435,11 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         _kbShowNotification = notification
 
         //  Boolean to know keyboard is showing/hiding
-        _pri
+        _privateIsKeyboardShowing = true
+        
+        let oldKBSize = _kbSize
+
+        if let info = notification?.userInfo {
+            
+            //  Getting keyboard animation.
+            if let curve = info[UIKeyboardAnimationCurveUs
