@@ -1442,4 +1442,10 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         if let info = notification?.userInfo {
             
             //  Getting keyboard animation.
-            if let curve = info[UIKeyboardAnimationCurveUs
+            if let curve = info[UIKeyboardAnimationCurveUserInfoKey] as? UInt {
+                _animationCurve = UIViewAnimationOptions(rawValue: curve)
+            } else {
+                _animationCurve = UIViewAnimationOptions.curveEaseOut
+            }
+            
+            //  Getting keybo
