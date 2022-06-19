@@ -1448,4 +1448,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                 _animationCurve = UIViewAnimationOptions.curveEaseOut
             }
             
-            //  Getting keybo
+            //  Getting keyboard animation duration
+            if let duration = info[UIKeyboardAnimationDurationUserInfoKey] as? TimeInterval {
+                
+                //Saving animation duration
+                if duration != 0.0 {
+                    _animationDuration = duratio
