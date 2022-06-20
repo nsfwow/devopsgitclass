@@ -1453,4 +1453,12 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                 
                 //Saving animation duration
                 if duration != 0.0 {
-                    _animationDuration = duratio
+                    _animationDuration = duration
+                }
+            } else {
+                _animationDuration = 0.25
+            }
+            
+            //  Getting UIKeyboardSize.
+            if let kbFrame = info[UIKeyboardFrameEndUserInfoKey] as? CGRect {
+ 
