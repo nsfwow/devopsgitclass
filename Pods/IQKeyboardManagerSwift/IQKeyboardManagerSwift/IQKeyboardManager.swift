@@ -1461,4 +1461,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             
             //  Getting UIKeyboardSize.
             if let kbFrame = info[UIKeyboardFrameEndUserInfoKey] as? CGRect {
- 
+                
+                let screenSize = UIScreen.main.bounds
+                
+                //Calculating actual keyboard displayed size, keyboard frame may be different when hardware keyboard is a
