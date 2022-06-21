@@ -1464,4 +1464,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                 
                 let screenSize = UIScreen.main.bounds
                 
-                //Calculating actual keyboard displayed size, keyboard frame may be different when hardware keyboard is a
+                //Calculating actual keyboard displayed size, keyboard frame may be different when hardware keyboard is attached (Bug ID: #469) (Bug ID: #381)
+                let intersectRect = kbFrame.intersection(screenSize)
+                
+                if intersectRect.isNull {
+                    _kbSize = CGSize(width: screenSize.size.width,
