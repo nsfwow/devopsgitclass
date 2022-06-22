@@ -1468,4 +1468,13 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                 let intersectRect = kbFrame.intersection(screenSize)
                 
                 if intersectRect.isNull {
-                    _kbSize = CGSize(width: screenSize.size.width,
+                    _kbSize = CGSize(width: screenSize.size.width, height: 0)
+                } else {
+                    _kbSize = intersectRect.size
+                }
+
+                showLog("UIKeyboard Size : \(_kbSize)")
+            }
+        }
+
+        if privateIsEnabled() 
