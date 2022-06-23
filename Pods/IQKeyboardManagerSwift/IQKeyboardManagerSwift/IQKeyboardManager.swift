@@ -1477,4 +1477,13 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             }
         }
 
-        if privateIsEnabled() 
+        if privateIsEnabled() == false {
+            return
+        }
+        
+        let startTime = CACurrentMediaTime()
+        showLog("****** \(#function) started ******")
+
+        //  (Bug ID: #5)
+        if _textFieldView != nil && _topViewBeginRect.equalTo(CGRect.zero) == true {
+  
