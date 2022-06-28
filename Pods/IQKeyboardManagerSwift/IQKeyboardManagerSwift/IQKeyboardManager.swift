@@ -1497,4 +1497,10 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             _rootViewController = _textFieldView?.topMostController()
             if _rootViewController == nil {
                 _rootViewController = keyWindow()?.topMostWindowController()
-       
+            }
+            
+            if let unwrappedRootController = _rootViewController {
+                _topViewBeginRect = unwrappedRootController.view.frame
+                
+#if swift(>=3.2)
+                if #available(iOS 11, *) {
