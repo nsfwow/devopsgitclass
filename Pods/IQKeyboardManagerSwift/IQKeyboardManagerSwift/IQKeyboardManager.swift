@@ -1504,3 +1504,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                 
 #if swift(>=3.2)
                 if #available(iOS 11, *) {
+                    _initialAdditionalSafeAreaInsets = unwrappedRootController.additionalSafeAreaInsets;
+                }
+#endif
+                if _topViewBeginRect.origin.y != 0 &&
+                    shouldFixInteractivePopGestureRecognizer == true &&
