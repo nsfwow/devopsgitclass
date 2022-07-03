@@ -1520,4 +1520,13 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                     }
                 }
 
-                showLog("Saving \(unwrappedRootController._IQDescription()) beginning Frame: \(_topViewB
+                showLog("Saving \(unwrappedRootController._IQDescription()) beginning Frame: \(_topViewBeginRect)")
+            } else {
+                _topViewBeginRect = CGRect.zero
+            }
+        }
+
+        //  Getting topMost ViewController.
+        var topMostController = _textFieldView?.topMostController()
+        
+        if topMostController
