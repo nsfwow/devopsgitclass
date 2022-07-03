@@ -1529,4 +1529,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         //  Getting topMost ViewController.
         var topMostController = _textFieldView?.topMostController()
         
-        if topMostController
+        if topMostController == nil {
+            topMostController = keyWindow()?.topMostWindowController()
+        }
+
+        //If last restored keyboard size is different(any orientation accure), then refresh. otherwise not.
+        if _kbSize.equalTo(oldKBSize) == false {
