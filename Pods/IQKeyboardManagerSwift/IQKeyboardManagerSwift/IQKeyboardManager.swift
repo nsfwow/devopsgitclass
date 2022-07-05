@@ -1535,3 +1535,5 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
 
         //If last restored keyboard size is different(any orientation accure), then refresh. otherwise not.
         if _kbSize.equalTo(oldKBSize) == false {
+            
+            //If _textFieldView is inside UITableViewController then let UITableViewController to handle it (Bug ID: #37) (Bug ID: #76) See note:- https://developer.apple.com/library/ios/documentation/StringsTextF
