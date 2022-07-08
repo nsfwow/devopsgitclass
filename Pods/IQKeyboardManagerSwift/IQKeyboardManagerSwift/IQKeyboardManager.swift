@@ -1552,4 +1552,13 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     }
 
     /*  UIKeyboardDidShowNotification. */
-    @objc internal func keyboardDidShow(_ notification : Notification?)
+    @objc internal func keyboardDidShow(_ notification : Notification?) -> Void {
+        
+        if privateIsEnabled() == false {
+            return
+        }
+        
+        let startTime = CACurrentMediaTime()
+        showLog("****** \(#function) started ******")
+        
+        //  Get
