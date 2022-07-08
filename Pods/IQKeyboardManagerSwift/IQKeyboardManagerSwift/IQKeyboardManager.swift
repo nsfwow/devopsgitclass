@@ -1547,4 +1547,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             }
         }
         
-        let elapsedTi
+        let elapsedTime = CACurrentMediaTime() - startTime
+        showLog("****** \(#function) ended: \(elapsedTime) seconds ******")
+    }
+
+    /*  UIKeyboardDidShowNotification. */
+    @objc internal func keyboardDidShow(_ notification : Notification?)
