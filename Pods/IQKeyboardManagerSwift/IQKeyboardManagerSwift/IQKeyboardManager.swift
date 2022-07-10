@@ -1568,3 +1568,6 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             topMostController = keyWindow()?.topMostWindowController()
         }
         
+        if _textFieldView != nil &&
+            (topMostController?.modalPresentationStyle == UIModalPresentationStyle.formSheet || topMostController?.modalPresentationStyle == UIModalPresentationStyle.pageSheet) &&
+            _textFieldVie
