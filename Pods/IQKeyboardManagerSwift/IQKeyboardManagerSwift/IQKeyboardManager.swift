@@ -1561,4 +1561,10 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         let startTime = CACurrentMediaTime()
         showLog("****** \(#function) started ******")
         
-        //  Get
+        //  Getting topMost ViewController.
+        var topMostController = _textFieldView?.topMostController()
+        
+        if topMostController == nil {
+            topMostController = keyWindow()?.topMostWindowController()
+        }
+        
