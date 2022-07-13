@@ -1572,4 +1572,14 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             (topMostController?.modalPresentationStyle == UIModalPresentationStyle.formSheet || topMostController?.modalPresentationStyle == UIModalPresentationStyle.pageSheet) &&
             _textFieldView?.isAlertViewTextField() == false {
             
-            //In case of form sheet or page sheet, we'll add adjustFrame call in main queue to perform it when UI thread will do all framing updation so adjustFrame will be executed after all internal operatio
+            //In case of form sheet or page sheet, we'll add adjustFrame call in main queue to perform it when UI thread will do all framing updation so adjustFrame will be executed after all internal operations.
+            OperationQueue.main.addOperation {
+                self.adjustFrame()
+            }
+        }
+        
+        let elapsedTime = CACurrentMediaTime() - startTime
+        showLog("****** \(#function) ended: \(elapsedTime) seconds ******")
+    }
+
+    /*  UIKeyb
