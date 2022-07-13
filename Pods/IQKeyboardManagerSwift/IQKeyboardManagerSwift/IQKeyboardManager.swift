@@ -1570,4 +1570,6 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         
         if _textFieldView != nil &&
             (topMostController?.modalPresentationStyle == UIModalPresentationStyle.formSheet || topMostController?.modalPresentationStyle == UIModalPresentationStyle.pageSheet) &&
-            _textFieldVie
+            _textFieldView?.isAlertViewTextField() == false {
+            
+            //In case of form sheet or page sheet, we'll add adjustFrame call in main queue to perform it when UI thread will do all framing updation so adjustFrame will be executed after all internal operatio
