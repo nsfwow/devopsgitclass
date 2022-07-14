@@ -1582,4 +1582,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         showLog("****** \(#function) ended: \(elapsedTime) seconds ******")
     }
 
-    /*  UIKeyb
+    /*  UIKeyboardWillHideNotification. So setting rootViewController to it's default frame. */
+    @objc internal func keyboardWillHide(_ notification : Notification?) -> Void {
+        
+        //If it's not a fake notification
