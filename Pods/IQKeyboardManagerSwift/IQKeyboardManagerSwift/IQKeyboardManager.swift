@@ -1593,4 +1593,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         //  Boolean to know keyboard is showing/hiding
         _privateIsKeyboardShowing = false
         
-        if 
+        if let info = notification?.userInfo {
+            
+            //  Getting keyboard animation duration
+            if let duration =  info[UIKeyboardAnimationDurationUserInfoKey] as? TimeInterval {
+                if duration != 0 {
+   
