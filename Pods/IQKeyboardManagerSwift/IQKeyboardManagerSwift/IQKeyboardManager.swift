@@ -1598,4 +1598,11 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             //  Getting keyboard animation duration
             if let duration =  info[UIKeyboardAnimationDurationUserInfoKey] as? TimeInterval {
                 if duration != 0 {
-   
+                    //  Setitng keyboard animation duration
+                    _animationDuration = duration
+                }
+            }
+        }
+        
+        //If not enabled then do nothing.
+        if privateIsEnabled() 
