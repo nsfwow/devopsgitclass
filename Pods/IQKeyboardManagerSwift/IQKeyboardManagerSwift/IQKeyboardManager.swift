@@ -1605,4 +1605,11 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         }
         
         //If not enabled then do nothing.
-        if privateIsEnabled() 
+        if privateIsEnabled() == false {
+            return
+        }
+        
+        let startTime = CACurrentMediaTime()
+        showLog("****** \(#function) started ******")
+
+        //Commented due to #56. Added all the conditions below to 
