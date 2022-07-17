@@ -1616,4 +1616,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         //  We are unable to get textField object while keyboard showing on UIWebView's textField.  (Bug ID: #11)
         //    if (_textFieldView == nil)   return
 
-        //Restoring the contentOf
+        //Restoring the contentOffset of the lastScrollView
+        if let lastScrollView = _lastScrollView {
+            
+            UIView.animate(withDuration: _animationDuration, delay: 0, options: UIViewAnimationOptions.beginFromCurrentState.union(_animationCurve), animatio
