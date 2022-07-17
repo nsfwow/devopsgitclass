@@ -1619,4 +1619,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         //Restoring the contentOffset of the lastScrollView
         if let lastScrollView = _lastScrollView {
             
-            UIView.animate(withDuration: _animationDuration, delay: 0, options: UIViewAnimationOptions.beginFromCurrentState.union(_animationCurve), animatio
+            UIView.animate(withDuration: _animationDuration, delay: 0, options: UIViewAnimationOptions.beginFromCurrentState.union(_animationCurve), animations: { () -> Void in
+                
+                lastScrollView.contentInset = self._startingContentInsets
+                lastScrollView.scrollIndicatorInsets = self._startingScrollIndicatorInsets
+                
+                if las
