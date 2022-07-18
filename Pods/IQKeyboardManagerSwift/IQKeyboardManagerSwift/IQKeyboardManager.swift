@@ -1624,4 +1624,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                 lastScrollView.contentInset = self._startingContentInsets
                 lastScrollView.scrollIndicatorInsets = self._startingScrollIndicatorInsets
                 
-                if las
+                if lastScrollView.shouldRestoreScrollViewContentOffset == true {
+                    lastScrollView.contentOffset = self._startingContentOffset
+                }
+                
+                self.showLog("Restoring \(lastScro
