@@ -1628,4 +1628,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                     lastScrollView.contentOffset = self._startingContentOffset
                 }
                 
-                self.showLog("Restoring \(lastScro
+                self.showLog("Restoring \(lastScrollView._IQDescription()) contentInset to : \(self._startingContentInsets) and contentOffset to : \(self._startingContentOffset)")
+
+                // TODO: restore scrollView state
+                // This is temporary solution. H
