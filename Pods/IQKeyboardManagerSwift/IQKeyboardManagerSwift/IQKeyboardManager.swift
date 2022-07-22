@@ -1636,4 +1636,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
 
                 while let scrollView = superScrollView {
 
-                    let contentSize = CGSize(width: max
+                    let contentSize = CGSize(width: max(scrollView.contentSize.width, scrollView.frame.width), height: max(scrollView.contentSize.height, scrollView.frame.height))
+                    
+                    let minimumY = contentSize.height - scrollView.frame.height
+                    
+    
