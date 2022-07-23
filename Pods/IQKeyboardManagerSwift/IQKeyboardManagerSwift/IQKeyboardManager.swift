@@ -1643,4 +1643,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                     if minimumY < scrollView.contentOffset.y {
                         scrollView.contentOffset = CGPoint(x: scrollView.contentOffset.x, y: minimumY)
                         
-                        self.showLog("Restoring
+                        self.showLog("Restoring \(scrollView._IQDescription()) contentOffset to : \(self._startingContentOffset)")
+                    }
+                    
+                    superScrollView = scrollView.superviewOfClassType(UIScrollView.self) as? UIScrollView
+   
