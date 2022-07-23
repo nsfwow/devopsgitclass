@@ -1640,4 +1640,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                     
                     let minimumY = contentSize.height - scrollView.frame.height
                     
-    
+                    if minimumY < scrollView.contentOffset.y {
+                        scrollView.contentOffset = CGPoint(x: scrollView.contentOffset.x, y: minimumY)
+                        
+                        self.showLog("Restoring
