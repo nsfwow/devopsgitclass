@@ -1647,4 +1647,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                     }
                     
                     superScrollView = scrollView.superviewOfClassType(UIScrollView.self) as? UIScrollView
-   
+                }
+                }) { (finished) -> Void in }
+        }
+        
+        //  Setting rootViewController frame to it's original position. //  (Bug ID: #18)
+        if _topViewBeginRect.equalTo(CGRect.
