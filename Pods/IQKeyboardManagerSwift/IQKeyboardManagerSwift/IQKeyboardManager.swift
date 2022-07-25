@@ -1657,4 +1657,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             if let rootViewController = _rootViewController {
                 
                 //frame size needs to be adjusted on iOS8 due to orientation API changes.
-                _topViewBeginRect.size = rootViewC
+                _topViewBeginRect.size = rootViewController.view.frame.size
+                
+                //Used UIViewAnimationOptionBeginFromCurrentState to minimize strange animations.
+                UIView.animate(withDuration: _animationDuration, delay: 0, options: UIViewAnimationOpt
