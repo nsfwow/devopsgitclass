@@ -1652,4 +1652,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         }
         
         //  Setting rootViewController frame to it's original position. //  (Bug ID: #18)
-        if _topViewBeginRect.equalTo(CGRect.
+        if _topViewBeginRect.equalTo(CGRect.zero) == false {
+            
+            if let rootViewController = _rootViewController {
+                
+                //frame size needs to be adjusted on iOS8 due to orientation API changes.
+                _topViewBeginRect.size = rootViewC
