@@ -1664,4 +1664,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                     
                     if let constraint = self._layoutGuideConstraint {
                         
-                        constraint
+                        constraint.constant = self._layoutGuideConstraintInitialConstant
+                        rootViewController.view.setNeedsLayout()
+                        rootViewController.view.layoutIfNeeded()
+                    }
+                    e
