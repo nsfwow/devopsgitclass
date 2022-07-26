@@ -1660,4 +1660,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                 _topViewBeginRect.size = rootViewController.view.frame.size
                 
                 //Used UIViewAnimationOptionBeginFromCurrentState to minimize strange animations.
-                UIView.animate(withDuration: _animationDuration, delay: 0, options: UIViewAnimationOpt
+                UIView.animate(withDuration: _animationDuration, delay: 0, options: UIViewAnimationOptions.beginFromCurrentState.union(_animationCurve), animations: { () -> Void in
+                    
+                    if let constraint = self._layoutGuideConstraint {
+                        
+                        constraint
