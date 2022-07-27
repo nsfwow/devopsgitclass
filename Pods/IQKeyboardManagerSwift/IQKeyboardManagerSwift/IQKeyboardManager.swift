@@ -1668,4 +1668,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                         rootViewController.view.setNeedsLayout()
                         rootViewController.view.layoutIfNeeded()
                     }
-                    e
+                    else {
+                        self.showLog("Restoring \(rootViewController._IQDescription()) frame to : \(self._topViewBeginRect)")
+                        
+                        //  Setting it's new frame
+                        rootViewCo
