@@ -1676,4 +1676,12 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                         
 #if swift(>=3.2)
                         if #available(iOS 11, *) {
-                            rootViewController.additionalSafeAreaInsets = self._initialAdditionalSafeAreaInset
+                            rootViewController.additionalSafeAreaInsets = self._initialAdditionalSafeAreaInsets;
+                        }
+#endif
+
+                        self._privateMovedDistance = 0
+                        
+                        //Animating content if needed (Bug ID: #204)
+                        if self.layoutIfNeededOnUpdate == true {
+      
