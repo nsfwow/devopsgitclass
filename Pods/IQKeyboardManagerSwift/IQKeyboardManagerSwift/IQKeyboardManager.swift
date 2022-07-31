@@ -1672,4 +1672,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                         self.showLog("Restoring \(rootViewController._IQDescription()) frame to : \(self._topViewBeginRect)")
                         
                         //  Setting it's new frame
-                        rootViewCo
+                        rootViewController.view.frame = self._topViewBeginRect
+                        
+#if swift(>=3.2)
+                        if #available(iOS 11, *) {
+                            rootViewController.additionalSafeAreaInsets = self._initialAdditionalSafeAreaInset
