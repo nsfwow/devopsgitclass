@@ -1701,4 +1701,13 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                     
                     constraint.constant = self._layoutGuideConstraintInitialConstant
                     rootViewController.view.setNeedsLayout()
-                    rootViewControl
+                    rootViewController.view.layoutIfNeeded()
+                }) { (finished) -> Void in }
+            }
+        }
+        
+        //Reset all values
+        _lastScrollView = nil
+        _kbSize = CGSize.zero
+        _layoutGuideConstraint = nil
+    
