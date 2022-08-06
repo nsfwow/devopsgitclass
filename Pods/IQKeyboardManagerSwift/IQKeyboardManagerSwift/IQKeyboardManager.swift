@@ -1710,4 +1710,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         _lastScrollView = nil
         _kbSize = CGSize.zero
         _layoutGuideConstraint = nil
-    
+        _layoutGuideConstraintInitialConstant = 0
+        _startingContentInsets = UIEdgeInsets.zero
+        _startingScrollIndicatorInsets = UIEdgeInsets.zero
+        _startingContentOffset = CGPoint.zero
+        //    topViewB
