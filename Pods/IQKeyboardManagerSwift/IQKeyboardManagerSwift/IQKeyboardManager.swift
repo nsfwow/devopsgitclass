@@ -1714,4 +1714,10 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         _startingContentInsets = UIEdgeInsets.zero
         _startingScrollIndicatorInsets = UIEdgeInsets.zero
         _startingContentOffset = CGPoint.zero
-        //    topViewB
+        //    topViewBeginRect = CGRectZero    //Commented due to #82
+
+        let elapsedTime = CACurrentMediaTime() - startTime
+        showLog("****** \(#function) ended: \(elapsedTime) seconds ******")
+    }
+
+    @objc internal func keyboardDidHide(_ notification:Not
