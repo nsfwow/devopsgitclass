@@ -1720,4 +1720,13 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         showLog("****** \(#function) ended: \(elapsedTime) seconds ******")
     }
 
-    @objc internal func keyboardDidHide(_ notification:Not
+    @objc internal func keyboardDidHide(_ notification:Notification) {
+
+        let startTime = CACurrentMediaTime()
+        showLog("****** \(#function) started ******")
+        
+        _topViewBeginRect = CGRect.zero
+        
+#if swift(>=3.2)
+        if #available(iOS 11, *) {
+  
