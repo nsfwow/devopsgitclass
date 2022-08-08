@@ -1729,4 +1729,11 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         
 #if swift(>=3.2)
         if #available(iOS 11, *) {
-  
+            _initialAdditionalSafeAreaInsets = .zero;
+        }
+#endif
+        
+        _kbSize = CGSize.zero
+
+        let elapsedTime = CACurrentMediaTime() - startTime
+        showLog("****** \(#function
