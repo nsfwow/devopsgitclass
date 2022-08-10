@@ -1736,4 +1736,11 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         _kbSize = CGSize.zero
 
         let elapsedTime = CACurrentMediaTime() - startTime
-        showLog("****** \(#function
+        showLog("****** \(#function) ended: \(elapsedTime) seconds ******")
+    }
+    
+    ///-------------------------------------------
+    /// MARK: UITextField/UITextView Notifications
+    ///-------------------------------------------
+
+    /**  UITextFieldTextDidBeginEdi
