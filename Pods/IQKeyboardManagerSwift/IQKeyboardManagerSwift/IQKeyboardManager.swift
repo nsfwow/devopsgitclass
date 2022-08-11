@@ -1743,4 +1743,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     /// MARK: UITextField/UITextView Notifications
     ///-------------------------------------------
 
-    /**  UITextFieldTextDidBeginEdi
+    /**  UITextFieldTextDidBeginEditingNotification, UITextViewTextDidBeginEditingNotification. Fetching UITextFieldView object. */
+    @objc internal func textFieldViewDidBeginEditing(_ notification:Notification) {
+
+        let startTime = 
