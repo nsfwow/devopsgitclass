@@ -1746,4 +1746,12 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     /**  UITextFieldTextDidBeginEditingNotification, UITextViewTextDidBeginEditingNotification. Fetching UITextFieldView object. */
     @objc internal func textFieldViewDidBeginEditing(_ notification:Notification) {
 
-        let startTime = 
+        let startTime = CACurrentMediaTime()
+        showLog("****** \(#function) started ******")
+
+        //  Getting object
+        _textFieldView = notification.object as? UIView
+        
+        if overrideKeyboardAppearance == true {
+            
+     
