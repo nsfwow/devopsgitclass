@@ -1764,4 +1764,11 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             } else if  let textFieldView = _textFieldView as? UITextView {
                 //If keyboard appearance is not like the provided appearance
                 if textFieldView.keyboardAppearance != keyboardAppearance {
-                    //Setting te
+                    //Setting textField keyboard appearance and reloading inputViews.
+                    textFieldView.keyboardAppearance = keyboardAppearance
+                    textFieldView.reloadInputViews()
+                }
+            }
+        }
+        
+  
