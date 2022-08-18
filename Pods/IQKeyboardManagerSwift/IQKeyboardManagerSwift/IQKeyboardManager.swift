@@ -1774,4 +1774,6 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         //If autoToolbar enable, then add toolbar on all the UITextField/UITextView's if required.
         if privateIsEnableAutoToolbar() == true {
 
-            //UITextView special case. Keyboard Notification is firing befo
+            //UITextView special case. Keyboard Notification is firing before textView notification so we need to resign it first and then again set it as first responder to add toolbar on it.
+            if _textFieldView is UITextView == true &&
+                _textFieldView?.inputAccessoryView == 
