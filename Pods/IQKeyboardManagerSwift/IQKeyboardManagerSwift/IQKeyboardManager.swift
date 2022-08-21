@@ -1776,4 +1776,10 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
 
             //UITextView special case. Keyboard Notification is firing before textView notification so we need to resign it first and then again set it as first responder to add toolbar on it.
             if _textFieldView is UITextView == true &&
-                _textFieldView?.inputAccessoryView == 
+                _textFieldView?.inputAccessoryView == nil {
+                
+                UIView.animate(withDuration: 0.00001, delay: 0, options: UIViewAnimationOptions.beginFromCurrentState.union(_animationCurve), animations: { () -> Void in
+
+                    self.addToolbarIfRequired()
+                    
+                    }, co
