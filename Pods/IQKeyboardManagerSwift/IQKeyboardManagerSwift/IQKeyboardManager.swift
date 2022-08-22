@@ -1787,4 +1787,12 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                         //On textView toolbar didn't appear on first time, so forcing textView to reload it's inputViews.
                         self._textFieldView?.reloadInputViews()
                 })
-      
+            } else {
+                //Adding toolbar
+                addToolbarIfRequired()
+            }
+        } else {
+            removeToolbarIfRequired()
+        }
+
+        resignFirstResponderGesture.isEnabled = privateShouldResignOnTouchOutside()
