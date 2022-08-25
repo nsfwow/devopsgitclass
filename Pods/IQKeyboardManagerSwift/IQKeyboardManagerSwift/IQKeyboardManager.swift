@@ -1799,4 +1799,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         _textFieldView?.window?.addGestureRecognizer(resignFirstResponderGesture)    //   (Enhancement ID: #14)
 
         if privateIsEnabled() == true {
-            if _topViewBeginRect.equalTo(CGRect.zero) == true {    //  (Bug ID
+            if _topViewBeginRect.equalTo(CGRect.zero) == true {    //  (Bug ID: #5)
+                
+                //  keyboard is not showing(At the beginning only). We should save rootViewRect.
+                if let constraint = _textFieldView?.viewController()?.IQLayoutGuideConstraint {
+                    _layoutGuideCo
