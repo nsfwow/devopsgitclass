@@ -1796,3 +1796,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         }
 
         resignFirstResponderGesture.isEnabled = privateShouldResignOnTouchOutside()
+        _textFieldView?.window?.addGestureRecognizer(resignFirstResponderGesture)    //   (Enhancement ID: #14)
+
+        if privateIsEnabled() == true {
+            if _topViewBeginRect.equalTo(CGRect.zero) == true {    //  (Bug ID
