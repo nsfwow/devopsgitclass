@@ -1803,4 +1803,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                 
                 //  keyboard is not showing(At the beginning only). We should save rootViewRect.
                 if let constraint = _textFieldView?.viewController()?.IQLayoutGuideConstraint {
-                    _layoutGuideCo
+                    _layoutGuideConstraint = constraint
+                    _layoutGuideConstraintInitialConstant = constraint.constant
+                }
+                
+                _rootViewController = _textFieldView?.topMostController()
+         
