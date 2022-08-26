@@ -1808,4 +1808,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                 }
                 
                 _rootViewController = _textFieldView?.topMostController()
-         
+                if _rootViewController == nil {
+                    _rootViewController = keyWindow()?.topMostWindowController()
+                }
+                
+                if let rootViewController = _rootViewController {
