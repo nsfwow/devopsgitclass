@@ -1813,3 +1813,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                 }
                 
                 if let rootViewController = _rootViewController {
+                    
+                    _topViewBeginRect = rootViewController.view.frame
+                    
+#if swift(>=3.2)
+                    if #available(iOS 11, *) {
+                        _initialAddi
