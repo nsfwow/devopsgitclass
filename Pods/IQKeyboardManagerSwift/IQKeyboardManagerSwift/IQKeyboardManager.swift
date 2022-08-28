@@ -1818,4 +1818,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                     
 #if swift(>=3.2)
                     if #available(iOS 11, *) {
-                        _initialAddi
+                        _initialAdditionalSafeAreaInsets = rootViewController.additionalSafeAreaInsets;
+                    }
+#endif
+
+                    if _topViewBeginRect.origin.y != 0 &&
+                        shouldFixInterac
