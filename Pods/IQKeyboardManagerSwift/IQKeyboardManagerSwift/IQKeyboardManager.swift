@@ -1826,4 +1826,6 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                         shouldFixInteractivePopGestureRecognizer == true &&
                         rootViewController is UINavigationController &&
                         rootViewController.modalPresentationStyle != UIModalPresentationStyle.formSheet &&
-                        rootViewController.
+                        rootViewController.modalPresentationStyle != UIModalPresentationStyle.pageSheet {
+                        if let window = keyWindow() {
+                            _topViewBeginRect.origin.y = window.frame.size.height-rootViewController.view.frame
