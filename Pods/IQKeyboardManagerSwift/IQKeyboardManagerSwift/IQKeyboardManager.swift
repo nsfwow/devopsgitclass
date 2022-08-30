@@ -1823,4 +1823,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
 #endif
 
                     if _topViewBeginRect.origin.y != 0 &&
-                        shouldFixInterac
+                        shouldFixInteractivePopGestureRecognizer == true &&
+                        rootViewController is UINavigationController &&
+                        rootViewController.modalPresentationStyle != UIModalPresentationStyle.formSheet &&
+                        rootViewController.
