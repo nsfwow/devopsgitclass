@@ -1828,4 +1828,10 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                         rootViewController.modalPresentationStyle != UIModalPresentationStyle.formSheet &&
                         rootViewController.modalPresentationStyle != UIModalPresentationStyle.pageSheet {
                         if let window = keyWindow() {
-                            _topViewBeginRect.origin.y = window.frame.size.height-rootViewController.view.frame
+                            _topViewBeginRect.origin.y = window.frame.size.height-rootViewController.view.frame.size.height
+                        } else {
+                            _topViewBeginRect.origin.y = 0
+                        }
+                    }
+                    
+                    showLog("Saving \(rootViewController._IQ
