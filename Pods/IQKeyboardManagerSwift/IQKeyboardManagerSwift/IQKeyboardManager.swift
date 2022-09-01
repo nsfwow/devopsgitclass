@@ -1839,4 +1839,5 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             }
             
             //If _textFieldView is inside ignored responder then do nothing. (Bug ID: #37, #74, #76)
-            //See notes:- https://d
+            //See notes:- https://developer.apple.com/library/ios/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/KeyboardManagement/KeyboardManagement.html If it is UIAlertView textField then do not affect anything (Bug ID: #70).
+            if
