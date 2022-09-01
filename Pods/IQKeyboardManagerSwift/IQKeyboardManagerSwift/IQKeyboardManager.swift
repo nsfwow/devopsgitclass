@@ -1834,4 +1834,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                         }
                     }
                     
-                    showLog("Saving \(rootViewController._IQ
+                    showLog("Saving \(rootViewController._IQDescription()) beginning frame : \(_topViewBeginRect)")
+                }
+            }
+            
+            //If _textFieldView is inside ignored responder then do nothing. (Bug ID: #37, #74, #76)
+            //See notes:- https://d
