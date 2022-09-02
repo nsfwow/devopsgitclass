@@ -1840,4 +1840,10 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             
             //If _textFieldView is inside ignored responder then do nothing. (Bug ID: #37, #74, #76)
             //See notes:- https://developer.apple.com/library/ios/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/KeyboardManagement/KeyboardManagement.html If it is UIAlertView textField then do not affect anything (Bug ID: #70).
-            if
+            if _privateIsKeyboardShowing == true &&
+                _textFieldView != nil &&
+                _textFieldView?.isAlertViewTextField() == false {
+                
+                //  keyboard is already showing. adjust frame.
+                adjustFrame()
+        
