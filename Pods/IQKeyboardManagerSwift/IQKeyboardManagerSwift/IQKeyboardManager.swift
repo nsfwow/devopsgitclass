@@ -1846,4 +1846,11 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                 
                 //  keyboard is already showing. adjust frame.
                 adjustFrame()
-        
+            }
+        }
+
+        let elapsedTime = CACurrentMediaTime() - startTime
+        showLog("****** \(#function) ended: \(elapsedTime) seconds ******")
+    }
+    
+    /**  UITextFieldTextDidEndEditingNotification, UITextViewTextDidEndEditingNotifi
