@@ -1853,4 +1853,10 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         showLog("****** \(#function) ended: \(elapsedTime) seconds ******")
     }
     
-    /**  UITextFieldTextDidEndEditingNotification, UITextViewTextDidEndEditingNotifi
+    /**  UITextFieldTextDidEndEditingNotification, UITextViewTextDidEndEditingNotification. Removing fetched object. */
+    @objc internal func textFieldViewDidEndEditing(_ notification:Notification) {
+        
+        let startTime = CACurrentMediaTime()
+        showLog("****** \(#function) started ******")
+
+        //Removing ges
