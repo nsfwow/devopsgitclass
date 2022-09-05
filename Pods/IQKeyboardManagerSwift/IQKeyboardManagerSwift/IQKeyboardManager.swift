@@ -1864,4 +1864,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         
         // We check if there's a change in original frame or not.
         
-        if let textView = _textF
+        if let textView = _textFieldView as? UITextView {
+
+            if isTextViewContentInsetChanged == true {
+                
+                UIView.animate(withDuration: _animationDuration, delay: 0, options: UIViewAnimationOptions.beginFromCurrent
