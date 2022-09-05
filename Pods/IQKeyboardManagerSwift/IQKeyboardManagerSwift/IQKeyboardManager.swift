@@ -1859,4 +1859,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         let startTime = CACurrentMediaTime()
         showLog("****** \(#function) started ******")
 
-        //Removing ges
+        //Removing gesture recognizer   (Enhancement ID: #14)
+        _textFieldView?.window?.removeGestureRecognizer(resignFirstResponderGesture)
+        
+        // We check if there's a change in original frame or not.
+        
+        if let textView = _textF
