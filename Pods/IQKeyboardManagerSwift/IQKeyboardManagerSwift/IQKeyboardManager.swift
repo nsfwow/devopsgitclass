@@ -1872,4 +1872,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                     
                     self.isTextViewContentInsetChanged = false
                     
-                    self.showLog("Restoring \(textView._IQDescription()) textView.contentI
+                    self.showLog("Restoring \(textView._IQDescription()) textView.contentInset to : \(self.startingTextViewContentInsets)")
+                    
+                    //Setting textField to it's initial contentInset
+                    textView.contentInset = self.startingTextViewContentInsets
+              
