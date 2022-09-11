@@ -1890,4 +1890,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     }
 
     ///------------------------------------------
-    /// MARK: UIStatusBar Notification meth
+    /// MARK: UIStatusBar Notification methods
+    ///------------------------------------------
+    
+    /**  UIApplicationWillChangeStatusBarOrientationNotification. Need to set the textView to it's original position. If any frame changes made. (Bug ID:
