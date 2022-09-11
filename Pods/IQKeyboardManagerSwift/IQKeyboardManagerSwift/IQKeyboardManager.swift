@@ -1885,4 +1885,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         //Setting object to nil
         _textFieldView = nil
 
-        let 
+        let elapsedTime = CACurrentMediaTime() - startTime
+        showLog("****** \(#function) ended: \(elapsedTime) seconds ******")
+    }
+
+    ///------------------------------------------
+    /// MARK: UIStatusBar Notification meth
