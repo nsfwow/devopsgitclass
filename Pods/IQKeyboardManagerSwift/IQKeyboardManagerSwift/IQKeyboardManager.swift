@@ -1893,4 +1893,10 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     /// MARK: UIStatusBar Notification methods
     ///------------------------------------------
     
-    /**  UIApplicationWillChangeStatusBarOrientationNotification. Need to set the textView to it's original position. If any frame changes made. (Bug ID:
+    /**  UIApplicationWillChangeStatusBarOrientationNotification. Need to set the textView to it's original position. If any frame changes made. (Bug ID: #92)*/
+    @objc internal func willChangeStatusBarOrientation(_ notification:Notification) {
+        
+        let startTime = CACurrentMediaTime()
+        showLog("****** \(#function) started ******")
+        
+        //If textViewContentInsetChan
