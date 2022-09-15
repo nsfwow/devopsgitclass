@@ -1899,4 +1899,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         let startTime = CACurrentMediaTime()
         showLog("****** \(#function) started ******")
         
-        //If textViewContentInsetChan
+        //If textViewContentInsetChanged is saved then restore it.
+        if let textView = _textFieldView as? UITextView {
+            
+            if isTextViewContentInsetChanged == true {
+                
+                UIView.animate(withDuration: _animationDuratio
