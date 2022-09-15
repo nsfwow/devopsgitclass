@@ -1904,4 +1904,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             
             if isTextViewContentInsetChanged == true {
                 
-                UIView.animate(withDuration: _animationDuratio
+                UIView.animate(withDuration: _animationDuration, delay: 0, options: UIViewAnimationOptions.beginFromCurrentState.union(_animationCurve), animations: { () -> Void in
+                    
+                    self.isTextViewContentInsetChanged = false
+                    
+                
