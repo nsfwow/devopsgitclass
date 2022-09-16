@@ -1911,4 +1911,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                     self.showLog("Restoring \(textView._IQDescription()) textView.contentInset to : \(self.startingTextViewContentInsets)")
                     
                     //Setting textField to it's initial contentInset
-                    t
+                    textView.contentInset = self.startingTextViewContentInsets
+                    textView.scrollIndicatorInsets = self.startingTextViewScrollIndicatorInsets
+                    
+                    }, completion: { (finished) -
