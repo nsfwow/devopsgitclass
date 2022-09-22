@@ -1914,4 +1914,14 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                     textView.contentInset = self.startingTextViewContentInsets
                     textView.scrollIndicatorInsets = self.startingTextViewScrollIndicatorInsets
                     
-                    }, completion: { (finished) -
+                    }, completion: { (finished) -> Void in })
+            }
+        }
+
+        if privateIsEnabled() == false {
+            return
+        }
+        
+        #if swift(>=3.2)
+        if let rootViewController = _rootViewController {
+            if #a
