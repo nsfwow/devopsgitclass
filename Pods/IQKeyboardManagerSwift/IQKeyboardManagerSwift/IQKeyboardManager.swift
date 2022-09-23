@@ -1936,4 +1936,5 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         showLog("****** \(#function) ended: \(elapsedTime) seconds ******")
     }
     
-    /** 
+    /**  UIApplicationDidChangeStatusBarFrameNotification. Need to refresh view position and update _topViewBeginRect. (Bug ID: #446)*/
+    @objc internal func didChangeStatusBarFrame(_ notification : Notification) -> Voi
