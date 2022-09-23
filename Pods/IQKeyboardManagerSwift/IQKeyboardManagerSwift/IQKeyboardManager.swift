@@ -1926,4 +1926,14 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         if let rootViewController = _rootViewController {
             if #available(iOS 11, *) {
                 if UIEdgeInsetsEqualToEdgeInsets(_initialAdditionalSafeAreaInsets, rootViewController.additionalSafeAreaInsets) {
-                    rootViewController.additionalSafeAreaInsets = _initialAdditionalSafeArea
+                    rootViewController.additionalSafeAreaInsets = _initialAdditionalSafeAreaInsets;
+                }
+            }
+        }
+        #endif
+
+        let elapsedTime = CACurrentMediaTime() - startTime
+        showLog("****** \(#function) ended: \(elapsedTime) seconds ******")
+    }
+    
+    /** 
