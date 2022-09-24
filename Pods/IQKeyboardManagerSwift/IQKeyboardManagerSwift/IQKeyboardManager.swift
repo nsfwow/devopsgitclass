@@ -1937,4 +1937,10 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     }
     
     /**  UIApplicationDidChangeStatusBarFrameNotification. Need to refresh view position and update _topViewBeginRect. (Bug ID: #446)*/
-    @objc internal func didChangeStatusBarFrame(_ notification : Notification) -> Voi
+    @objc internal func didChangeStatusBarFrame(_ notification : Notification) -> Void {
+        
+        let oldStatusBarFrame = _statusBarFrame
+        
+        //  Getting keyboard animation duration
+        if let info = notification.userInfo {
+            if let newFrame = info[UIApplicationStatusBarFrameUserI
