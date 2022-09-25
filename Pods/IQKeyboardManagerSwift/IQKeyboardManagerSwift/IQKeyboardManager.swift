@@ -1943,4 +1943,15 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         
         //  Getting keyboard animation duration
         if let info = notification.userInfo {
-            if let newFrame = info[UIApplicationStatusBarFrameUserI
+            if let newFrame = info[UIApplicationStatusBarFrameUserInfoKey] as? CGRect {
+                
+                _statusBarFrame = newFrame
+            }
+        }
+
+        if privateIsEnabled() == false {
+            return
+        }
+        
+        let startTime = CACurrentMediaTime()
+        showLog("*****
