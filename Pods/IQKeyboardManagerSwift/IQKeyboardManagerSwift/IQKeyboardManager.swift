@@ -1954,4 +1954,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         }
         
         let startTime = CACurrentMediaTime()
-        showLog("*****
+        showLog("****** \(#function) started ******")
+        
+        if _rootViewController != nil &&
+            !_topViewBeginRect.equalTo(_rootViewController!.view.frame) == true {
+
+            if let unwrappedRootController = _rootView
