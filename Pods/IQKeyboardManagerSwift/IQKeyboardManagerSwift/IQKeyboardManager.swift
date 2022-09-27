@@ -1959,4 +1959,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         if _rootViewController != nil &&
             !_topViewBeginRect.equalTo(_rootViewController!.view.frame) == true {
 
-            if let unwrappedRootController = _rootView
+            if let unwrappedRootController = _rootViewController {
+                _topViewBeginRect = unwrappedRootController.view.frame
+                
+#if swift(>=3.2)
+                if #available(iOS 11, *) {
+                    _initialAdditionalSafeAreaInsets = unwrappedRootCont
