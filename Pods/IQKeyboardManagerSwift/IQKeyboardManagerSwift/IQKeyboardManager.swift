@@ -1970,4 +1970,6 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                 
                 if _topViewBeginRect.origin.y != 0 &&
                     shouldFixInteractivePopGestureRecognizer == true &&
-                    unwrappedRootContro
+                    unwrappedRootController is UINavigationController &&
+                    unwrappedRootController.modalPresentationStyle != UIModalPresentationStyle.formSheet &&
+                    unwrappedRootController.modalPresentationStyle != UIModalPresentationStyle
