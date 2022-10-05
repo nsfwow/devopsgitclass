@@ -1982,4 +1982,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                 }
                 
                 showLog("Saving \(unwrappedRootController._IQDescription()) beginning Frame: \(_topViewBeginRect)")
-    
+            } else {
+                _topViewBeginRect = CGRect.zero
+            }
+        }
+        
+        //If _textFieldView is inside UITableViewController then let UITableViewController to handle it (Bug ID: #37) (Bug ID: #76) See note:- 
