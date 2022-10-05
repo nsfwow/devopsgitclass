@@ -1977,4 +1977,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                     if let window = keyWindow() {
                         _topViewBeginRect.origin.y = window.frame.size.height-unwrappedRootController.view.frame.size.height
                     } else {
-              
+                        _topViewBeginRect.origin.y = 0
+                    }
+                }
+                
+                showLog("Saving \(unwrappedRootController._IQDescription()) beginning Frame: \(_topViewBeginRect)")
+    
