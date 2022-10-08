@@ -1987,4 +1987,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             }
         }
         
-        //If _textFieldView is inside UITableViewController then let UITableViewController to handle it (Bug ID: #37) (Bug ID: #76) See note:- https://developer.apple.com/library/ios/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/KeyboardManagement/KeyboardManagement.html If it is UIAlertView textField then do not affect anything (Bug ID: #70)
+        //If _textFieldView is inside UITableViewController then let UITableViewController to handle it (Bug ID: #37) (Bug ID: #76) See note:- https://developer.apple.com/library/ios/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/KeyboardManagement/KeyboardManagement.html If it is UIAlertView textField then do not affect anything (Bug ID: #70).
+        
+        if _privateIsKeyboardShowing == true &&
+            _textFieldView != nil &&
+            _statusBarFrame.size.equalTo(oldStatusBarFrame.size) == false &&
+            _textFieldView?.isAlertViewTextField() == false {
