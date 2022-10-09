@@ -1993,3 +1993,10 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             _textFieldView != nil &&
             _statusBarFrame.size.equalTo(oldStatusBarFrame.size) == false &&
             _textFieldView?.isAlertViewTextField() == false {
+            
+            //  keyboard is already showing. adjust frame.
+            adjustFrame()
+        }
+        
+        let elapsedTime = CACurrentMediaTime() - startTime
+        showLog("****** \(#function) ended: \(elapsedTime) seco
