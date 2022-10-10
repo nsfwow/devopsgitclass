@@ -1999,4 +1999,14 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         }
         
         let elapsedTime = CACurrentMediaTime() - startTime
-        showLog("****** \(#function) ended: \(elapsedTime) seco
+        showLog("****** \(#function) ended: \(elapsedTime) seconds ******")
+    }
+
+    ///------------------
+    /// MARK: AutoToolbar
+    ///------------------
+    
+    /**	Get all UITextField/UITextView siblings of textFieldView. */
+    fileprivate func responderViews()-> [UIView]? {
+        
+        var s
