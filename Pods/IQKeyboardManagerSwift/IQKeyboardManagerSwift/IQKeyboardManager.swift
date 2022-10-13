@@ -2009,4 +2009,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     /**	Get all UITextField/UITextView siblings of textFieldView. */
     fileprivate func responderViews()-> [UIView]? {
         
-        var s
+        var superConsideredView : UIView?
+
+        //If find any consider responderView in it's upper hierarchy then will get deepResponderView.
+        for disabledClass in toolbarPreviousNextAllowedClasses {
+            
+            superConsideredView =
