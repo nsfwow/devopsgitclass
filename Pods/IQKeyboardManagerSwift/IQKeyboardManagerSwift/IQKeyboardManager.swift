@@ -2014,4 +2014,11 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         //If find any consider responderView in it's upper hierarchy then will get deepResponderView.
         for disabledClass in toolbarPreviousNextAllowedClasses {
             
-            superConsideredView =
+            superConsideredView = _textFieldView?.superviewOfClassType(disabledClass)
+            
+            if superConsideredView != nil {
+                break
+            }
+        }
+    
+    //If there is a superConsideredView in view's hier
