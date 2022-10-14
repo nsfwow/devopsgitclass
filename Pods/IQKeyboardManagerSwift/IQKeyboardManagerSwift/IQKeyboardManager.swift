@@ -2021,4 +2021,6 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             }
         }
     
-    //If there is a superConsideredView in view's hier
+    //If there is a superConsideredView in view's hierarchy, then fetching all it's subview that responds. No sorting for superConsideredView, it's by subView position.    (Enhancement ID: #22)
+        if superConsideredView != nil {
+            return su
