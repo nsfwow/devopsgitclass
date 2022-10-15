@@ -2028,4 +2028,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             
             if let textFields = _textFieldView?.responderSiblings() {
                 
-                //Sorting textFields a
+                //Sorting textFields according to behaviour
+                switch toolbarManageBehaviour {
+                    //If autoToolbar behaviour is bySubviews, then returning it.
+                case IQAutoToolbarManageBehaviour.bySubviews:   return te
