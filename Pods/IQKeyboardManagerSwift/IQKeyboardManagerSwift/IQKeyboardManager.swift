@@ -2034,4 +2034,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                 case IQAutoToolbarManageBehaviour.bySubviews:   return textFields
                     
                     //If autoToolbar behaviour is by tag, then sorting it according to tag property.
-                case IQAutoToolbarManageBehaviour.byTag:    return textFields.so
+                case IQAutoToolbarManageBehaviour.byTag:    return textFields.sortedArrayByTag()
+                    
+                    //If autoToolbar behaviour is by tag, then sorting it according to tag property.
+                case IQAutoToolbarManageBehaviour.byPosition:    return textFields.s
