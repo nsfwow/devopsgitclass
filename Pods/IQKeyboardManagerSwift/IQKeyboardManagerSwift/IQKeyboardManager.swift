@@ -2046,4 +2046,12 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     }
     
     /** Add toolbar if it is required to add on textFields and it's siblings. */
-    fileprivate func addToolbarIfRequire
+    fileprivate func addToolbarIfRequired() {
+        
+        let startTime = CACurrentMediaTime()
+        showLog("****** \(#function) started ******")
+
+        //	Getting all the sibling textFields.
+        if let siblings = responderViews(), !siblings.isEmpty {
+            
+    
