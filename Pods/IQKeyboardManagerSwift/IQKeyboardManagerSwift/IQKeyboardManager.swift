@@ -2037,4 +2037,13 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                 case IQAutoToolbarManageBehaviour.byTag:    return textFields.sortedArrayByTag()
                     
                     //If autoToolbar behaviour is by tag, then sorting it according to tag property.
-                case IQAutoToolbarManageBehaviour.byPosition:    return textFields.s
+                case IQAutoToolbarManageBehaviour.byPosition:    return textFields.sortedArrayByPosition()
+                }
+            } else {
+                return nil
+            }
+        }
+    }
+    
+    /** Add toolbar if it is required to add on textFields and it's siblings. */
+    fileprivate func addToolbarIfRequire
