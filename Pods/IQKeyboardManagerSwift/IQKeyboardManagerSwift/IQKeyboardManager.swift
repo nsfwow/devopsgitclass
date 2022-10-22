@@ -2054,4 +2054,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         //	Getting all the sibling textFields.
         if let siblings = responderViews(), !siblings.isEmpty {
             
-    
+            showLog("Found \(siblings.count) responder sibling(s)")
+            
+            if let textField = _textFieldView {
+                //Either there is no inputAccessoryView or if accessoryView is not appropriate for current 
