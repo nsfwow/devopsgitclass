@@ -2057,4 +2057,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             showLog("Found \(siblings.count) responder sibling(s)")
             
             if let textField = _textFieldView {
-                //Either there is no inputAccessoryView or if accessoryView is not appropriate for current 
+                //Either there is no inputAccessoryView or if accessoryView is not appropriate for current situation(There is Previous/Next/Done toolbar).
+                //setInputAccessoryView: check   (Bug ID: #307)
+                if textField.responds(to: #selector(setter: UITextField.inputAccessoryView)) {
+              
