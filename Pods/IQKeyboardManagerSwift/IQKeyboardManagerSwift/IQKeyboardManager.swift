@@ -2060,4 +2060,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                 //Either there is no inputAccessoryView or if accessoryView is not appropriate for current situation(There is Previous/Next/Done toolbar).
                 //setInputAccessoryView: check   (Bug ID: #307)
                 if textField.responds(to: #selector(setter: UITextField.inputAccessoryView)) {
-              
+                    
+                    if textField.inputAccessoryView == nil ||
+                        textField.inputAccessoryView?.tag == IQKeyboardManager.kIQPreviousNextButtonToolbarTag ||
+                        textField.inputAccessoryView?.ta
