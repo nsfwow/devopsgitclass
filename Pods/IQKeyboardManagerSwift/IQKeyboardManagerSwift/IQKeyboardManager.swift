@@ -2066,4 +2066,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                         textField.inputAccessoryView?.tag == IQKeyboardManager.kIQDoneButtonToolbarTag {
                         
                         //	If only one object is found, then adding only Done button.
-                        if (siblings.count == 1 && previousNextDisplayMode
+                        if (siblings.count == 1 && previousNextDisplayMode == .Default) || previousNextDisplayMode == .alwaysHide {
+                            
+                            if let doneBarButtonItemImage = toolbarDoneBarButtonItemImage {
+                                textField.addRightBut
