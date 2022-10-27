@@ -2069,4 +2069,6 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                         if (siblings.count == 1 && previousNextDisplayMode == .Default) || previousNextDisplayMode == .alwaysHide {
                             
                             if let doneBarButtonItemImage = toolbarDoneBarButtonItemImage {
-                                textField.addRightBut
+                                textField.addRightButtonOnKeyboardWithImage(doneBarButtonItemImage, target: self, action: #selector(self.doneAction(_:)), shouldShowPlaceholder: shouldShowToolbarPlaceholder)
+                            }
+                                //Supporting Cust
