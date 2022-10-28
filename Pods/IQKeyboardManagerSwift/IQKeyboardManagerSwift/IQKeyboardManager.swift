@@ -2071,4 +2071,6 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                             if let doneBarButtonItemImage = toolbarDoneBarButtonItemImage {
                                 textField.addRightButtonOnKeyboardWithImage(doneBarButtonItemImage, target: self, action: #selector(self.doneAction(_:)), shouldShowPlaceholder: shouldShowToolbarPlaceholder)
                             }
-                                //Supporting Cust
+                                //Supporting Custom Done button text (Enhancement ID: #209, #411, Bug ID: #376)
+                            else if let doneBarButtonItemText = toolbarDoneBarButtonItemText {
+                                textField.addRightButtonOnKeyboardWithText(doneBarButtonIt
