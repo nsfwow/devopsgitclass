@@ -2077,4 +2077,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                             } else {
                                 //Now adding textField placeholder text as title of IQToolbar  (Enhancement ID: #27)
                                 textField.addDoneOnKeyboardWithTarget(self, action: #selector(self.doneAction(_:)), shouldShowPlaceholder: shouldShowToolbarPlaceholder)
-                     
+                            }
+                            textField.inputAccessoryView?.tag = IQKeyboardManager.kIQDoneButtonToolbarTag //  (Bug ID: #78)
+                            
+                        } else if (siblings.count > 1 && previousNextDisplayMode == .Default) || previousNextDis
