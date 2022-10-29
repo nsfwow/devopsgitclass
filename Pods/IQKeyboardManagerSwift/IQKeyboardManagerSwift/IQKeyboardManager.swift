@@ -2075,4 +2075,6 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                             else if let doneBarButtonItemText = toolbarDoneBarButtonItemText {
                                 textField.addRightButtonOnKeyboardWithText(doneBarButtonItemText, target: self, action: #selector(self.doneAction(_:)), shouldShowPlaceholder: shouldShowToolbarPlaceholder)
                             } else {
-                                //Now adding textField placeholder text as title of IQToolb
+                                //Now adding textField placeholder text as title of IQToolbar  (Enhancement ID: #27)
+                                textField.addDoneOnKeyboardWithTarget(self, action: #selector(self.doneAction(_:)), shouldShowPlaceholder: shouldShowToolbarPlaceholder)
+                     
