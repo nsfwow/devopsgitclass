@@ -2080,4 +2080,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                             }
                             textField.inputAccessoryView?.tag = IQKeyboardManager.kIQDoneButtonToolbarTag //  (Bug ID: #78)
                             
-                        } else if (siblings.count > 1 && previousNextDisplayMode == .Default) || previousNextDis
+                        } else if (siblings.count > 1 && previousNextDisplayMode == .Default) || previousNextDisplayMode == .alwaysShow {
+                            
+                            //Supporting Custom Done button image (Enhancement ID: #366)
+                            if let doneBarButtonItemImage = toolbarDoneBarButton
