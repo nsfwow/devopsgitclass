@@ -2088,4 +2088,5 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                             }
                                 //Supporting Custom Done button text (Enhancement ID: #209, #411, Bug ID: #376)
                             else if let doneBarButtonItemText = toolbarDoneBarButtonItemText {
-                                textField.addPreviousNextRightOnKeyboardWithTarget(self, rightButtonTitle: doneBarButtonItemText, pr
+                                textField.addPreviousNextRightOnKeyboardWithTarget(self, rightButtonTitle: doneBarButtonItemText, previousAction: #selector(self.previousAction(_:)), nextAction: #selector(self.nextAction(_:)), rightButtonAction: #selector(self.doneAction(_:)), shouldShowPlaceholder: shouldShowToolbarPlaceholder)
+                         
