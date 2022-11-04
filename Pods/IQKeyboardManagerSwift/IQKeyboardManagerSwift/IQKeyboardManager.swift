@@ -2093,4 +2093,10 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                                 //Now adding textField placeholder text as title of IQToolbar  (Enhancement ID: #27)
                                 textField.addPreviousNextDoneOnKeyboardWithTarget(self, previousAction: #selector(self.previousAction(_:)), nextAction: #selector(self.nextAction(_:)), doneAction: #selector(self.doneAction(_:)), shouldShowPlaceholder: shouldShowToolbarPlaceholder)
                             }
-                            textField.inputAccessoryView?.tag = 
+                            textField.inputAccessoryView?.tag = IQKeyboardManager.kIQPreviousNextButtonToolbarTag //  (Bug ID: #78)
+                        }
+
+                        let toolbar = textField.keyboardToolbar
+
+                        //  Setting toolbar to keyboard.
+                        if
