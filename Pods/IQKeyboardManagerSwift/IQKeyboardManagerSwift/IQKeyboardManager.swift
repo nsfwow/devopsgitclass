@@ -2099,4 +2099,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                         let toolbar = textField.keyboardToolbar
 
                         //  Setting toolbar to keyboard.
-                        if
+                        if let _textField = textField as? UITextField {
+                            
+                            //Bar style according to keyboard appearance
+                            switch _textField.keyboardAppearance {
+       
