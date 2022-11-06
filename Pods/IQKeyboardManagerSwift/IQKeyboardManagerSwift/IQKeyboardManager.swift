@@ -2107,4 +2107,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                             case UIKeyboardAppearance.dark:
                                 toolbar.barStyle = UIBarStyle.black
                                 toolbar.tintColor = UIColor.white
-      
+                                toolbar.barTintColor = nil
+                            default:
+                                toolbar.barStyle = UIBarStyle.default
+                                toolbar.barTintColor = toolbarBarTintColor
+   
