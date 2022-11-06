@@ -2103,4 +2103,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                             
                             //Bar style according to keyboard appearance
                             switch _textField.keyboardAppearance {
-       
+                                
+                            case UIKeyboardAppearance.dark:
+                                toolbar.barStyle = UIBarStyle.black
+                                toolbar.tintColor = UIColor.white
+      
