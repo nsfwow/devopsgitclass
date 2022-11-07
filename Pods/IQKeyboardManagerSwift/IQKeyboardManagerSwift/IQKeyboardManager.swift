@@ -2111,4 +2111,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                             default:
                                 toolbar.barStyle = UIBarStyle.default
                                 toolbar.barTintColor = toolbarBarTintColor
-   
+                                
+                                //Setting toolbar tintColor //  (Enhancement ID: #30)
+                                if shouldToolbarUsesTextFieldTintColor {
+                                    t
