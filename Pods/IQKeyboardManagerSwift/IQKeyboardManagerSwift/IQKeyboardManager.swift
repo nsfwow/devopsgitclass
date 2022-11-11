@@ -2118,4 +2118,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                                 } else if let tintColor = toolbarTintColor {
                                     toolbar.tintColor = tintColor
                                 } else {
-                                    
+                                    toolbar.tintColor = UIColor.black
+                                }
+                            }
+                        } else if let _textView = textField as? UITextView {
+                            
+                            //Bar 
