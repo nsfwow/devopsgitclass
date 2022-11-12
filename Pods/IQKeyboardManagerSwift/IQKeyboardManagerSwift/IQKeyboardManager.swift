@@ -2123,4 +2123,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                             }
                         } else if let _textView = textField as? UITextView {
                             
-                            //Bar 
+                            //Bar style according to keyboard appearance
+                            switch _textView.keyboardAppearance {
+                                
+                            case UIKeyboardAppearance.dark:
+                                toolbar.barStyle = 
