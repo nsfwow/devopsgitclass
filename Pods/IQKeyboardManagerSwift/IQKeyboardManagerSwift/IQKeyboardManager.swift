@@ -2136,4 +2136,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
 
                                 if shouldToolbarUsesTextFieldTintColor {
                                     toolbar.tintColor = _textView.tintColor
-      
+                                } else if let tintColor = toolbarTintColor {
+                                    toolbar.tintColor = tintColor
+                                } else {
+                                    toolbar.tintColor = UIColor.black
