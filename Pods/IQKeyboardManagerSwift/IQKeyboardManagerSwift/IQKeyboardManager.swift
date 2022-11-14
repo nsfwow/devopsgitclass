@@ -2140,3 +2140,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                                     toolbar.tintColor = tintColor
                                 } else {
                                     toolbar.tintColor = UIColor.black
+                                }
+                            }
+                        }
+
+                        //Setting toolbar title font.   //  (Enhancement ID: #30)
+                        if shouldShowToolbarPlacehold
