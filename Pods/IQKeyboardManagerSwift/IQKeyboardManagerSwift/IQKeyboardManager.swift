@@ -2145,4 +2145,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                         }
 
                         //Setting toolbar title font.   //  (Enhancement ID: #30)
-                        if shouldShowToolbarPlacehold
+                        if shouldShowToolbarPlaceholder == true &&
+                            textField.shouldHideToolbarPlaceholder == false {
+                            
+                            //Updating placeholder font to toolbar.     //(Bug ID: #148, #272)
+                
