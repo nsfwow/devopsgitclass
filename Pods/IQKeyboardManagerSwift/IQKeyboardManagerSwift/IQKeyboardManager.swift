@@ -2151,4 +2151,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                             //Updating placeholder font to toolbar.     //(Bug ID: #148, #272)
                             if toolbar.titleBarButton.title == nil ||
                                 toolbar.titleBarButton.title != textField.drawingToolbarPlaceholder {
-                                toolbar.titleBarButton.title = 
+                                toolbar.titleBarButton.title = textField.drawingToolbarPlaceholder
+                            }
+                            
+                            //Setting toolbar title font.   //  (Enhancement ID: #30)
+                            if placeholderFont != nil {
+                   
