@@ -2160,4 +2160,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                             }
                         } else {
                             
-                            toolbar.titleBarButton.ti
+                            toolbar.titleBarButton.title = nil
+                        }
+                        
+                        //In case of UITableView (Special), the next/previous buttons has to be refreshed everytime.    (Bug ID: #56)
+                        //	If firstTextField, then p
