@@ -2156,4 +2156,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                             
                             //Setting toolbar title font.   //  (Enhancement ID: #30)
                             if placeholderFont != nil {
-                   
+                                toolbar.titleBarButton.titleFont = placeholderFont
+                            }
+                        } else {
+                            
+                            toolbar.titleBarButton.ti
