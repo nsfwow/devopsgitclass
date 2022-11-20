@@ -2164,4 +2164,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                         }
                         
                         //In case of UITableView (Special), the next/previous buttons has to be refreshed everytime.    (Bug ID: #56)
-                        //	If firstTextField, then p
+                        //	If firstTextField, then previous should not be enabled.
+                        if siblings.first == textField {
+                            if (siblings.count == 1) {
+                                textField.keyboardToolbar.previousBarButton.isEnabled = false
+        
