@@ -2168,4 +2168,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                         if siblings.first == textField {
                             if (siblings.count == 1) {
                                 textField.keyboardToolbar.previousBarButton.isEnabled = false
+                                textField.keyboardToolbar.nextBarButton.isEnabled = false
+                            } else {
+                                textField.keyboardToolbar.previousBarButton.isEnabled = false
         
