@@ -2185,4 +2185,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
             }
         }
 
-        let elapsedT
+        let elapsedTime = CACurrentMediaTime() - startTime
+        showLog("****** \(#function) ended: \(elapsedTime) seconds ******")
+    }
+    
+    /** Remove any toolbar if it is IQToolbar. */
+    fileprivate func removeToolbarIfRequir
