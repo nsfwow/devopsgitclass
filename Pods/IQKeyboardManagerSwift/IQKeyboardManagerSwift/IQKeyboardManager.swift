@@ -2190,4 +2190,10 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     }
     
     /** Remove any toolbar if it is IQToolbar. */
-    fileprivate func removeToolbarIfRequir
+    fileprivate func removeToolbarIfRequired() {    //  (Bug ID: #18)
+        
+        let startTime = CACurrentMediaTime()
+        showLog("****** \(#function) started ******")
+
+        //	Getting all the sibling textFields.
+        if let siblings = responder
