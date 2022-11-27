@@ -2196,4 +2196,12 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         showLog("****** \(#function) started ******")
 
         //	Getting all the sibling textFields.
-        if let siblings = responder
+        if let siblings = responderViews() {
+            
+            showLog("Found \(siblings.count) responder sibling(s)")
+
+            for view in siblings {
+                
+                if let toolbar = view.inputAccessoryView as? IQToolbar {
+
+                    //setInputAccessoryView: chec
