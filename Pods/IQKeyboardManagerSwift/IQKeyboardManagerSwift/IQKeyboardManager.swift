@@ -2204,4 +2204,6 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                 
                 if let toolbar = view.inputAccessoryView as? IQToolbar {
 
-                    //setInputAccessoryView: chec
+                    //setInputAccessoryView: check   (Bug ID: #307)
+                    if view.responds(to: #selector(setter: UITextField.inputAccessoryView)) &&
+                        (toolbar.tag == IQKeyboardManager.kIQDoneButtonToolbarTag || too
