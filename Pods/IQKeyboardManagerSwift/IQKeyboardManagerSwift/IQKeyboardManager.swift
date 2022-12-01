@@ -2206,4 +2206,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
 
                     //setInputAccessoryView: check   (Bug ID: #307)
                     if view.responds(to: #selector(setter: UITextField.inputAccessoryView)) &&
-                        (toolbar.tag == IQKeyboardManager.kIQDoneButtonToolbarTag || too
+                        (toolbar.tag == IQKeyboardManager.kIQDoneButtonToolbarTag || toolbar.tag == IQKeyboardManager.kIQPreviousNextButtonToolbarTag) {
+                        
+                        if let textField = view as? UITextField {
+                            textField.inputAccessoryView = nil
+                 
