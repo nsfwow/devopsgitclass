@@ -2213,4 +2213,14 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                             textField.reloadInputViews()
                         } else if let textView = view as? UITextView {
                             textView.inputAccessoryView = nil
-                            textView.reloadIn
+                            textView.reloadInputViews()
+                        }
+                    }
+                }
+            }
+        }
+
+        let elapsedTime = CACurrentMediaTime() - startTime
+        showLog("****** \(#function) ended: \(elapsedTime) seconds ******")
+    }
+ 
