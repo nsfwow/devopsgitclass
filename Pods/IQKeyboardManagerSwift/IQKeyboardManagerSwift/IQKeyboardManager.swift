@@ -2223,4 +2223,9 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         let elapsedTime = CACurrentMediaTime() - startTime
         showLog("****** \(#function) ended: \(elapsedTime) seconds ******")
     }
- 
+    
+    /**	reloadInputViews to reload toolbar buttons enable/disable state on the fly Enhancement ID #434. */
+    open func reloadInputViews() {
+        
+        //If enabled then adding toolbar.
+        if p
