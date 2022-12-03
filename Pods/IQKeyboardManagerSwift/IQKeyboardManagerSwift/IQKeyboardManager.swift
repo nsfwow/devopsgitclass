@@ -2228,4 +2228,12 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     open func reloadInputViews() {
         
         //If enabled then adding toolbar.
-        if p
+        if privateIsEnableAutoToolbar() == true {
+            self.addToolbarIfRequired()
+        } else {
+            self.removeToolbarIfRequired()
+        }
+    }
+    
+    ///------------------
+    /// MARK: Debugging & Developer o
