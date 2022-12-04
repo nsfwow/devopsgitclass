@@ -2236,4 +2236,10 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     }
     
     ///------------------
-    /// MARK: Debugging & Developer o
+    /// MARK: Debugging & Developer options
+    ///------------------
+    
+    open var enableDebugging = false
+
+    /**
+     @warning Use below methods to completely enable/disable notifications registered by library internally. Please keep in mind that library is total
