@@ -2247,4 +2247,5 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     open func registerAllNotifications() {
 
         //  Registering for keyboard notification.
-        NotificationCenter.default.addOb
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name: Notification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardDidShow(_:)), name: Notification.Name.UIKeyboardDidSho
