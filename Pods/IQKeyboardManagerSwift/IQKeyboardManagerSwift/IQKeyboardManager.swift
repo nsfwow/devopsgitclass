@@ -2255,4 +2255,5 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         //  Registering for UITextField notification.
         registerTextFieldViewClass(UITextField.self, didBeginEditingNotificationName: Notification.Name.UITextFieldTextDidBeginEditing.rawValue, didEndEditingNotificationName: Notification.Name.UITextFieldTextDidEndEditing.rawValue)
         
-        //  Registering for UITextV
+        //  Registering for UITextView notification.
+        registerTextFieldViewClass(UITextView.self, didBeginEditingNotificationName: Notification.Name.UITextViewTextDidBeginEditing.rawValue, didEndEditingNotificationName: Notification.Name.UITextViewT
