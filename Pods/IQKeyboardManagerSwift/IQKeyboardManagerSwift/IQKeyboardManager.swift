@@ -2259,4 +2259,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         registerTextFieldViewClass(UITextView.self, didBeginEditingNotificationName: Notification.Name.UITextViewTextDidBeginEditing.rawValue, didEndEditingNotificationName: Notification.Name.UITextViewTextDidEndEditing.rawValue)
         
         //  Registering for orientation changes notification
-        NotificationCenter.default.addObserver(self, selector: #selector(self.willChangeStatusBarOrientation(_:)), name: Notificati
+        NotificationCenter.default.addObserver(self, selector: #selector(self.willChangeStatusBarOrientation(_:)), name: Notification.Name.UIApplicationWillChangeStatusBarOrientation, object: UIApplication.shared)
+        
+        //  Registering for status bar frame change notification
+        NotificationCenter.default.addObserver(self, selector: #selector(self.didChangeStatusBarFr
