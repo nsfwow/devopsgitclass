@@ -2268,4 +2268,6 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     open func unregisterAllNotifications() {
         
         //  Unregistering for keyboard notification.
-        NotificationCenter.def
+        NotificationCenter.default.removeObserver(self, name: Notification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: Notification.Name.UIKeyboardDidShow, object: nil)
+        NotificationCenter.de
