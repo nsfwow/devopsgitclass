@@ -2262,4 +2262,10 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(self.willChangeStatusBarOrientation(_:)), name: Notification.Name.UIApplicationWillChangeStatusBarOrientation, object: UIApplication.shared)
         
         //  Registering for status bar frame change notification
-        NotificationCenter.default.addObserver(self, selector: #selector(self.didChangeStatusBarFr
+        NotificationCenter.default.addObserver(self, selector: #selector(self.didChangeStatusBarFrame(_:)), name: Notification.Name.UIApplicationDidChangeStatusBarFrame, object: UIApplication.shared)
+    }
+
+    open func unregisterAllNotifications() {
+        
+        //  Unregistering for keyboard notification.
+        NotificationCenter.def
