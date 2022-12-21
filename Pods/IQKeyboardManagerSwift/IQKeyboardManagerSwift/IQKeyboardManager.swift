@@ -2283,4 +2283,14 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         NotificationCenter.default.removeObserver(self, name: Notification.Name.UIApplicationWillChangeStatusBarOrientation, object: UIApplication.shared)
         
         //  Unregistering for status bar frame change notification
-        NotificationCenter.default.removeObserver(self, name: Notification.Name.UIAp
+        NotificationCenter.default.removeObserver(self, name: Notification.Name.UIApplicationDidChangeStatusBarFrame, object: UIApplication.shared)
+    }
+
+    fileprivate func showLog(_ logString: String) {
+        
+        if enableDebugging {
+            print("IQKeyboardManager: " + logString)
+        }
+    }
+}
+
