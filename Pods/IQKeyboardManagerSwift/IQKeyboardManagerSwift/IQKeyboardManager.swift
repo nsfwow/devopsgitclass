@@ -2280,4 +2280,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         unregisterTextFieldViewClass(UITextView.self, didBeginEditingNotificationName: Notification.Name.UITextViewTextDidBeginEditing.rawValue, didEndEditingNotificationName: Notification.Name.UITextViewTextDidEndEditing.rawValue)
         
         //  Unregistering for orientation changes notification
-        NotificationCenter.default.removeObserver(self, name: Notification.Name.UI
+        NotificationCenter.default.removeObserver(self, name: Notification.Name.UIApplicationWillChangeStatusBarOrientation, object: UIApplication.shared)
+        
+        //  Unregistering for status bar frame change notification
+        NotificationCenter.default.removeObserver(self, name: Notification.Name.UIAp
