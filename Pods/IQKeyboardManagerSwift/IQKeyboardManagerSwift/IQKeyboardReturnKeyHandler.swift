@@ -475,3 +475,152 @@ open class IQKeyboardReturnKeyHandler: NSObject , UITextFieldDelegate, UITextVie
     
     open func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
         
+        if delegate == nil {
+            
+            if let unwrapDelegate = textFieldViewCachedInfo(textView)?[kIQTextFieldDelegate] as? UITextViewDelegate {
+                if unwrapDelegate.responds(to: #selector(UITextViewDelegate.textViewShouldEndEditing(_:))) {
+                    return unwrapDelegate.textViewShouldEndEditing?(textView) == true
+                }
+            }
+        }
+        
+        return true
+    }
+    
+    open func textViewDidBeginEditing(_ textView: UITextView) {
+        updateReturnKeyTypeOnTextField(textView)
+        
+        var aDelegate : UITextViewDelegate? = delegate
+        
+        if aDelegate == nil {
+            
+            if let dict = textFieldViewCachedInfo(textView) {
+                aDelegate = dict[kIQTextFieldDelegate] as? UITextViewDelegate
+            }
+        }
+        
+        aDelegate?.textViewDidBeginEditing?(textView)
+    }
+    
+    open func textViewDidEndEditing(_ textView: UITextView) {
+        
+        var aDelegate : UITextViewDelegate? = delegate
+        
+        if aDelegate == nil {
+            
+            if let dict = textFieldViewCachedInfo(textView) {
+                aDelegate = dict[kIQTextFieldDelegate] as? UITextViewDelegate
+            }
+        }
+        
+        aDelegate?.textViewDidEndEditing?(textView)
+    }
+    
+    open func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        
+        var shouldReturn = true
+        
+        if delegate == nil {
+            
+            if let unwrapDelegate = textFieldViewCachedInfo(textView)?[kIQTextFieldDelegate] as? UITextViewDelegate {
+                if unwrapDelegate.responds(to: #selector(UITextViewDelegate.textView(_:shouldChangeTextIn:replacementText:))) {
+                    shouldReturn = (unwrapDelegate.textView?(textView, shouldChangeTextIn: range, replacementText: text)) == true
+                }
+            }
+        }
+        
+        if shouldReturn == true && text == "\n" {
+            shouldReturn = goToNextResponderOrResign(textView)
+        }
+        
+        return shouldReturn
+    }
+    
+    open func textViewDidChange(_ textView: UITextView) {
+        
+        var aDelegate : UITextViewDelegate? = delegate
+        
+        if aDelegate == nil {
+            
+            if let dict = textFieldViewCachedInfo(textView) {
+                aDelegate = dict[kIQTextFieldDelegate] as? UITextViewDelegate
+            }
+        }
+        
+        aDelegate?.textViewDidChange?(textView)
+    }
+    
+    open func textViewDidChangeSelection(_ textView: UITextView) {
+        
+        var aDelegate : UITextViewDelegate? = delegate
+        
+        if aDelegate == nil {
+            
+            if let dict = textFieldViewCachedInfo(textView) {
+                aDelegate = dict[kIQTextFieldDelegate] as? UITextViewDelegate
+            }
+        }
+        
+        aDelegate?.textViewDidChangeSelection?(textView)
+    }
+    
+    @available(iOS 10.0, *)
+    open func textView(_ aTextView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
+        
+        if delegate == nil {
+            
+            if let unwrapDelegate = textFieldViewCachedInfo(aTextView)?[kIQTextFieldDelegate] as? UITextViewDelegate {
+                if unwrapDelegate.responds(to: #selector(textView as (UITextView, URL, NSRange, UITextItemInteraction) -> Bool)) {
+                    return unwrapDelegate.textView?(aTextView, shouldInteractWith: URL, in: characterRange, interaction: interaction) == true
+                }
+            }
+        }
+        
+        return true
+    }
+    
+    @available(iOS 10.0, *)
+    open func textView(_ aTextView: UITextView, shouldInteractWith textAttachment: NSTextAttachment, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
+        
+        if delegate == nil {
+            
+            if let unwrapDelegate = textFieldViewCachedInfo(aTextView)?[kIQTextFieldDelegate] as? UITextViewDelegate {
+                if unwrapDelegate.responds(to: #selector(textView as (UITextView, NSTextAttachment, NSRange, UITextItemInteraction) -> Bool)) {
+                    return unwrapDelegate.textView?(aTextView, shouldInteractWith: textAttachment, in: characterRange, interaction: interaction) == true
+                }
+            }
+        }
+        
+        return true
+    }
+    
+    @available(iOS, deprecated: 10.0)
+    open func textView(_ aTextView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange) -> Bool {
+        
+        if delegate == nil {
+            
+            if let unwrapDelegate = textFieldViewCachedInfo(aTextView)?[kIQTextFieldDelegate] as? UITextViewDelegate {
+                if unwrapDelegate.responds(to: #selector(textView as (UITextView, URL, NSRange) -> Bool)) {
+                    return unwrapDelegate.textView?(aTextView, shouldInteractWith: URL, in: characterRange) == true
+                }
+            }
+        }
+        
+        return true
+    }
+    
+    @available(iOS, deprecated: 10.0)
+    open func textView(_ aTextView: UITextView, shouldInteractWith textAttachment: NSTextAttachment, in characterRange: NSRange) -> Bool {
+        
+        if delegate == nil {
+            
+            if let unwrapDelegate = textFieldViewCachedInfo(aTextView)?[kIQTextFieldDelegate] as? UITextViewDelegate {
+                if unwrapDelegate.responds(to: #selector(textView as (UITextView, NSTextAttachment, NSRange) -> Bool)) {
+                    return unwrapDelegate.textView?(aTextView, shouldInteractWith: textAttachment, in: characterRange) == true
+                }
+            }
+        }
+        
+        return true
+    }
+}
