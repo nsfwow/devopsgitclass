@@ -34,4 +34,9 @@ open class IQTextView : UITextView {
 
     override init(frame: CGRect, textContainer: NSTextContainer?) {
         super.init(frame: frame, textContainer: textContainer)
-        NotificationCenter.default.addObserver(self, selector: #selector(sel
+        NotificationCenter.default.addObserver(self, selector: #selector(self.refreshPlaceholder), name: Notification.Name.UITextViewTextDidChange, object: self)
+    }
+    
+    override open func awakeFromNib() {
+         super.awakeFromNib()
+        NotificationCenter.default.addObserver(self, selector: #selector(self.refres
