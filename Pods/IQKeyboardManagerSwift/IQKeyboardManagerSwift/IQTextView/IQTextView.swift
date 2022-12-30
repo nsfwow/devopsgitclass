@@ -39,4 +39,13 @@ open class IQTextView : UITextView {
     
     override open func awakeFromNib() {
          super.awakeFromNib()
-        NotificationCenter.default.addObserver(self, selector: #selector(self.refres
+        NotificationCenter.default.addObserver(self, selector: #selector(self.refreshPlaceholder), name: Notification.Name.UITextViewTextDidChange, object: self)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    fileprivate var placeholderLabel: UILabel?
+    
+    
