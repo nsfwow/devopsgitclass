@@ -48,4 +48,13 @@ open class IQTextView : UITextView {
     
     fileprivate var placeholderLabel: UILabel?
     
-    
+    /** @abstract To set textView's placeholder text. Default is ni.    */
+    @IBInspectable open var placeholder : String? {
+
+        get {
+            return placeholderLabel?.text
+        }
+ 
+        set {
+            
+            if 
