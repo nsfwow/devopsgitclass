@@ -57,4 +57,10 @@ open class IQTextView : UITextView {
  
         set {
             
-            if 
+            if placeholderLabel == nil {
+                
+                placeholderLabel = UILabel()
+                
+                if let unwrappedPlaceholderLabel = placeholderLabel {
+                    
+                    unwrappedPlaceholderLabel.autoresizingMask = [.
