@@ -63,4 +63,7 @@ open class IQTextView : UITextView {
                 
                 if let unwrappedPlaceholderLabel = placeholderLabel {
                     
-                    unwrappedPlaceholderLabel.autoresizingMask = [.
+                    unwrappedPlaceholderLabel.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+                    unwrappedPlaceholderLabel.lineBreakMode = .byWordWrapping
+                    unwrappedPlaceholderLabel.numberOfLines = 0
+                    unwrappedPlaceholderL
