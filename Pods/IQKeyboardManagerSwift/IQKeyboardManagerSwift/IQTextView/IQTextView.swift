@@ -66,4 +66,7 @@ open class IQTextView : UITextView {
                     unwrappedPlaceholderLabel.autoresizingMask = [.flexibleWidth, .flexibleHeight]
                     unwrappedPlaceholderLabel.lineBreakMode = .byWordWrapping
                     unwrappedPlaceholderLabel.numberOfLines = 0
-                    unwrappedPlaceholderL
+                    unwrappedPlaceholderLabel.font = self.font
+                    unwrappedPlaceholderLabel.textAlignment = self.textAlignment
+                    unwrappedPlaceholderLabel.backgroundColor = UIColor.clear
+                    unwrappedPlaceholderLabel.textColor = UI
