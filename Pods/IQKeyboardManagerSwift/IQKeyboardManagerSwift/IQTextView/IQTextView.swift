@@ -76,4 +76,13 @@ open class IQTextView : UITextView {
             }
             
             placeholderLabel?.text = newValue
-            refr
+            refreshPlaceholder()
+        }
+    }
+    
+    open override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        if let unwrappedPlaceholderLabel = placeholderLabel {
+            
+            let offsetLeft = textContainerInset.left 
