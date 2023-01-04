@@ -90,3 +90,6 @@ open class IQTextView : UITextView {
             let offsetTop = textContainerInset.top
             let offsetBottom = textContainerInset.top
 
+            let expectedSize = unwrappedPlaceholderLabel.sizeThatFits(CGSize(width: self.frame.width-offsetLeft-offsetRight, height: self.frame.height-offsetTop-offsetBottom))
+
+            unwrappedPlaceholderLabel.frame = CGRect(x: offsetLef
