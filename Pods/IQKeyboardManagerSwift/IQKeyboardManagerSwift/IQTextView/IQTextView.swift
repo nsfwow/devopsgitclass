@@ -85,4 +85,8 @@ open class IQTextView : UITextView {
         
         if let unwrappedPlaceholderLabel = placeholderLabel {
             
-            let offsetLeft = textContainerInset.left 
+            let offsetLeft = textContainerInset.left + textContainer.lineFragmentPadding
+            let offsetRight = textContainerInset.right + textContainer.lineFragmentPadding
+            let offsetTop = textContainerInset.top
+            let offsetBottom = textContainerInset.top
+
