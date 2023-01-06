@@ -100,4 +100,18 @@ open class IQTextView : UITextView {
         
         if text.characters.count != 0 {
             placeholderLabel?.alpha = 0
+        } else {
+            placeholderLabel?.alpha = 1
+        }
+    }
     
+    override open var text: String! {
+        
+        didSet {
+            
+            refreshPlaceholder()
+
+        }
+    }
+    
+    override open var font : UIFont?
