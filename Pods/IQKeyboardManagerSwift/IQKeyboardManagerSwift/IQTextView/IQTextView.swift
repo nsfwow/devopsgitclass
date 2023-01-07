@@ -124,4 +124,13 @@ open class IQTextView : UITextView {
                 placeholderLabel?.font = UIFont.systemFont(ofSize: 12)
             }
         }
-  
+    }
+    
+    override open var textAlignment: NSTextAlignment
+    {
+        didSet {
+            placeholderLabel?.textAlignment = textAlignment
+        }
+    }
+    
+    override open var delegate : UITextViewDelega
