@@ -114,4 +114,14 @@ open class IQTextView : UITextView {
         }
     }
     
-    override open var font : UIFont?
+    override open var font : UIFont? {
+       
+        didSet {
+            
+            if let unwrappedFont = font {
+                placeholderLabel?.font = unwrappedFont
+            } else {
+                placeholderLabel?.font = UIFont.systemFont(ofSize: 12)
+            }
+        }
+  
