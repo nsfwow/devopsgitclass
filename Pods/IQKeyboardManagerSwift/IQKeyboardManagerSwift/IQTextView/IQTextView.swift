@@ -133,4 +133,17 @@ open class IQTextView : UITextView {
         }
     }
     
-    override open var delegate : UITextViewDelega
+    override open var delegate : UITextViewDelegate? {
+        
+        get {
+            refreshPlaceholder()
+            return super.delegate
+        }
+        
+        set {
+            super.delegate = newValue
+        }
+    }
+}
+
+
