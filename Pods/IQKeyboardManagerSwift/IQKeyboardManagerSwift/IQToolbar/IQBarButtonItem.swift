@@ -25,4 +25,13 @@
 import UIKit
 import Foundation
 
-open
+open class IQBarButtonItem: UIBarButtonItem {
+
+    private static var _classInitialize: Void = classInitialize()
+    
+    public override init() {
+        _ = IQBarButtonItem._classInitialize
+          super.init()
+      }
+
+    public required init?(code
