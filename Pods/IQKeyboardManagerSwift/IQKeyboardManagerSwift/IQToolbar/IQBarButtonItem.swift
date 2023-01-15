@@ -34,4 +34,14 @@ open class IQBarButtonItem: UIBarButtonItem {
           super.init()
       }
 
-    public required init?(code
+    public required init?(coder aDecoder: NSCoder) {
+        _ = IQBarButtonItem._classInitialize
+           super.init(coder: aDecoder)
+       }
+
+   
+    private class func classInitialize() {
+
+        let  appearanceProxy = self.appearance()
+
+     
