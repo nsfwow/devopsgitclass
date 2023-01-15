@@ -44,4 +44,8 @@ open class IQBarButtonItem: UIBarButtonItem {
 
         let  appearanceProxy = self.appearance()
 
-     
+        let states : [UIControlState] = [.normal,.highlighted,.disabled,.selected,.application,.reserved];
+
+        for state in states {
+
+            appearanceProxy.setBackgroundImage(nil, for: state, barMetr
