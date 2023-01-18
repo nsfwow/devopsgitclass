@@ -48,4 +48,7 @@ open class IQBarButtonItem: UIBarButtonItem {
 
         for state in states {
 
-            appearanceProxy.setBackgroundImage(nil, for: state, barMetr
+            appearanceProxy.setBackgroundImage(nil, for: state, barMetrics: .default)
+            appearanceProxy.setBackgroundImage(nil, for: state, style: .done, barMetrics: .default)
+            appearanceProxy.setBackgroundImage(nil, for: state, style: .plain, barMetrics: .default)
+            appearanceProx
