@@ -51,4 +51,8 @@ open class IQBarButtonItem: UIBarButtonItem {
             appearanceProxy.setBackgroundImage(nil, for: state, barMetrics: .default)
             appearanceProxy.setBackgroundImage(nil, for: state, style: .done, barMetrics: .default)
             appearanceProxy.setBackgroundImage(nil, for: state, style: .plain, barMetrics: .default)
-            appearanceProx
+            appearanceProxy.setBackButtonBackgroundImage(nil, for: state, barMetrics: .default)
+        }
+        
+        appearanceProxy.setTitlePositionAdjustment(UIOffset.zero, for: .default)
+        appearanceProxy.setBackgroundVerticalPosit
