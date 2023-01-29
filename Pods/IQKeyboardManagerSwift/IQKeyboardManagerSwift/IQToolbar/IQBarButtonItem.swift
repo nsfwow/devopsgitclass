@@ -55,4 +55,9 @@ open class IQBarButtonItem: UIBarButtonItem {
         }
         
         appearanceProxy.setTitlePositionAdjustment(UIOffset.zero, for: .default)
-        appearanceProxy.setBackgroundVerticalPosit
+        appearanceProxy.setBackgroundVerticalPositionAdjustment(0, for: .default)
+        appearanceProxy.setBackButtonTitlePositionAdjustment(UIOffset.zero, for: .default)
+        appearanceProxy.setBackButtonBackgroundVerticalPositionAdjustment(0, for: .default)
+    }
+    
+    open overr
