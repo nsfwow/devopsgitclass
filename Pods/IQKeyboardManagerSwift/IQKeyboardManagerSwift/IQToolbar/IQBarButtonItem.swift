@@ -67,4 +67,11 @@ open class IQBarButtonItem: UIBarButtonItem {
                 var textAttributes = [NSAttributedStringKey : Any]()
                 
                 if let attributes = titleTextAttributes(for: .normal) {
-       
+                
+                    for (key, value) in attributes {
+                
+                        textAttributes[NSAttributedStringKey.init(key)] = value
+                    }
+                }
+                
+ 
