@@ -60,4 +60,11 @@ open class IQBarButtonItem: UIBarButtonItem {
         appearanceProxy.setBackButtonBackgroundVerticalPositionAdjustment(0, for: .default)
     }
     
-    open overr
+    open override var tintColor: UIColor? {
+        didSet {
+
+            #if swift(>=4)
+                var textAttributes = [NSAttributedStringKey : Any]()
+                
+                if let attributes = titleTextAttributes(for: .normal) {
+       
