@@ -87,4 +87,12 @@ open class IQBarButtonItem: UIBarButtonItem {
                 }
                 
                 textAttributes[NSForegroundColorAttributeName] = tintColor
-  
+                
+                setTitleTextAttributes(textAttributes, for: .normal)
+
+            #endif
+        }
+    }
+
+    /**
+     Boolean to know if it's a system item or custom item, we are having a limitatio
