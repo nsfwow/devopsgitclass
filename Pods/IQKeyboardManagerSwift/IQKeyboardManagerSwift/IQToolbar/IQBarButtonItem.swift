@@ -95,4 +95,8 @@ open class IQBarButtonItem: UIBarButtonItem {
     }
 
     /**
-     Boolean to know if it's a system item or custom item, we are having a limitatio
+     Boolean to know if it's a system item or custom item, we are having a limitation that we cannot override a designated initializer, so we are manually setting this property once in initialization
+     */
+    @objc var isSystemItem = false
+    
+//    public override init(barButtonSystemItem sys
