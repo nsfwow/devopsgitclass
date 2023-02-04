@@ -99,4 +99,9 @@ open class IQBarButtonItem: UIBarButtonItem {
      */
     @objc var isSystemItem = false
     
-//    public override init(barButtonSystemItem sys
+//    public override init(barButtonSystemItem systemItem: UIBarButtonSystemItem, target: Any?, action: Selector?) {
+//        return super.init(barButtonSystemItem: systemItem, target: target, action: action)
+//    }
+
+    /**
+     Additional target & action to do get callback action. Note that se
