@@ -116,4 +116,6 @@ open class IQBarButtonItem: UIBarButtonItem {
     /**
      Customized Invocation to be called when button is pressed. invocation is internally created using setTarget:action: method.
      */
-    open var inv
+    open var invocation : (target: AnyObject?, action: Selector?)
+    
+}
