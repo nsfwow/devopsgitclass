@@ -1,5 +1,6 @@
+
 //
-// IQPreviousNextView.swift
+//  IQTitleBarButtonItem.swift
 // https://github.com/hackiftekhar/IQKeyboardManager
 // Copyright (c) 2013-16 Iftekhar Qurashi.
 //
@@ -21,8 +22,30 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+
+import Foundation
 import UIKit
 
-open class IQPreviousNextView: UIView {
+open class IQTitleBarButtonItem: IQBarButtonItem {
+   
+    open var titleFont : UIFont? {
+    
+        didSet {
+            if let unwrappedFont = titleFont {
+                _titleButton?.titleLabel?.font = unwrappedFont
+            } else {
+                _titleButton?.titleLabel?.font = UIFont.systemFont(ofSize: 13)
+            }
+        }
+    }
 
-}
+    override open var title: String? {
+        didSet {
+                _titleButton?.setTitle(title, for: UIControlState())
+        }
+    }
+    
+    /**
+     selectableTextColor to be used for displaying button text when button is enabled.
+     */
+    open var selectableTextColor : UIColor? {
