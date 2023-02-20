@@ -515,3 +515,253 @@ public extension UIView {
         addRightButtonOnKeyboardWithText(text, target: target, action: action, titleText: title)
     }
     
+
+    ///------------------
+    /// MARK: Cancel/Done
+    ///------------------
+    
+    /**
+    Helper function to add Cancel and Done button on keyboard.
+    
+    @param target Target object for selector.
+    @param cancelAction Cancel button action name. Usually 'cancelAction:(IQBarButtonItem*)item'.
+    @param doneAction Done button action name. Usually 'doneAction:(IQBarButtonItem*)item'.
+    */
+    public func addCancelDoneOnKeyboardWithTarget (_ target : AnyObject?, cancelAction : Selector, doneAction : Selector) {
+        
+        addCancelDoneOnKeyboardWithTarget(target, cancelAction: cancelAction, doneAction: doneAction, titleText: nil)
+    }
+
+    /**
+    Helper function to add Cancel and Done button on keyboard.
+    
+    @param target Target object for selector.
+    @param cancelAction Cancel button action name. Usually 'cancelAction:(IQBarButtonItem*)item'.
+    @param doneAction Done button action name. Usually 'doneAction:(IQBarButtonItem*)item'.
+    @param titleText text to show as title in IQToolbar'.
+    */
+    public func addCancelDoneOnKeyboardWithTarget (_ target : AnyObject?, cancelAction : Selector, doneAction : Selector, titleText: String?) {
+        
+        //If can't set InputAccessoryView. Then return
+        if self.responds(to: #selector(setter: UITextField.inputAccessoryView)) {
+            //  Creating a toolBar for phoneNumber keyboard
+            let toolbar = self.keyboardToolbar
+            
+            var items : [IQBarButtonItem] = []
+            
+            //Cancel button
+            var cancelButton = toolbar.previousBarButton
+            if cancelButton.isSystemItem == false {
+                cancelButton = IQBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel, target: target, action: cancelAction)
+                cancelButton.isSystemItem = true
+                cancelButton.invocation = toolbar.previousBarButton.invocation
+                cancelButton.accessibilityLabel = toolbar.previousBarButton.accessibilityLabel
+                toolbar.previousBarButton = cancelButton
+            }
+
+            items.append(cancelButton)
+            
+            //Flexible space
+            items.append(UIView.flexibleBarButtonItem())
+            
+            //Title
+            toolbar.titleBarButton.title = shouldHideToolbarPlaceholder == true ? nil : titleText
+            
+            #if swift(>=3.2)
+                if #available(iOS 11, *) {}
+                else {
+                    toolbar.titleBarButton.customView?.frame = CGRect.zero
+                }
+            #else
+                toolbar.titleBarButton.customView?.frame = CGRect.zero
+            #endif
+
+            items.append(toolbar.titleBarButton)
+            
+            //Flexible space
+            items.append(UIView.flexibleBarButtonItem())
+            
+            //Done button
+            var doneButton = toolbar.doneBarButton
+            if doneButton.isSystemItem == false {
+                doneButton = IQBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: target, action: doneAction)
+                doneButton.isSystemItem = true
+                doneButton.invocation = toolbar.doneBarButton.invocation
+                doneButton.accessibilityLabel = toolbar.doneBarButton.accessibilityLabel
+                toolbar.doneBarButton = doneButton
+            }
+
+            items.append(doneButton)
+            
+            //  Adding button to toolBar.
+            toolbar.items = items
+
+            //  Setting toolbar to keyboard.
+            if let textField = self as? UITextField {
+                textField.inputAccessoryView = toolbar
+                
+                switch textField.keyboardAppearance {
+                case UIKeyboardAppearance.dark:
+                    toolbar.barStyle = UIBarStyle.black
+                default:
+                    toolbar.barStyle = UIBarStyle.default
+                }
+            } else if let textView = self as? UITextView {
+                textView.inputAccessoryView = toolbar
+                
+                switch textView.keyboardAppearance {
+                case UIKeyboardAppearance.dark:
+                    toolbar.barStyle = UIBarStyle.black
+                default:
+                    toolbar.barStyle = UIBarStyle.default
+                }
+            }
+        }
+    }
+    
+    /**
+    Helper function to add Cancel and Done button on keyboard.
+    
+    @param target Target object for selector.
+    @param cancelAction Cancel button action name. Usually 'cancelAction:(IQBarButtonItem*)item'.
+    @param doneAction Done button action name. Usually 'doneAction:(IQBarButtonItem*)item'.
+    @param shouldShowPlaceholder A boolean to indicate whether to show textField placeholder on IQToolbar'.
+    */
+    public func addCancelDoneOnKeyboardWithTarget (_ target : AnyObject?, cancelAction : Selector, doneAction : Selector, shouldShowPlaceholder: Bool) {
+        
+        var title : String?
+        
+        if shouldShowPlaceholder == true {
+            title = self.drawingToolbarPlaceholder
+        }
+        
+        addCancelDoneOnKeyboardWithTarget(target, cancelAction: cancelAction, doneAction: doneAction, titleText: title)
+    }
+    
+
+    ///-----------------
+    /// MARK: Right/Left
+    ///-----------------
+    
+    /**
+    Helper function to add Left and Right button on keyboard.
+    
+    @param target Target object for selector.
+    @param leftButtonTitle Title for leftBarButtonItem, usually 'Cancel'.
+    @param rightButtonTitle Title for rightBarButtonItem, usually 'Done'.
+    @param leftButtonAction Left button action name. Usually 'cancelAction:(IQBarButtonItem*)item'.
+    @param rightButtonAction Right button action name. Usually 'doneAction:(IQBarButtonItem*)item'.
+    */
+    public func addRightLeftOnKeyboardWithTarget( _ target : AnyObject?, leftButtonTitle : String, rightButtonTitle : String, rightButtonAction : Selector, leftButtonAction : Selector) {
+        
+        addRightLeftOnKeyboardWithTarget(target, leftButtonTitle: leftButtonTitle, rightButtonTitle: rightButtonTitle, rightButtonAction: rightButtonAction, leftButtonAction: leftButtonAction, titleText: nil)
+    }
+    
+    /**
+    Helper function to add Left and Right button on keyboard.
+    
+    @param target Target object for selector.
+    @param leftButtonTitle Title for leftBarButtonItem, usually 'Cancel'.
+    @param rightButtonTitle Title for rightBarButtonItem, usually 'Done'.
+    @param leftButtonAction Left button action name. Usually 'cancelAction:(IQBarButtonItem*)item'.
+    @param rightButtonAction Right button action name. Usually 'doneAction:(IQBarButtonItem*)item'.
+    @param titleText text to show as title in IQToolbar'.
+    */
+    public func addRightLeftOnKeyboardWithTarget( _ target : AnyObject?, leftButtonTitle : String, rightButtonTitle : String, rightButtonAction : Selector, leftButtonAction : Selector, titleText: String?) {
+        
+        //If can't set InputAccessoryView. Then return
+        if self.responds(to: #selector(setter: UITextField.inputAccessoryView)) {
+            //  Creating a toolBar for phoneNumber keyboard
+            let toolbar = self.keyboardToolbar
+            
+            var items : [IQBarButtonItem] = []
+            
+            //Left button
+            var cancelButton = toolbar.previousBarButton
+            if cancelButton.isSystemItem == false {
+                cancelButton.title = rightButtonTitle
+                cancelButton.image = nil
+                cancelButton.target = target
+                cancelButton.action = rightButtonAction
+            }
+            else
+            {
+                cancelButton = IQBarButtonItem(title: leftButtonTitle, style: UIBarButtonItemStyle.plain, target: target, action: leftButtonAction)
+                cancelButton.invocation = toolbar.previousBarButton.invocation
+                cancelButton.accessibilityLabel = toolbar.previousBarButton.accessibilityLabel
+                toolbar.previousBarButton = cancelButton
+            }
+
+            items.append(cancelButton)
+            
+            //Flexible space
+            items.append(UIView.flexibleBarButtonItem())
+            
+            //Title button
+            toolbar.titleBarButton.title = shouldHideToolbarPlaceholder == true ? nil : titleText
+            
+            #if swift(>=3.2)
+                if #available(iOS 11, *) {}
+                else {
+                    toolbar.titleBarButton.customView?.frame = CGRect.zero
+                }
+            #else
+                toolbar.titleBarButton.customView?.frame = CGRect.zero
+            #endif
+
+            items.append(toolbar.titleBarButton)
+            
+            //Flexible space
+            items.append(UIView.flexibleBarButtonItem())
+            
+            //Right button
+            var doneButton = toolbar.doneBarButton
+            if doneButton.isSystemItem == false {
+                doneButton.title = rightButtonTitle
+                doneButton.image = nil
+                doneButton.target = target
+                doneButton.action = rightButtonAction
+            }
+            else
+            {
+                doneButton = IQBarButtonItem(title: rightButtonTitle, style: UIBarButtonItemStyle.done, target: target, action: rightButtonAction)
+                doneButton.invocation = toolbar.doneBarButton.invocation
+                doneButton.accessibilityLabel = toolbar.doneBarButton.accessibilityLabel
+                toolbar.doneBarButton = doneButton
+            }
+
+            items.append(doneButton)
+            
+            //  Adding button to toolBar.
+            toolbar.items = items
+
+            //  Setting toolbar to keyboard.
+            if let textField = self as? UITextField {
+                textField.inputAccessoryView = toolbar
+                
+                switch textField.keyboardAppearance {
+                case UIKeyboardAppearance.dark:
+                    toolbar.barStyle = UIBarStyle.black
+                default:
+                    toolbar.barStyle = UIBarStyle.default
+                }
+            } else if let textView = self as? UITextView {
+                textView.inputAccessoryView = toolbar
+                
+                switch textView.keyboardAppearance {
+                case UIKeyboardAppearance.dark:
+                    toolbar.barStyle = UIBarStyle.black
+                default:
+                    toolbar.barStyle = UIBarStyle.default
+                }
+            }
+        }
+    }
+    
+    /**
+    Helper function to add Left and Right button on keyboard.
+    
+    @param target Target object for selector.
+    @param leftButtonTitle Title for leftBarButtonItem, usually 'Cancel'.
+    @param rightButtonTitle Title for rightBarButtonItem, usually 'Done'.
+    @param leftButtonAction Left button action name. Usually 'cancelAction:(IQBarButtonItem*)item'.
