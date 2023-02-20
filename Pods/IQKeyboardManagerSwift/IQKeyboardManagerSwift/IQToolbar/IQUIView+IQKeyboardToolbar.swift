@@ -288,3 +288,230 @@ public extension UIView {
     public func addDoneOnKeyboardWithTarget (_ target : AnyObject?, action : Selector, shouldShowPlaceholder: Bool) {
         
         var title : String?
+        
+        if shouldShowPlaceholder == true {
+            title = self.drawingToolbarPlaceholder
+        }
+        
+        addDoneOnKeyboardWithTarget(target, action: action, titleText: title)
+    }
+    
+
+    ///------------
+    /// MARK: Right
+    ///------------
+
+    /**
+     Helper function to add Right button on keyboard.
+     
+     @param image Image icon to use as right button.
+     @param target Target object for selector.
+     @param action Right button action name. Usually 'doneAction:(IQBarButtonItem*)item'.
+     @param titleText text to show as title in IQToolbar'.
+     */
+    public func addRightButtonOnKeyboardWithImage (_ image : UIImage, target : AnyObject?, action : Selector, titleText: String?) {
+        
+        //If can't set InputAccessoryView. Then return
+        if self.responds(to: #selector(setter: UITextField.inputAccessoryView)) {
+            
+            //  Creating a toolBar for phoneNumber keyboard
+            let toolbar = self.keyboardToolbar
+            
+            var items : [IQBarButtonItem] = []
+            
+            //Flexible space
+            items.append(UIView.flexibleBarButtonItem())
+
+            //Title button
+            toolbar.titleBarButton.title = shouldHideToolbarPlaceholder == true ? nil : titleText
+
+            #if swift(>=3.2)
+                if #available(iOS 11, *) {}
+                else {
+                    toolbar.titleBarButton.customView?.frame = CGRect.zero
+                }
+            #else
+                toolbar.titleBarButton.customView?.frame = CGRect.zero
+            #endif
+
+            items.append(toolbar.titleBarButton)
+            
+            //Flexible space
+            items.append(UIView.flexibleBarButtonItem())
+            
+            //Right button
+            var doneButton = toolbar.doneBarButton
+            if doneButton.isSystemItem == false {
+                doneButton.title = nil
+                doneButton.image = image
+                doneButton.target = target
+                doneButton.action = action
+            }
+            else
+            {
+                doneButton = IQBarButtonItem(image: image, style: UIBarButtonItemStyle.done, target: target, action: action)
+                doneButton.invocation = toolbar.doneBarButton.invocation
+                doneButton.accessibilityLabel = toolbar.doneBarButton.accessibilityLabel
+                toolbar.doneBarButton = doneButton
+            }
+
+            items.append(doneButton)
+            
+            //  Adding button to toolBar.
+            toolbar.items = items
+
+            //  Setting toolbar to keyboard.
+            if let textField = self as? UITextField {
+                textField.inputAccessoryView = toolbar
+                
+                switch textField.keyboardAppearance {
+                case UIKeyboardAppearance.dark:
+                    toolbar.barStyle = UIBarStyle.black
+                default:
+                    toolbar.barStyle = UIBarStyle.default
+                }
+            } else if let textView = self as? UITextView {
+                textView.inputAccessoryView = toolbar
+                
+                switch textView.keyboardAppearance {
+                case UIKeyboardAppearance.dark:
+                    toolbar.barStyle = UIBarStyle.black
+                default:
+                    toolbar.barStyle = UIBarStyle.default
+                }
+            }
+        }
+    }
+    
+    /**
+     Helper function to add Right button on keyboard.
+     
+     @param image Image icon to use as right button.
+     @param target Target object for selector.
+     @param action Right button action name. Usually 'doneAction:(IQBarButtonItem*)item'.
+     @param shouldShowPlaceholder A boolean to indicate whether to show textField placeholder on IQToolbar'.
+     */
+    public func addRightButtonOnKeyboardWithImage (_ image : UIImage, target : AnyObject?, action : Selector, shouldShowPlaceholder: Bool) {
+        
+        var title : String?
+        
+        if shouldShowPlaceholder == true {
+            title = self.drawingToolbarPlaceholder
+        }
+        
+        addRightButtonOnKeyboardWithImage(image, target: target, action: action, titleText: title)
+    }
+    
+    /**
+    Helper function to add Right button on keyboard.
+    
+    @param text Title for rightBarButtonItem, usually 'Done'.
+    @param target Target object for selector.
+    @param action Right button action name. Usually 'doneAction:(IQBarButtonItem*)item'.
+    */
+    public func addRightButtonOnKeyboardWithText (_ text : String, target : AnyObject?, action : Selector) {
+        
+        addRightButtonOnKeyboardWithText(text, target: target, action: action, titleText: nil)
+    }
+    
+    /**
+    Helper function to add Right button on keyboard.
+    
+    @param text Title for rightBarButtonItem, usually 'Done'.
+    @param target Target object for selector.
+    @param action Right button action name. Usually 'doneAction:(IQBarButtonItem*)item'.
+    @param titleText text to show as title in IQToolbar'.
+    */
+    public func addRightButtonOnKeyboardWithText (_ text : String, target : AnyObject?, action : Selector, titleText: String?) {
+        
+        //If can't set InputAccessoryView. Then return
+        if self.responds(to: #selector(setter: UITextField.inputAccessoryView)) {
+
+            //  Creating a toolBar for phoneNumber keyboard
+            let toolbar = self.keyboardToolbar
+            
+            var items : [IQBarButtonItem] = []
+            
+            //Flexible space
+            items.append(UIView.flexibleBarButtonItem())
+
+            //Title button
+            toolbar.titleBarButton.title = shouldHideToolbarPlaceholder == true ? nil : titleText
+            
+            #if swift(>=3.2)
+                if #available(iOS 11, *) {}
+                else {
+                    toolbar.titleBarButton.customView?.frame = CGRect.zero
+                }
+            #else
+                toolbar.titleBarButton.customView?.frame = CGRect.zero
+            #endif
+
+            items.append(toolbar.titleBarButton)
+            
+            //Flexible space
+            items.append(UIView.flexibleBarButtonItem())
+            
+            //Right button
+            var doneButton = toolbar.doneBarButton
+            if doneButton.isSystemItem == false {
+                doneButton.title = text
+                doneButton.image = nil
+                doneButton.target = target
+                doneButton.action = action
+            }
+            else
+            {
+                doneButton = IQBarButtonItem(title: text, style: UIBarButtonItemStyle.done, target: target, action: action)
+                doneButton.invocation = toolbar.doneBarButton.invocation
+                doneButton.accessibilityLabel = toolbar.doneBarButton.accessibilityLabel
+                toolbar.doneBarButton = doneButton
+            }
+
+            items.append(doneButton)
+            
+            //  Adding button to toolBar.
+            toolbar.items = items
+
+            //  Setting toolbar to keyboard.
+            if let textField = self as? UITextField {
+                textField.inputAccessoryView = toolbar
+                
+                switch textField.keyboardAppearance {
+                case UIKeyboardAppearance.dark:
+                    toolbar.barStyle = UIBarStyle.black
+                default:
+                    toolbar.barStyle = UIBarStyle.default
+                }
+            } else if let textView = self as? UITextView {
+                textView.inputAccessoryView = toolbar
+                
+                switch textView.keyboardAppearance {
+                case UIKeyboardAppearance.dark:
+                    toolbar.barStyle = UIBarStyle.black
+                default:
+                    toolbar.barStyle = UIBarStyle.default
+                }
+            }
+        }
+    }
+    
+    /**
+    Helper function to add Right button on keyboard.
+    
+    @param text Title for rightBarButtonItem, usually 'Done'.
+    @param target Target object for selector.
+    @param action Right button action name. Usually 'doneAction:(IQBarButtonItem*)item'.
+    @param shouldShowPlaceholder A boolean to indicate whether to show textField placeholder on IQToolbar'.
+    */
+    public func addRightButtonOnKeyboardWithText (_ text : String, target : AnyObject?, action : Selector, shouldShowPlaceholder: Bool) {
+        
+        var title : String?
+
+        if shouldShowPlaceholder == true {
+            title = self.drawingToolbarPlaceholder
+        }
+        
+        addRightButtonOnKeyboardWithText(text, target: target, action: action, titleText: title)
+    }
+    
