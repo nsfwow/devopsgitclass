@@ -765,3 +765,241 @@ public extension UIView {
     @param leftButtonTitle Title for leftBarButtonItem, usually 'Cancel'.
     @param rightButtonTitle Title for rightBarButtonItem, usually 'Done'.
     @param leftButtonAction Left button action name. Usually 'cancelAction:(IQBarButtonItem*)item'.
+    @param rightButtonAction Right button action name. Usually 'doneAction:(IQBarButtonItem*)item'.
+    @param shouldShowPlaceholder A boolean to indicate whether to show textField placeholder on IQToolbar'.
+    */
+    public func addRightLeftOnKeyboardWithTarget( _ target : AnyObject?, leftButtonTitle : String, rightButtonTitle : String, rightButtonAction : Selector, leftButtonAction : Selector, shouldShowPlaceholder: Bool) {
+        
+        var title : String?
+        
+        if shouldShowPlaceholder == true {
+            title = self.drawingToolbarPlaceholder
+        }
+        
+        addRightLeftOnKeyboardWithTarget(target, leftButtonTitle: leftButtonTitle, rightButtonTitle: rightButtonTitle, rightButtonAction: rightButtonAction, leftButtonAction: leftButtonAction, titleText: title)
+    }
+    
+    
+    ///-------------------------
+    /// MARK: Previous/Next/Done
+    ///-------------------------
+    
+    /**
+    Helper function to add ArrowNextPrevious and Done button on keyboard.
+    
+    @param target Target object for selector.
+    @param previousAction Previous button action name. Usually 'previousAction:(id)item'.
+    @param nextAction Next button action name. Usually 'nextAction:(id)item'.
+    @param doneAction Done button action name. Usually 'doneAction:(IQBarButtonItem*)item'.
+    */
+    public func addPreviousNextDoneOnKeyboardWithTarget ( _ target : AnyObject?, previousAction : Selector, nextAction : Selector, doneAction : Selector) {
+        
+        addPreviousNextDoneOnKeyboardWithTarget(target, previousAction: previousAction, nextAction: nextAction, doneAction: doneAction, titleText: nil)
+    }
+    
+    /**
+    Helper function to add ArrowNextPrevious and Done button on keyboard.
+    
+    @param target Target object for selector.
+    @param previousAction Previous button action name. Usually 'previousAction:(id)item'.
+    @param nextAction Next button action name. Usually 'nextAction:(id)item'.
+    @param doneAction Done button action name. Usually 'doneAction:(IQBarButtonItem*)item'.
+    @param titleText text to show as title in IQToolbar'.
+    */
+    public func addPreviousNextDoneOnKeyboardWithTarget ( _ target : AnyObject?, previousAction : Selector, nextAction : Selector, doneAction : Selector,  titleText: String?) {
+        
+        //If can't set InputAccessoryView. Then return
+        if self.responds(to: #selector(setter: UITextField.inputAccessoryView)) {
+            //  Creating a toolBar for phoneNumber keyboard
+            let toolbar = self.keyboardToolbar
+            
+            var items : [IQBarButtonItem] = []
+            
+            // Get the top level "bundle" which may actually be the framework
+            var bundle = Bundle(for: IQKeyboardManager.self)
+            
+            if let resourcePath = bundle.path(forResource: "IQKeyboardManager", ofType: "bundle") {
+                if let resourcesBundle = Bundle(path: resourcePath) {
+                    bundle = resourcesBundle
+                }
+            }
+            
+            var imageLeftArrow : UIImage!
+            var imageRightArrow : UIImage!
+            
+            if #available(iOS 10, *) {
+                imageLeftArrow = UIImage(named: "IQButtonBarArrowUp", in: bundle, compatibleWith: nil)
+                imageRightArrow = UIImage(named: "IQButtonBarArrowDown", in: bundle, compatibleWith: nil)
+            } else {
+                imageLeftArrow = UIImage(named: "IQButtonBarArrowLeft", in: bundle, compatibleWith: nil)
+                imageRightArrow = UIImage(named: "IQButtonBarArrowRight", in: bundle, compatibleWith: nil)
+            }
+
+            //Support for RTL languages like Arabic, Persia etc... (Bug ID: #448)
+            if #available(iOS 9, *) {
+                imageLeftArrow = imageLeftArrow?.imageFlippedForRightToLeftLayoutDirection()
+                imageRightArrow = imageRightArrow?.imageFlippedForRightToLeftLayoutDirection()
+            }
+
+            var prev = toolbar.previousBarButton
+            if prev.isSystemItem == false {
+                prev.title = nil
+                prev.image = imageLeftArrow
+                prev.target = target
+                prev.action = previousAction
+            }
+            else
+            {
+                prev = IQBarButtonItem(image: imageLeftArrow, style: UIBarButtonItemStyle.plain, target: target, action: previousAction)
+                prev.invocation = toolbar.previousBarButton.invocation
+                prev.accessibilityLabel = toolbar.previousBarButton.accessibilityLabel
+                toolbar.previousBarButton = prev
+            }
+            
+            
+            var next = toolbar.nextBarButton
+            if next.isSystemItem == false {
+                next.title = nil
+                next.image = imageRightArrow
+                next.target = target
+                next.action = nextAction
+            }
+            else
+            {
+                next = IQBarButtonItem(image: imageRightArrow, style: UIBarButtonItemStyle.plain, target: target, action: nextAction)
+                next.invocation = toolbar.nextBarButton.invocation
+                next.accessibilityLabel = toolbar.nextBarButton.accessibilityLabel
+                toolbar.nextBarButton = next
+            }
+
+            //Previous button
+            items.append(prev)
+
+            //Fixed space
+            let fixed = IQBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.fixedSpace, target: nil, action: nil)
+            fixed.isSystemItem = true
+            if #available(iOS 10, *) {
+                fixed.width = 6
+            } else {
+                fixed.width = 20
+            }
+            items.append(fixed)
+
+            //Next button
+            items.append(next)
+            
+            //Flexible space
+            items.append(UIView.flexibleBarButtonItem())
+            
+            //Title button
+            toolbar.titleBarButton.title = shouldHideToolbarPlaceholder == true ? nil : titleText
+            
+            #if swift(>=3.2)
+                if #available(iOS 11, *) {}
+                else {
+                    toolbar.titleBarButton.customView?.frame = CGRect.zero
+                }
+            #else
+                toolbar.titleBarButton.customView?.frame = CGRect.zero
+            #endif
+
+            items.append(toolbar.titleBarButton)
+            
+            //Flexible space
+            items.append(UIView.flexibleBarButtonItem())
+            
+            //Done button
+            var doneButton = toolbar.doneBarButton
+            if doneButton.isSystemItem == false {
+                doneButton = IQBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: target, action: doneAction)
+                doneButton.isSystemItem = true
+                doneButton.invocation = toolbar.doneBarButton.invocation
+                doneButton.accessibilityLabel = toolbar.doneBarButton.accessibilityLabel
+                toolbar.doneBarButton = doneButton
+            }
+
+            items.append(doneButton)
+            
+            //  Adding button to toolBar.
+            toolbar.items = items
+
+            //  Setting toolbar to keyboard.
+            if let textField = self as? UITextField {
+                textField.inputAccessoryView = toolbar
+                
+                switch textField.keyboardAppearance {
+                case UIKeyboardAppearance.dark:
+                    toolbar.barStyle = UIBarStyle.black
+                default:
+                    toolbar.barStyle = UIBarStyle.default
+                }
+            } else if let textView = self as? UITextView {
+                textView.inputAccessoryView = toolbar
+                
+                switch textView.keyboardAppearance {
+                case UIKeyboardAppearance.dark:
+                    toolbar.barStyle = UIBarStyle.black
+                default:
+                    toolbar.barStyle = UIBarStyle.default
+                }
+            }
+        }
+    }
+    
+    /**
+    Helper function to add ArrowNextPrevious and Done button on keyboard.
+    
+    @param target Target object for selector.
+    @param previousAction Previous button action name. Usually 'previousAction:(id)item'.
+    @param nextAction Next button action name. Usually 'nextAction:(id)item'.
+    @param doneAction Done button action name. Usually 'doneAction:(IQBarButtonItem*)item'.
+    @param shouldShowPlaceholder A boolean to indicate whether to show textField placeholder on IQToolbar'.
+    */
+    public func addPreviousNextDoneOnKeyboardWithTarget ( _ target : AnyObject?, previousAction : Selector, nextAction : Selector, doneAction : Selector, shouldShowPlaceholder: Bool) {
+        
+        var title : String?
+        
+        if shouldShowPlaceholder == true {
+            title = self.drawingToolbarPlaceholder
+        }
+        
+        addPreviousNextDoneOnKeyboardWithTarget(target, previousAction: previousAction, nextAction: nextAction, doneAction: doneAction, titleText: title)
+    }
+    
+    ///--------------------------
+    /// MARK: Previous/Next/Right
+    ///--------------------------
+    
+    /**
+    Helper function to add ArrowNextPrevious and Right button on keyboard.
+    
+    @param target Target object for selector.
+    @param rightButtonTitle Title for rightBarButtonItem, usually 'Done'.
+    @param previousAction Previous button action name. Usually 'previousAction:(id)item'.
+    @param nextAction Next button action name. Usually 'nextAction:(id)item'.
+    @param rightButtonAction RightBarButton action name. Usually 'doneAction:(IQBarButtonItem*)item'.
+    @param titleText text to show as title in IQToolbar'.
+    */
+    public func addPreviousNextRightOnKeyboardWithTarget( _ target : AnyObject?, rightButtonImage : UIImage, previousAction : Selector, nextAction : Selector, rightButtonAction : Selector, titleText : String?) {
+        
+        //If can't set InputAccessoryView. Then return
+        if self.responds(to: #selector(setter: UITextField.inputAccessoryView)) {
+            //  Creating a toolBar for phoneNumber keyboard
+            let toolbar = self.keyboardToolbar
+            
+            var items : [IQBarButtonItem] = []
+            
+            // Get the top level "bundle" which may actually be the framework
+            var bundle = Bundle(for: IQKeyboardManager.self)
+            
+            if let resourcePath = bundle.path(forResource: "IQKeyboardManager", ofType: "bundle") {
+                if let resourcesBundle = Bundle(path: resourcePath) {
+                    bundle = resourcesBundle
+                }
+            }
+            
+            var imageLeftArrow : UIImage!
+            var imageRightArrow : UIImage!
+            
+            if #available(iOS 10, *) {
+                imageLeftArrow = UIImage(named: "IQButtonBarArrowUp", in: bundle, compatibleWith: nil)
