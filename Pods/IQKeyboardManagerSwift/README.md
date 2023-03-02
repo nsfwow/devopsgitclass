@@ -117,3 +117,98 @@ In AppDelegate.swift, just import IQKeyboardManagerSwift framework and enable IQ
 import IQKeyboardManagerSwift
 
 @UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
+
+    var window: UIWindow?
+
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+
+      IQKeyboardManager.sharedManager().enable = true
+
+      return true
+    }
+}
+```
+
+#### Installation with Carthage
+
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
+
+You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
+
+```bash
+$ brew update
+$ brew install carthage
+```
+
+To integrate `IQKeyboardManger` or `IQKeyboardManagerSwift` into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+```ogdl
+github "hackiftekhar/IQKeyboardManager"
+```
+
+Run `carthage` to build the frameworks and drag the appropriate framework (`IQKeyboardManager.framework` or `IQKeyboardManagerSwift.framework`) into your Xcode project according to your need. Make sure to add only one framework and not both.
+
+
+#### Installation with Source Code
+
+[![Github tag](https://img.shields.io/github/tag/hackiftekhar/iqkeyboardmanager.svg)]()
+
+
+
+***IQKeyboardManager (Objective-C):*** Just ***drag and drop*** `IQKeyboardManager` directory from demo project to your project. That's it.
+
+***IQKeyboardManager (Swift):*** ***Drag and drop*** `IQKeyboardManagerSwift` directory from demo project to your project
+
+In AppDelegate.swift, just enable IQKeyboardManager.
+
+```swift
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
+
+    var window: UIWindow?
+
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+
+      IQKeyboardManager.sharedManager().enable = true
+
+      return true
+    }
+}
+```
+
+
+## Known Issues
+
+You can find known issues list [here](https://github.com/hackiftekhar/IQKeyboardManager/blob/master/KNOWN%20ISSUES.md).
+
+Manual Management:
+---
+
+You can find some manual management tweaks & examples [here](https://github.com/hackiftekhar/IQKeyboardManager/blob/master/MANUAL%20MANAGEMENT.md).
+
+
+
+## Flow Diagram
+[![IQKeyboardManager CFD](https://raw.githubusercontent.com/hackiftekhar/IQKeyboardManager/master/Screenshot/IQKeyboardManagerFlowDiagram.jpg)](https://raw.githubusercontent.com/hackiftekhar/IQKeyboardManager/master/Screenshot/IQKeyboardManagerFlowDiagram.jpg)
+
+If you would like to see detailed Flow diagram then see [here](https://raw.githubusercontent.com/hackiftekhar/IQKeyboardManager/v3.3.0/Screenshot/IQKeyboardManagerCFD.jpg).
+
+
+
+## Properties and functions usage
+
+You can find some documentation about properties, methods and their uses [here](https://github.com/hackiftekhar/IQKeyboardManager/blob/master/PROPERTIES%20%26%20FUNCTIONS.md).
+
+
+LICENSE
+---
+Distributed under the MIT License.
+
+Contributions
+---
+Any contribution is more than welcome! You can contribute through pull requests and issues on GitHub.
+
+Author
+---
+If you wish to contact me, email at: hack.iftekhar@gmail.com
