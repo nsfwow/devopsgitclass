@@ -18,4 +18,11 @@
                BuildableName = "Pods_MachineLearningDemo.framework"
                BlueprintName = "Pods-MachineLearningDemo"
                ReferencedContainer = "container:Pods.xcodeproj">
-         
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selected
