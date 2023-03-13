@@ -54,4 +54,11 @@
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
-      </Ad
+      </AdditionalOptions>
+   </LaunchAction>
+   <ProfileAction
+      buildConfiguration = "Release"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning
