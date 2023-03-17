@@ -12,4 +12,5 @@
 
 
 FOUNDATION_EXPORT double IQKeyboardManagerSwiftVersionNumber;
-FOU
+FOUNDATION_EXPORT const unsigned char IQKeyboardManagerSwiftVersionString[];
+
