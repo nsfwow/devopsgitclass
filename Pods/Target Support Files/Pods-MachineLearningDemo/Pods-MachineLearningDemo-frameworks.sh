@@ -15,4 +15,13 @@ install_framework()
   if [ -r "${BUILT_PRODUCTS_DIR}/$1" ]; then
     local source="${BUILT_PRODUCTS_DIR}/$1"
   elif [ -r "${BUILT_PRODUCTS_DIR}/$(basename "$1")" ]; then
-    local source="${BUILT_PRODUC
+    local source="${BUILT_PRODUCTS_DIR}/$(basename "$1")"
+  elif [ -r "$1" ]; then
+    local source="$1"
+  fi
+
+  local destination="${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}"
+
+  if [ -L "${source}" ]; then
+      echo "Symlinked..."
+      source="
