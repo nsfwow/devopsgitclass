@@ -33,4 +33,10 @@ install_framework()
 
   local basename
   basename="$(basename -s .framework "$1")"
-  binary="${destination}/${basename}.framew
+  binary="${destination}/${basename}.framework/${basename}"
+  if ! [ -r "$binary" ]; then
+    binary="${destination}/${basename}"
+  fi
+
+  # Strip invalid architectures so "fat" simulator / device frameworks work on device
+  if [[ "$(file "$binary")" =
