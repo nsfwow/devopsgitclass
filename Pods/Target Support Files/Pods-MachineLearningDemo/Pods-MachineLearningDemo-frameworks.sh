@@ -82,4 +82,11 @@ code_sign_if_enabled() {
   fi
 }
 
-# Strip invalid arch
+# Strip invalid architectures
+strip_invalid_archs() {
+  binary="$1"
+  # Get architectures for current file
+  archs="$(lipo -info "$binary" | rev | cut -d ':' -f1 | rev)"
+  stripped=""
+  for arch in $archs; do
+    if ! [[ "${ARCHS}" == *"$arch"
