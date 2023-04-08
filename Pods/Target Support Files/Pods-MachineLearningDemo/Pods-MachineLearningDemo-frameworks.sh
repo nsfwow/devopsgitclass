@@ -96,4 +96,13 @@ strip_invalid_archs() {
     fi
   done
   if [[ "$stripped" ]]; then
-    echo "Stripped $binary of architectu
+    echo "Stripped $binary of architectures:$stripped"
+  fi
+}
+
+
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_f
